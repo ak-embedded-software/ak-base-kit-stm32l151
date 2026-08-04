@@ -8,6 +8,7 @@
 #ifndef __SCREENS_H__
 #define __SCREENS_H__
 
+#include "screens_layout.h"
 #include "scr_dungeon_game.h"
 #include "scr_charts_game.h"
 #include "scr_game_over.h"
@@ -17,6 +18,7 @@
 #include "scr_dungeon_how_to_play.h"
 #include "scr_menu_game.h"
 #include "scr_startup.h"
+#include "scr_title.h"
 
 // scr_dungeon_game
 extern view_dynamic_t dyn_view_item_dungeon_game;

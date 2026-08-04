@@ -7,6 +7,7 @@ VPATH += sources/app/screens
 # Screen
 SOURCES_CPP += sources/app/screens/scr_idle.cpp
 SOURCES_CPP += sources/app/screens/scr_startup.cpp
+SOURCES_CPP += sources/app/screens/scr_title.cpp
 SOURCES_CPP += sources/app/screens/scr_menu_game.cpp
 SOURCES_CPP += sources/app/screens/scr_game_setting.cpp
 SOURCES_CPP += sources/app/screens/scr_dungeon_game.cpp

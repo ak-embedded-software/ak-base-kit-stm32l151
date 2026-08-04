@@ -25,30 +25,33 @@ view_screen_t scr_dungeon_how_to_play = {
 };
 
 void view_scr_dungeon_how_to_play() {
-	view_render.drawRect(0, 0, LCD_WIDTH, LCD_HEIGHT, WHITE);
 	view_render.setTextColor(WHITE);
 	view_render.setTextSize(1);
 
-	view_render.setCursor(31, 3);
+	view_render.setCursor(SCR_CENTER_X(7), SCR_ROW_TITLE);
 	view_render.print("DUNGEON");
 
-	view_render.drawLine(4, 13, 123, 13, WHITE);
+	view_render.drawLine(SCR_PAD_L, SCR_ROW_RULE, SCR_PAD_R, SCR_ROW_RULE, WHITE);
 
-	view_render.setCursor(4, 17);
+	/* Bốn dòng nội dung cách nhau 9 px (chữ cao 8, chừa 1 px cho dễ đọc).
+	 * Dòng cuối ở 42, kết ở 49, còn dư 3 px trước dòng gợi ý ở 53. */
+	view_render.setCursor(SCR_PAD_L, SCR_ROW_BODY);
 	view_render.print("UP   : MOVE SELECT");
-	view_render.setCursor(4, 27);
+	view_render.setCursor(SCR_PAD_L, SCR_ROW_BODY + 9);
 	view_render.print("DOWN : MOVE SELECT");
-	view_render.setCursor(4, 37);
+	view_render.setCursor(SCR_PAD_L, SCR_ROW_BODY + 18);
 	view_render.print("MODE : CONFIRM");
 
-	view_render.setCursor(4, 49);
+	view_render.setCursor(SCR_PAD_L, SCR_ROW_BODY + 27);
 	if (dungeon_is_creator_mode()) {
-		view_render.print("CREATOR TEST (NO SAVE)");
+		/* Chuỗi cũ "CREATOR TEST (NO SAVE)" dài 22 ký tự = 132 px, tràn khỏi
+		 * màn 128 px. Tối đa là 20 ký tự khi bắt đầu ở SCR_PAD_L. */
+		view_render.print("CREATOR TEST NO SAVE");
 	}
 	else {
 		view_render.print("TRAVEL, BATTLE, LOOT");
 	}
-	view_render.setCursor(17, 57);
+	view_render.setCursor(SCR_CENTER_X(13), SCR_ROW_HINT);
 	view_render.print("MODE TO BEGIN");
 }
 

@@ -108,7 +108,7 @@ SECTIONS {
 	} > SRAM
 
 	/* non clear RAM */
-	.non_clear_ram : {
+	.non_clear_ram (NOLOAD) : {
 		_non_clear_ram = .;
 		KEEP (*(.non_clear_ram))
 		KEEP (*(.non_clear_ram*))

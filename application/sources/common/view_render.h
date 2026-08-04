@@ -2,7 +2,7 @@
 #define __VIEW_RENDER_H__
 
 #include "view_item.h"
-#include "Adafruit_ssd1306syp.h"
+#include "Adafruit_oled_drv.h"
 
 #define	X_SIZE_FONT						(5)
 #define	Y_SIZE_FONT						(7)
@@ -23,7 +23,7 @@
 
 typedef int (*view_render_item)(void*);
 
-extern Adafruit_ssd1306syp view_render;
+extern Adafruit_oled_drv view_render;
 
 extern void view_render_init();
 extern int view_render_screen(view_screen_t* screen);

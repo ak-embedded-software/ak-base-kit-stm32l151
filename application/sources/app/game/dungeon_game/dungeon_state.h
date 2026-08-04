@@ -23,19 +23,9 @@
 #include "buzzer.h"
 #include "scr_dungeon_game.h"
 
-#define NUM_METEOROIDS              (5)
 
-typedef struct {
-	bool visible;
-	int16_t x, y;
-	uint8_t action_image;
-} dungeon_state_t;
 
-extern dungeon_state_t meteoroid[NUM_METEOROIDS];
 
-extern uint8_t dungeon_count_active_meteoroids();
-extern void dungeon_state_reset_meteoroids();
-extern void dungeon_process_action_hit(int16_t action_x, int16_t action_y, uint8_t power);
 extern void dungeon_state_handle(ak_msg_t* msg);
 
 #endif //__DUNGEON_STATE_H__

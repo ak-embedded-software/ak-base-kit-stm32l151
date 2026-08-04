@@ -1,4 +1,4 @@
-include sources/driver/Adafruit_ssd1306syp/Makefile.mk
+include sources/driver/Adafruit_oled_drv/Makefile.mk
 include sources/driver/button/Makefile.mk
 include sources/driver/eeprom/Makefile.mk
 include sources/driver/flash/Makefile.mk

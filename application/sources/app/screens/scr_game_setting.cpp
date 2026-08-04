@@ -10,22 +10,9 @@
 /*****************************************************************************/
 /* Variable Declaration - Setting game */
 /*****************************************************************************/
-dungeon_game_setting_t settingdata;
+/* settingdata now lives in app_eeprom.cpp next to its read/write helpers. */
 static uint8_t setting_location_chosse;
 
-static void bw_sanitize_setting_local() {
-	if ((settingdata.num_arrow == 0) || (settingdata.num_arrow > 5)) {
-		settingdata.num_arrow = 3;
-	}
-
-	if ((settingdata.meteoroid_speed == 0) || (settingdata.meteoroid_speed > 5)) {
-		settingdata.meteoroid_speed = 2;
-	}
-
-	if ((settingdata.arrow_speed == 0) || (settingdata.arrow_speed > 10)) {
-		settingdata.arrow_speed = 4;
-	}
-}
 
 /*****************************************************************************/
 /* View - Setting game */
@@ -47,37 +34,71 @@ view_screen_t scr_game_setting = {
 	.focus_item = 0,
 };
 
+/* Dòng đầu tiên của hàng thứ row (0..3). */
+static int16_t setting_row_y(uint8_t row) {
+	return (int16_t)(DUNGEON_SETTING_FRAMES_AXIS_Y_1 + DUNGEON_SETTING_FRAMES_STEP * row);
+}
+
+/* setting_location_chosse vẫn giữ kiểu mã hoá cũ 15/30/45/60 để phần
+ * xử lý nút không phải sửa. Ở đây chỉ đổi nó về chỉ số hàng 0..3. */
+static uint8_t setting_row_index() {
+	uint8_t row = (uint8_t)((setting_location_chosse / STEP_SETTING_CHOSSE) - 1);
+	if (row >= DUNGEON_SETTING_ROW_COUNT) {
+		row = 0;
+	}
+	return row;
+}
+
 void view_scr_game_setting() {
 	view_render.setTextSize(1);
 	view_render.setTextColor(WHITE);
-	view_render.drawBitmap(0, setting_location_chosse - DUNGEON_SETTING_CHOSSE_ICON_AXIS_Y, chosse_icon, DUNGEON_SETTING_CHOSSE_ICON_SIZE_W, DUNGEON_SETTING_CHOSSE_ICON_SIZE_H, WHITE);
-	if (settingdata.silent == 0) {
-		view_render.drawBitmap(109, DUNGEON_SETTING_FRAMES_AXIS_Y_1 + DUNGEON_SETTING_FRAMES_STEP * 3 - 12, speaker_1, 7, 7, WHITE);
+
+	/* Con trỏ là tam giác nhỏ chỉ sang phải, canh giữa hàng đang chọn.
+	 * Cao 7 nằm gọn trong hàng cao 13 nên không bao giờ đè sang hàng khác. */
+	int16_t cursor_y = setting_row_y(setting_row_index())
+			+ ((DUNGEON_SETTING_FRAMES_SIZE_H - DUNGEON_SETTING_CURSOR_H) / 2);
+	view_render.fillTriangle(
+			DUNGEON_SETTING_CURSOR_AXIS_X, cursor_y,
+			DUNGEON_SETTING_CURSOR_AXIS_X, cursor_y + DUNGEON_SETTING_CURSOR_H - 1,
+			DUNGEON_SETTING_CURSOR_AXIS_X + DUNGEON_SETTING_CURSOR_W - 1,
+			cursor_y + (DUNGEON_SETTING_CURSOR_H / 2),
+			WHITE);
+
+	for (uint8_t row = 0; row < DUNGEON_SETTING_ROW_COUNT; row++) {
+		view_render.drawRoundRect(DUNGEON_SETTING_FRAMES_AXIS_X, setting_row_y(row),
+				DUNGEON_SETTING_FRAMES_SIZE_W, DUNGEON_SETTING_FRAMES_SIZE_H,
+				DUNGEON_SETTING_FRAMES_SIZE_R, WHITE);
 	}
-	else {
-		view_render.drawBitmap(109, DUNGEON_SETTING_FRAMES_AXIS_Y_1 + DUNGEON_SETTING_FRAMES_STEP * 3 - 12, speaker_2, 7, 7, WHITE);
-	}
 
-	view_render.drawRoundRect(DUNGEON_SETTING_FRAMES_AXIS_X, DUNGEON_SETTING_FRAMES_AXIS_Y_1, DUNGEON_SETTING_FRAMES_SIZE_W, DUNGEON_SETTING_FRAMES_SIZE_H, DUNGEON_SETTING_FRAMES_SIZE_R, WHITE);
-	view_render.drawRoundRect(DUNGEON_SETTING_FRAMES_AXIS_X, DUNGEON_SETTING_FRAMES_AXIS_Y_1 + DUNGEON_SETTING_FRAMES_STEP, DUNGEON_SETTING_FRAMES_SIZE_W, DUNGEON_SETTING_FRAMES_SIZE_H, DUNGEON_SETTING_FRAMES_SIZE_R, WHITE);
-	view_render.drawRoundRect(DUNGEON_SETTING_FRAMES_AXIS_X, DUNGEON_SETTING_FRAMES_AXIS_Y_1 + DUNGEON_SETTING_FRAMES_STEP * 2, DUNGEON_SETTING_FRAMES_SIZE_W, DUNGEON_SETTING_FRAMES_SIZE_H, DUNGEON_SETTING_FRAMES_SIZE_R, WHITE);
-	view_render.drawRoundRect(DUNGEON_SETTING_FRAMES_AXIS_X, DUNGEON_SETTING_FRAMES_AXIS_Y_1 + DUNGEON_SETTING_FRAMES_STEP * 3, DUNGEON_SETTING_FRAMES_SIZE_W, DUNGEON_SETTING_FRAMES_SIZE_H, DUNGEON_SETTING_FRAMES_SIZE_R, WHITE);
+	/* Hàng 1 - Frames */
+	view_render.setCursor(DUNGEON_SETTING_TEXT_AXIS_X, setting_row_y(0) + DUNGEON_SETTING_TEXT_OFFSET_Y);
+	view_render.print("Frames");
+	view_render.setCursor(DUNGEON_SETTING_NUMBER_AXIS_X, setting_row_y(0) + DUNGEON_SETTING_TEXT_OFFSET_Y);
+	view_render.print("(");
+	view_render.print(settingdata.party_size);
+	view_render.print(")");
 
-	view_render.setCursor(DUNGEON_SETTING_TEXT_AXIS_X, 5);
-	view_render.print(" Frames       ( ) ");
-	view_render.setCursor(DUNGEON_SETTING_NUMBER_AXIS_X, 5);
-	view_render.print(settingdata.num_arrow);
+	/* Hàng 2 - Lane speed */
+	view_render.setCursor(DUNGEON_SETTING_TEXT_AXIS_X, setting_row_y(1) + DUNGEON_SETTING_TEXT_OFFSET_Y);
+	view_render.print("Lane speed");
+	view_render.setCursor(DUNGEON_SETTING_NUMBER_AXIS_X, setting_row_y(1) + DUNGEON_SETTING_TEXT_OFFSET_Y);
+	view_render.print("(");
+	view_render.print(settingdata.monster_speed);
+	view_render.print(")");
 
-	view_render.setCursor(DUNGEON_SETTING_TEXT_AXIS_X, 20);
-	view_render.print(" Lane speed   ( ) ");
-	view_render.setCursor(DUNGEON_SETTING_NUMBER_AXIS_X, 20);
-	view_render.print(settingdata.meteoroid_speed);
+	/* Hàng 3 - Silent, kèm icon loa cao 7 canh giữa hàng cao 13 */
+	view_render.setCursor(DUNGEON_SETTING_TEXT_AXIS_X, setting_row_y(2) + DUNGEON_SETTING_TEXT_OFFSET_Y);
+	view_render.print("Silent");
+	view_render.drawBitmap(DUNGEON_SETTING_SPEAKER_AXIS_X,
+			setting_row_y(2) + ((DUNGEON_SETTING_FRAMES_SIZE_H - DUNGEON_SETTING_SPEAKER_SIZE) / 2),
+			(settingdata.silent == 0) ? speaker_1 : speaker_2,
+			DUNGEON_SETTING_SPEAKER_SIZE, DUNGEON_SETTING_SPEAKER_SIZE, WHITE);
 
-	view_render.setCursor(DUNGEON_SETTING_TEXT_AXIS_X, 35);
-	view_render.print(" Silent           ");
-
-	view_render.setCursor(DUNGEON_SETTING_TEXT_AXIS_X + 32, 50);
-	view_render.print(" EXIT ");
+	/* Hàng 4 - EXIT, canh giữa theo bề ngang của khung */
+	view_render.setCursor(DUNGEON_SETTING_FRAMES_AXIS_X
+			+ ((DUNGEON_SETTING_FRAMES_SIZE_W - (4 * SCR_CHAR_W)) / 2),
+			setting_row_y(3) + DUNGEON_SETTING_TEXT_OFFSET_Y);
+	view_render.print("EXIT");
 	view_render.update();
 }
 
@@ -90,8 +111,7 @@ void scr_game_setting_handle(ak_msg_t* msg) {
 		APP_DBG_SIG("SCREEN_ENTRY\n");
 		view_render.clear();
 		setting_location_chosse = SETTING_ITEM_ARRDESS_1;
-		eeprom_read(EEPROM_SETTING_START_ADDR, (uint8_t*)&settingdata, sizeof(settingdata));
-		bw_sanitize_setting_local();
+		dungeon_setting_read(&settingdata);
 	}
 		break;
 
@@ -99,17 +119,17 @@ void scr_game_setting_handle(ak_msg_t* msg) {
 		APP_DBG_SIG("AC_DISPLAY_BUTTON_MODE_RELEASED\n");
 		switch (setting_location_chosse) {
 		case SETTING_ITEM_ARRDESS_1: {
-			settingdata.num_arrow++;
-			if (settingdata.num_arrow > 5) {
-				settingdata.num_arrow = 1;
+			settingdata.party_size++;
+			if (settingdata.party_size > 5) {
+				settingdata.party_size = 1;
 			}
 		}
 			break;
 
 		case SETTING_ITEM_ARRDESS_2: {
-			settingdata.meteoroid_speed++;
-			if (settingdata.meteoroid_speed > 5) {
-				settingdata.meteoroid_speed = 1;
+			settingdata.monster_speed++;
+			if (settingdata.monster_speed > 5) {
+				settingdata.monster_speed = 1;
 			}
 		}
 			break;
@@ -121,8 +141,8 @@ void scr_game_setting_handle(ak_msg_t* msg) {
 			break;
 
 		case SETTING_ITEM_ARRDESS_4: {
-			settingdata.arrow_speed = 4;
-			eeprom_write(EEPROM_SETTING_START_ADDR, (uint8_t*)&settingdata, sizeof(settingdata));
+			settingdata.anim_speed = 4;
+			dungeon_setting_write(&settingdata);
 			SCREEN_TRAN(scr_menu_game_handle, &scr_menu_game);
 			BUZZER_PlayTones(tones_startup);
 		}
@@ -137,8 +157,8 @@ void scr_game_setting_handle(ak_msg_t* msg) {
 
 	case AC_DISPLAY_BUTTON_UP_LONG_PRESSED: {
 		APP_DBG_SIG("AC_DISPLAY_BUTTON_UP_LONG_PRESSED\n");
-		settingdata.num_arrow = 5;
-		settingdata.meteoroid_speed = 5;
+		settingdata.party_size = 5;
+		settingdata.monster_speed = 5;
 		settingdata.silent = 0;
 	}
 		BUZZER_Sleep(settingdata.silent);
@@ -157,8 +177,8 @@ void scr_game_setting_handle(ak_msg_t* msg) {
 
 	case AC_DISPLAY_BUTTON_DOWN_LONG_PRESSED: {
 		APP_DBG_SIG("AC_DISPLAY_BUTTON_DOWN_LONG_PRESSED\n");
-		settingdata.num_arrow = 1;
-		settingdata.meteoroid_speed = 1;
+		settingdata.party_size = 1;
+		settingdata.monster_speed = 1;
 		settingdata.silent = 1;
 	}
 		BUZZER_Sleep(settingdata.silent);

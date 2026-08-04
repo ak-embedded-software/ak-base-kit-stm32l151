@@ -29,6 +29,14 @@ extern "C"
 #define SSD1306_DATA_PIN				(0x04)
 #define SSD1306_RES_PIN					(0x08)
 
+/* Adafruit_oled_drv is controller-agnostic (SH1106 / SSD1306 / SSD1309) and
+ * asks for OLED_*_PIN. Same three pins, generic names.
+ * wiring_digital.cpp still switches on the SSD1306_* names, hence the alias
+ * rather than a rename. */
+#define OLED_CLK_PIN					SSD1306_CLK_PIN
+#define OLED_DATA_PIN					SSD1306_DATA_PIN
+#define OLED_RES_PIN					SSD1306_RES_PIN
+
 /******************************************************************************
  *Pin map button
 *******************************************************************************/

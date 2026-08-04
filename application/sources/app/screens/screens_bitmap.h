@@ -53,6 +53,7 @@ extern const unsigned char PROGMEM item_shield [];
 extern const unsigned char PROGMEM item_heal [];
 extern const unsigned char PROGMEM item_shrine [];
 extern const unsigned char PROGMEM item_bomb [];
+extern const unsigned char PROGMEM item_bomb20 [];
 extern const unsigned char PROGMEM item_trap [];
 
 #endif //__SCREENS_BITMAP_H__

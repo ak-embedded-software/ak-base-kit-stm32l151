@@ -38,6 +38,7 @@ extern "C"
  * DEFINITION: signals
  *
  *****************************************************************************/
+#define AK_SYS_DEFINE_SIG				(0)
 #define AK_USER_DEFINE_SIG				(10)
 #define DUNGEON_DEFINE_SIG              (100)
 

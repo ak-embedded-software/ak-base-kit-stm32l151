@@ -27,23 +27,30 @@ view_screen_t scr_startup = {
 	.focus_item = 0,
 };
 
+/* Logo AK là chữ ASCII 4 dòng, mỗi dòng 14 ký tự.
+ * Chữ cao 8 px nên 4 dòng phải cách nhau đúng 8 thì nét mới liền nhau.
+ * Khối logo chiếm 10..41, dòng tên chiếm 45..52. Cả khối nằm giữa 3..60. */
+#define AK_LOGO_AXIS_X		SCR_CENTER_X(14)
+#define AK_LOGO_AXIS_Y		(10)
+#define AK_LOGO_LINE_H		(SCR_CHAR_H)
+#define AK_LOGO_TEXT_X		SCR_CENTER_X(13)
+#define AK_LOGO_TEXT_Y		(45)
+
 void view_scr_startup() {
-#define AK_LOGO_AXIS_X		(23)
-#define AK_LOGO_TEXT		(AK_LOGO_AXIS_X + 4)
 	/* ak logo */
 	BUZZER_PlayTones(tones_startup);
 	view_render.clear();
 	view_render.setTextSize(1);
 	view_render.setTextColor(WHITE);
-	view_render.setCursor(AK_LOGO_AXIS_X, 3);
+	view_render.setCursor(AK_LOGO_AXIS_X, AK_LOGO_AXIS_Y);
 	view_render.print("   __    _  _ ");
-	view_render.setCursor(AK_LOGO_AXIS_X, 10);
+	view_render.setCursor(AK_LOGO_AXIS_X, AK_LOGO_AXIS_Y + AK_LOGO_LINE_H);
 	view_render.print("  /__\\  ( )/ )");
-	view_render.setCursor(AK_LOGO_AXIS_X, 20);
+	view_render.setCursor(AK_LOGO_AXIS_X, AK_LOGO_AXIS_Y + AK_LOGO_LINE_H * 2);
 	view_render.print(" /(__)\\ (   (");
-	view_render.setCursor(AK_LOGO_AXIS_X, 30);
+	view_render.setCursor(AK_LOGO_AXIS_X, AK_LOGO_AXIS_Y + AK_LOGO_LINE_H * 3);
 	view_render.print("(__)(__)(_)\\_)");
-	view_render.setCursor(AK_LOGO_TEXT, 42);
+	view_render.setCursor(AK_LOGO_TEXT_X, AK_LOGO_TEXT_Y);
 	view_render.print("Active Kernel");
 	view_render.update();
 }
@@ -62,22 +69,24 @@ void scr_startup_handle(ak_msg_t* msg) {
 					AC_DISPLAY_STARTUP_INTERVAL, \
 					TIMER_ONE_SHOT);
 		// Read setting
-		eeprom_read(	EEPROM_SETTING_START_ADDR, \
-						(uint8_t*)&settingdata, \
-						sizeof(settingdata));
+		dungeon_setting_read(&settingdata);
 		BUZZER_Sleep(settingdata.silent);
 	}
 		break;
 
+	/* Bấm MODE là bỏ qua 2 giây chờ, nhảy thẳng sang màn mở màn của game.
+	 * Nhớ huỷ timer AC_DISPLAY_SHOW_LOGO, không thì 2 giây sau nó vẫn nổ và
+	 * lại đá màn hình về scr_title một lần nữa. */
 	case AC_DISPLAY_BUTTON_MODE_RELEASED: {
 		APP_DBG_SIG("AC_DISPLAY_BUTTON_MODE_RELEASED\n");
-		SCREEN_TRAN(scr_menu_game_handle, &scr_menu_game);
+		timer_remove_attr(AC_TASK_DISPLAY_ID, AC_DISPLAY_SHOW_LOGO);
+		SCREEN_TRAN(scr_title_handle, &scr_title);
 	}
 		break;
 
 	case AC_DISPLAY_SHOW_LOGO: {
 		APP_DBG_SIG("AC_DISPLAY_SHOW_LOGO\n");
-		SCREEN_TRAN(scr_menu_game_handle, &scr_menu_game);
+		SCREEN_TRAN(scr_title_handle, &scr_title);
 	}
 		break;
 

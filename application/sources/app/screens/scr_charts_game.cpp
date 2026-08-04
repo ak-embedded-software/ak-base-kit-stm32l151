@@ -49,35 +49,39 @@ view_screen_t scr_charts_game = {
 
 void view_scr_charts_game() {
 	view_render.fillScreen(BLACK);
-	view_render.drawRect(0, 0, LCD_WIDTH, LCD_HEIGHT, WHITE);
 	view_render.setTextSize(1);
 	view_render.setTextColor(WHITE);
-	view_render.setCursor(28, 4);
 	if (dungeon_level_view_mode == DUNGEON_LEVEL_VIEW_CREATOR) {
+		view_render.setCursor(SCR_CENTER_X(7), SCR_ROW_TITLE);
 		view_render.print("CREATOR");
 	}
 	else {
+		view_render.setCursor(SCR_CENTER_X(10), SCR_ROW_TITLE);
 		view_render.print("LEVEL INFO");
 	}
-	view_render.drawLine(6, 14, 121, 14, WHITE);
+	view_render.drawLine(SCR_PAD_L, SCR_ROW_RULE, SCR_PAD_R, SCR_ROW_RULE, WHITE);
 
+	/* Cỡ chữ 2, chuỗi 2 ký tự "L3" -> 24 px, canh giữa. Chiếm dòng 16..31. */
 	view_render.setTextSize(2);
-	view_render.setCursor(46, 20);
+	view_render.setCursor(SCR_CENTER_X_BIG(2), 16);
 	view_render.print("L");
 	view_render.print(dungeon_selected_level);
 
+	/* Hai dòng mô tả canh trái giống màn LeaderBoard cho đồng bộ. */
 	view_render.setTextSize(1);
-	view_render.setCursor(28, 42);
+	view_render.setCursor(SCR_PAD_L, 35);
+	view_render.print("Mode  : ");
 	view_render.print(dungeon_level_mode_name[dungeon_selected_level - 1]);
-	view_render.setCursor(16, 52);
-	view_render.print("Max stages:");
+	view_render.setCursor(SCR_PAD_L, 44);
+	view_render.print("Stages: ");
 	view_render.print(dungeon_level_stage_count[dungeon_selected_level - 1]);
 
-	view_render.setCursor(8, 56);
 	if (dungeon_level_view_mode == DUNGEON_LEVEL_VIEW_CREATOR) {
+		view_render.setCursor(SCR_CENTER_X(16), SCR_ROW_HINT);
 		view_render.print("MODE: Start test");
 	}
 	else {
+		view_render.setCursor(SCR_CENTER_X(10), SCR_ROW_HINT);
 		view_render.print("MODE: Back");
 	}
 }

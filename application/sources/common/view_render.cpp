@@ -1,5 +1,5 @@
 #include "view_render.h"
-Adafruit_ssd1306syp view_render;
+Adafruit_oled_drv view_render;
 
 static int view_render_rectangle(void* rectangle);
 static int view_render_dynamic(void* dynamic);

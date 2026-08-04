@@ -1,0 +1,4 @@
+build/
+dungeon-sim
+dungeon-sim.dSYM/
+*.eeprom

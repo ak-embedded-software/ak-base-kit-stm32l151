@@ -119,33 +119,43 @@ enum {
 #define AC_DISPLAY_IDLE_INTERVAL									(20000)
 #define AC_DISPLAY_LOGO_INTERVAL									(10000)
 #define AC_DISPLAY_SHOW_IDLE_BALL_MOVING_UPDATE_INTERAL				(150)
+#define AC_DISPLAY_MINIMUM_SCREEN_RENDER_INTERVAL_MS				(50) /* 50ms => Max 20 FPS */
+#define AC_DISPLAY_TITLE_BLINK_INTERVAL								(500) /* nửa chu kỳ nhấp nháy */
 
-/* define signal */
+/* define signal
+ *
+ * Signal space of the display task:
+ *   [0]      AK_SYS_DEFINE_SIG  - internal render request
+ *   [1..9]                      - button events (posted from app_bsp callbacks)
+ *   [10..]   AK_USER_DEFINE_SIG - screen level signals
+ */
 enum {
+	/* Render screen signal */
+	AC_DISPLAY_RENDER_SCREEN = AK_SYS_DEFINE_SIG,
+
+	/* Button signals */
+	AC_DISPLAY_BUTTON_MODE_PRESSED,
+	AC_DISPLAY_BUTTON_MODE_LONG_PRESSED,
+	AC_DISPLAY_BUTTON_MODE_RELEASED,
+	AC_DISPLAY_BUTTON_UP_PRESSED,
+	AC_DISPLAY_BUTTON_UP_LONG_PRESSED,
+	AC_DISPLAY_BUTTON_UP_RELEASED,
+	AC_DISPLAY_BUTTON_DOWN_PRESSED,
+	AC_DISPLAY_BUTTON_DOWN_LONG_PRESSED,
+	AC_DISPLAY_BUTTON_DOWN_RELEASED,
+
+	/* Screen signals */
 	AC_DISPLAY_INITIAL = AK_USER_DEFINE_SIG,
 	AC_DISPLAY_SHOW_LOGO,
 	AC_DISPLAY_SHOW_IDLE,
 	AC_DISPLAY_SHOW_IDLE_BALL_MOVING_UPDATE,
 	AC_DISPLAY_SHOW_FW_UPDATE,
 	AC_DISPLAY_SHOW_FW_UPDATE_ERR,
-};
 
-/*****************************************************************************/
-/*  BUTTON task define
- */
-/*****************************************************************************/
-/* define timer */
-/* define signal */
-enum {
-	AC_DISPLAY_BUTTON_MODE_PRESSED = 1,						
-	AC_DISPLAY_BUTTON_MODE_LONG_PRESSED,					
-	AC_DISPLAY_BUTTON_MODE_RELEASED,
-	AC_DISPLAY_BUTTON_UP_PRESSED,							
-	AC_DISPLAY_BUTTON_UP_LONG_PRESSED,					
-	AC_DISPLAY_BUTTON_UP_RELEASED,
-	AC_DISPLAY_BUTTON_DOWN_PRESSED,						
-	AC_DISPLAY_BUTTON_DOWN_LONG_PRESSED,					
-	AC_DISPLAY_BUTTON_DOWN_RELEASED,
+	/* Thêm ở CUỐI enum, đừng chèn vào giữa.
+	 * Mấy giá trị trên đã nằm trong firmware đang chạy ngoài bo, chèn giữa là
+	 * đổi số của tất cả signal đứng sau nó. */
+	AC_DISPLAY_TITLE_BLINK,
 };
 
 /*****************************************************************************/

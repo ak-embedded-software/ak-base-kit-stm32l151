@@ -18,6 +18,7 @@
 #include "cmd_line.h"
 #include "xprintf.h"
 #include "view_render.h"
+#include "screens_layout.h"
 
 #include "sys_ctrl.h"
 #include "sys_io.h"
@@ -39,7 +40,7 @@
 
 #include "led.h"
 #include "eeprom.h"
-#include "Adafruit_ssd1306syp.h"
+#include "Adafruit_oled_drv.h"
 #include "flash.h"
 
 /*****************************************************************************/
@@ -470,21 +471,19 @@ int32_t shell_lcd(uint8_t* argv) {
 		break;
 
 	case 't':
-		/* ak logo */
-#define AK_LOGO_AXIS_X	23
-#define AK_LOGO_TEXT	(AK_LOGO_AXIS_X + 4)
-
+		/* ak logo - dùng chung hằng số bố cục với màn startup, xem
+		 * screens_layout.h. Bốn dòng ASCII phải cách nhau đúng 8 px. */
 		view_render.setTextSize(1);
 		view_render.setTextColor(WHITE);
-		view_render.setCursor(AK_LOGO_AXIS_X, 3);
+		view_render.setCursor(SCR_CENTER_X(14), 10);
 		view_render.print("   __    _  _ ");
-		view_render.setCursor(AK_LOGO_AXIS_X, 10);
+		view_render.setCursor(SCR_CENTER_X(14), 10 + SCR_CHAR_H);
 		view_render.print("  /__\\  ( )/ )");
-		view_render.setCursor(AK_LOGO_AXIS_X, 20);
+		view_render.setCursor(SCR_CENTER_X(14), 10 + SCR_CHAR_H * 2);
 		view_render.print(" /(__)\\ (   (");
-		view_render.setCursor(AK_LOGO_AXIS_X, 30);
+		view_render.setCursor(SCR_CENTER_X(14), 10 + SCR_CHAR_H * 3);
 		view_render.print("(__)(__)(_)\\_)");
-		view_render.setCursor(AK_LOGO_TEXT, 42);
+		view_render.setCursor(SCR_CENTER_X(13), 45);
 		view_render.print("Active Kernel");
 		view_render.update ();
 		break;

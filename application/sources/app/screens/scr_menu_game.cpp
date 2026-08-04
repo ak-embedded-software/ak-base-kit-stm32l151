@@ -22,16 +22,34 @@
 	Bước 5: Thêm địa chỉ cho item:
 			- Thêm 1 item vào: "screen_tran_menu()" rồi điền địa chỉ muốn 
 			chuyển tới.
-	## Nếu icon không cân xứng vào "menu_items_icon_axis_y[3]" để điều chỉnh lại.
+	## Icon tự canh giữa thẻ trong "menu_icon_axis_y()", không cần chỉnh tay.
+	## Icon nên cao tối đa 20 px, cao hơn sẽ bị kẹp lại cho khỏi phá lề 3 px.
 */
 
 /*****************************************************************************/
 /* Variable and Struct Declaration - Menu game */
 /*****************************************************************************/
-// Screen 
-#define STEP_MENU_CHOSSE				(22)
+// Screen
 #define NUMBER_MENU_ITEMS				(6)
-#define	SCREEN_MENU_H					(64)
+
+/* Bố cục menu bám theo lề chung 3 px trong screens_layout.h.
+ * Vùng vẽ được là dòng 3..60, tức 58 dòng. Chia cho 3 thẻ:
+ *   3 thẻ cao 18 + 2 khe hở 2 px = 18*3 + 2*2 = 58 dòng. Vừa khít.
+ * Nên thẻ nằm ở dòng 3..20, 23..40, 43..60. Bước nhảy là 20. */
+#define DUNGEON_MENU_FRAME_X			SCR_PAD_L		/* 3 */
+#define DUNGEON_MENU_FRAME_W			(116)			/* 3..118 */
+#define DUNGEON_MENU_FRAME_H			(18)
+#define DUNGEON_MENU_FRAME_PITCH		(20)
+#define DUNGEON_MENU_FRAME_TOP			SCR_PAD_T		/* 3 */
+
+/* Thanh cuộn nằm sát lề phải: 122..124 là đúng SCR_PAD_R. */
+#define DUNGEON_MENU_SCROLL_X			(122)
+#define DUNGEON_MENU_SCROLL_W			(3)
+#define DUNGEON_MENU_TRACK_TOP			SCR_PAD_T
+#define DUNGEON_MENU_TRACK_H			(SCR_PAD_B - SCR_PAD_T + 1)	/* 58 */
+
+#define DUNGEON_MENU_ICON_AXIS_X		(6)
+#define DUNGEON_MENU_TEXT_AXIS_X		(34)
 
 enum {
 	MENU_ITEM_CONTINUE = 0,
@@ -42,14 +60,16 @@ enum {
 	MENU_ITEM_SETTINGS,
 };
 
-// Menu items name
+/* Tên item không cần chèn khoảng trắng để đẩy chữ nữa.
+ * Vị trí chữ do DUNGEON_MENU_TEXT_AXIS_X quyết định. Chuỗi dài nhất là
+ * "Creator Mode" = 12 ký tự = 72 px, bắt đầu ở 34 thì kết ở 105, vẫn trong thẻ. */
 static char menu_items_name[NUMBER_MENU_ITEMS][20] = {
-	"   Continue       ",		// item 1
-	"   New Game       ",		// item 2
-	"   Level Info     ",		// item 3
-	"   LeaderBoard    ",		// item 4
-	"   Creator Mode   ",		// item 5
-	"   Settings       ",		// item 6
+	"Continue",					// item 1
+	"New Game",					// item 2
+	"Level Info",				// item 3
+	"LeaderBoard",				// item 4
+	"Creator Mode",				// item 5
+	"Settings",					// item 6
 };
 
 // Menu items icon
@@ -83,12 +103,6 @@ uint8_t menu_items_icon_size_h[NUMBER_MENU_ITEMS] = {
 
 // Menu items color
 uint8_t menu_items_icon_color[NUMBER_MENU_ITEMS];
-// Menu items axis Y
-uint8_t menu_items_icon_axis_y[3] = {
-	2,							// icon frame 1
-	24,							// icon frame 2
-	46							// icon frame 3
-};
 
 // Screen and item location on the Menu
 typedef struct {
@@ -98,18 +112,18 @@ typedef struct {
 
 // Scroll bar
 typedef struct {
-	uint8_t axis_x = 126;
-	uint8_t axis_y = 0;
-	uint8_t size_W = 3;
-	uint8_t size_h = SCREEN_MENU_H / 3;
+	uint8_t axis_x = DUNGEON_MENU_SCROLL_X;
+	uint8_t axis_y = DUNGEON_MENU_TRACK_TOP;
+	uint8_t size_W = DUNGEON_MENU_SCROLL_W;
+	uint8_t size_h = DUNGEON_MENU_TRACK_H / 3;
 } scr_menu_scroll_bar_t;
 
 // Frames
 typedef struct {
-	uint8_t axis_x = 0;
-	uint8_t axis_y = 0;
-	uint8_t size_w = 123;
-	uint8_t size_h = 20;
+	uint8_t axis_x = DUNGEON_MENU_FRAME_X;
+	uint8_t axis_y = DUNGEON_MENU_FRAME_TOP;
+	uint8_t size_w = DUNGEON_MENU_FRAME_W;
+	uint8_t size_h = DUNGEON_MENU_FRAME_H;
 	uint8_t size_r = 3;
 } scr_menu_frames_t;
 
@@ -161,20 +175,34 @@ view_screen_t scr_menu_game = {
 	.focus_item = 0,
 };
 
+/* Icon cao không đều (16..20 px) nên canh giữa theo thẻ.
+ * Icon cao 20 sẽ lòi ra 1 px mỗi bên, nhưng khe hở giữa hai thẻ là 2 px
+ * nên nó không đè lên thẻ kế bên. Riêng thẻ đầu và thẻ cuối thì kẹp lại
+ * để không phá lề 3 px. */
+static int16_t menu_icon_axis_y(uint8_t frame_index, uint8_t item) {
+	int16_t frame_y = (int16_t)frame[frame_index].axis_y;
+	int16_t icon_h = (int16_t)menu_items_icon_size_h[item];
+	int16_t y = frame_y + ((DUNGEON_MENU_FRAME_H - icon_h) / 2);
+
+	if (y < SCR_PAD_T) {
+		y = SCR_PAD_T;
+	}
+	if ((y + icon_h - 1) > SCR_PAD_B) {
+		y = SCR_PAD_B - icon_h + 1;
+	}
+	return y;
+}
+
 void view_scr_menu_game() {
-#define DUNGEON_MENU_ICON_AXIS_X			(7)
-#define DUNGEON_MENU_TEXT_AXIS_X			(32)
-	// Scroll bar
-	view_render.fillRect(	scroll_bar.axis_x - 1, \
+	// Scroll bar - đường ray chạy đúng trong lề, con trượt đè lên trên
+	view_render.drawFastVLine(	DUNGEON_MENU_SCROLL_X + 1, \
+								DUNGEON_MENU_TRACK_TOP, \
+								DUNGEON_MENU_TRACK_H, \
+								WHITE);
+	view_render.fillRect(	scroll_bar.axis_x, \
 							scroll_bar.axis_y, \
 							scroll_bar.size_W, \
 							scroll_bar.size_h, \
-							WHITE);
-	view_render.drawBitmap(	scroll_bar.axis_x, \
-							0, \
-							dot_icon, \
-							1, \
-							SCREEN_MENU_H, \
 							WHITE);
 	// Frame White
 	view_render.fillRoundRect(	frame_white.axis_x, \
@@ -199,13 +227,13 @@ void view_scr_menu_game() {
 		uint8_t item = menu_visible_list[visible_index];
 	// Icon
 		view_render.drawBitmap(	DUNGEON_MENU_ICON_AXIS_X, \
-								menu_items_icon_axis_y[i], \
+								menu_icon_axis_y(i, item), \
 								menu_items_icon[item], \
 								menu_items_icon_size_w[item], \
 								menu_items_icon_size_h[item], \
 								menu_items_icon_color[item]);
 	}
-	// Text Menu
+	// Text Menu - chữ cao 8 px, canh giữa thẻ cao 18 px thì lệch xuống 5 px
 	view_render.setTextSize(1);
 	for (uint8_t i = 0; i < 3; i++) {
 		uint8_t visible_index = (uint8_t)(screen_menu.screen + i);
@@ -214,7 +242,7 @@ void view_scr_menu_game() {
 		}
 		uint8_t item = menu_visible_list[visible_index];
 		view_render.setTextColor(menu_items_icon_color[item]);
-		view_render.setCursor(DUNGEON_MENU_TEXT_AXIS_X, menu_items_icon_axis_y[i]+5);
+		view_render.setCursor(DUNGEON_MENU_TEXT_AXIS_X, frame[i].axis_y + 5);
 		view_render.print(menu_items_name[item]);
 	}
 }
@@ -244,23 +272,29 @@ void update_menu_screen_chosse() {
 		screen_menu.screen = 0;
 	}
 
-	// Frames location
-	frame_white.axis_y =frame[screen_menu.location-screen_menu.screen].axis_y;
-	frame[0].axis_y = 0;
-	frame[1].axis_y = 22;
-	frame[2].axis_y = 44;
+	// Frames location - đặt trước rồi mới lấy vị trí cho khung sáng
+	frame[0].axis_y = DUNGEON_MENU_FRAME_TOP;
+	frame[1].axis_y = DUNGEON_MENU_FRAME_TOP + DUNGEON_MENU_FRAME_PITCH;
+	frame[2].axis_y = DUNGEON_MENU_FRAME_TOP + DUNGEON_MENU_FRAME_PITCH * 2;
+	frame_white.axis_y = frame[screen_menu.location - screen_menu.screen].axis_y;
 
 	for (uint8_t i = 0; i < NUMBER_MENU_ITEMS; i++) {
 		menu_items_icon_color[i] = WHITE;
 	}
 	menu_items_icon_color[menu_visible_list[screen_menu.location]] = BLACK;
 
-	// update scroll bar
-	scroll_bar.size_h = (uint8_t)(SCREEN_MENU_H / menu_visible_count);
+	// update scroll bar - con trượt chạy trong đường ray 3..60
+	scroll_bar.size_h = (uint8_t)(DUNGEON_MENU_TRACK_H / menu_visible_count);
 	if (scroll_bar.size_h < 4) {
 		scroll_bar.size_h = 4;
 	}
-	scroll_bar.axis_y = (uint8_t)(SCREEN_MENU_H*screen_menu.location / menu_visible_count);
+	scroll_bar.axis_y = (uint8_t)(DUNGEON_MENU_TRACK_TOP
+			+ (DUNGEON_MENU_TRACK_H * screen_menu.location) / menu_visible_count);
+
+	/* Chốt lại: con trượt không được vượt quá đáy vùng vẽ. */
+	if ((scroll_bar.axis_y + scroll_bar.size_h - 1) > SCR_PAD_B) {
+		scroll_bar.axis_y = (uint8_t)(SCR_PAD_B - scroll_bar.size_h + 1);
+	}
 }
 
 void screen_tran_menu() {

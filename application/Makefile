@@ -102,6 +102,13 @@ LIB_PATH += -L$(dir $(LIBGCC))
 # Interface option
 IF_OPTION +=	$(IF_LINK_OPTION)		\
 
+# OLED controller select. Adafruit_oled_drv has separate init sequences for
+# SH1106 / SSD1306 / SSD1309 and #errors if none is selected.
+# The AK base kit v3 carries an SSD1309.
+OLED_OPTION +=				\
+		-DSSD1309_DRIVER_EN	\
+		-USH1106_DRIVER_EN	\
+
 # Console log compile option
 CONSOLE_OPTION +=			\
 		-DLOGIN_PRINT_EN	\
@@ -109,7 +116,11 @@ CONSOLE_OPTION +=			\
 		-DAPP_PRINT_EN		\
 		-DSYS_DBG_EN		\
 		-DAPP_DBG_EN		\
-		-DAPP_DBG_SIG_EN	\
+
+# NOTE: -DAPP_DBG_SIG_EN prints every dispatched signal over UART (blocking xprintf).
+# With a 100ms game tick posting to 5 tasks this measurably delays the game loop.
+# Re-enable only when debugging signal flow.
+#		-DAPP_DBG_SIG_EN
 
 GENERAL_FLAGS +=			\
 		$(RTOS_DEV_OPTION)	\
@@ -122,6 +133,7 @@ GENERAL_FLAGS +=			\
 		$(APP_ADDR_OPTION)	\
 		$(USB_OPTION)		\
 		$(IF_OPTION)		\
+		$(OLED_OPTION)		\
 		-DUSE_STDPERIPH_DRIVER	\
 		-DSTM32L1XX_MD		\
 		-DSTM32L_PLATFORM	\
