@@ -1,0 +1,69 @@
+/* 
+ * ModbusMaster Library: A portable MODBUS master for MODBUS ASCII/RTU/TCP.
+ * Copyright (c) 2008-2011 Christian Walter <cwalter@embedded-solutions.at>
+ * All rights reserved.
+ *
+ * $Id: main.dox,v 1.11 2011-11-22 00:50:09 embedded-solutions.cwalter Exp $
+ */
+
+/*! \mainpage 
+
+The MODBUS master stack was designed for embedded engineers by embedded engineers to get an easy and ready to use software component. Using this stack can greatly reduce your development and testing time. The stack supports the following features:
+ - Very low memory footprint of about 300 - 350Bytes for RTU and ASCII and a single instance.
+ - Multiple master instances supported on a single system.
+ - Support of very small systems without an operating system to larger system using for example linux.
+ - Support for almost all MODBUS functions codes.
+ - Royalty free license.
+ - Delivered in source code to protect your investions.
+ - Delivered with a lot of already existing ports.
+ - Free software updates and bugfixes.
+ - Online bug reporting and open for customer improvements.
+ - Tested using latest industry practices using unit testing on the core stack with 100% Modified Condition/Decision Coverage and 100% Statement Coverage.
+
+\section requirements Requirements
+A C-compiler and an engineer capable of 'C' programming.  If there already exists a port for your target platform integrating the stack into your development environment is a matter of hours. In the other case a new port must be created but we provide the following tools to ease the work of developers:
+ - A complete test suite which can be used to test the port.
+ - Two templates for systems with and without an operating system which can be found in the <code>demo/BARE</code> and <code>/demo/BARERTOS</code>.
+On request we can also provide complete and tested ports for your platform.
+
+\section intro Introduction
+
+\section ports Available ports
+\par ARM devices:
+- ARM Cortex M3 (STM32) with GCC.
+- ARM Cortex M3 (Luminary Micro) with Keil.
+- ARM Cortex M3 (Luminary Micro) with FreeRTOS/lwIP and Keil
+- ARM 7 (SAM7X) with FreeRTOS
+- ARM Cortex M3 (LPC1758)
+- ARM 7 (STR71X)
+
+\par Coldfire devices:
+ - MCF5235 with CMX.
+ 
+\par AVR devices:
+- MODBUS RTU/ASCII on ATMega32, ATMega128 and ATMega168, ATMega328P, ATMega644P, ATMega2561 with WinAVR. See AVR/demo.c for an example.
+
+\par Nut/OS:
+ - Port for Nut/OS on XNUT-100.
+
+\par PIC
+ - PIC18F port.
+
+\par Windows
+ - WIN32 port.
+ - WIN32 DLL.
+
+\par Cygwin:
+ - MODBUS RTU/ASCII on Cygwin
+ - MODBUS TCP on Cygwin
+ 
+\par Linux:
+ - MODBUS RTU/ASCII on Linux
+ - MODBUS TCP on Linux
+
+*/
+
+
+/*!
+ \example AVR/demo.c
+ */

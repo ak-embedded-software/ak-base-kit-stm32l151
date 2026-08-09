@@ -1,0 +1,141 @@
+[Stack]
+FillEnabled=0
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnLogOnly=1
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[PlDriver]
+MemConfigValue=
+FirstRun=0
+[Jet]
+DisableInterrupts=0
+MultiCoreRunAll=0
+JetConnSerialNo=78225
+JetConnFoundProbes=
+OnlineReset=Software
+PrevWtdReset=Hardware
+[ArmDriver]
+EnableCache=1
+[DebugChecksum]
+Checksum=2095521660
+[CodeCoverage]
+Enabled=_ 0
+[Exceptions]
+StopOnUncaught=_ 0
+StopOnThrow=_ 0
+[CallStack]
+ShowArgs=0
+[Disassembly]
+MixedMode=1
+[SWOManager]
+SamplingDivider=8192
+OverrideClock=0
+CpuClock=0
+SwoClock=0
+DataLogMode=0
+ItmPortsEnabled=63
+ItmTermIOPorts=1
+ItmLogPorts=0
+ItmLogFile=$PROJ_DIR$\ITM.log
+PowerForcePC=1
+PowerConnectPC=1
+[PlCacheRanges]
+CustomRanges0=0 0 1048576 1 2048
+CustomRangesText0=
+CustomRanges1=0 1048576 8192 2 1048576
+CustomRangesText1=
+CustomRanges2=0 536805376 65536 0 2048
+CustomRangesText2=
+CustomRanges3=0 536870912 65536 0 2048
+CustomRangesText3=
+CustomRanges4=0 570425344 33554432 2 33554432
+CustomRangesText4=
+CustomRanges5=0 1073741824 33554432 2 0
+CustomRangesText5=Peripheral
+CustomRanges6=0 1107296256 33554432 2 0
+CustomRangesText6=bit-banding
+CustomRanges7=0 1610612736 2147483648 2 2415919104
+CustomRangesText7=
+CustomRanges8=0 3758096384 1048576 2 1048576
+CustomRangesText8=
+[Interrupts]
+Enabled=1
+[MemConfig]
+Base=1
+Manual=0
+Ddf=1
+TypeViol=0
+Stop=1
+[Simulator]
+Freq=10000000
+MultiCoreRunAll=1
+[struct_types]
+Fmt0=T_NODE-ipa	4	0
+[SWOTraceWindow]
+ForcedPcSampling=0
+ForcedInterruptLogs=0
+ForcedItmLogs=0
+EventCPI=0
+EventEXC=0
+EventFOLD=0
+EventLSU=0
+EventSLEEP=0
+[PowerLog]
+LogEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+ShowTimeSum=0
+Title_0=ITrgPwr
+Symbol_0=0 4 1
+LiveEnabled=0
+LiveFile=PowerLogLive.log
+[DataLog]
+LogEnabled=0
+SumEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+ShowTimeSum=1
+[EventLog]
+LogEnabled=0
+SumEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+ShowTimeSum=1
+SumSortOrder=0
+[InterruptLog]
+LogEnabled=0
+SumEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+ShowTimeSum=1
+SumSortOrder=0
+[CallStackLog]
+Enabled=0
+[DriverProfiling]
+Enabled=0
+Mode=3
+Graph=0
+Symbiont=0
+Exclusions=
+[PowerProbe]
+Frequency=10000
+Probe0=ITrgPwr
+ProbeSetup0=2 1 1 2 0 0
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[Disassemble mode]
+mode=0
+[Breakpoints2]
+Count=0
+[Aliases]
+Count=0
+SuppressDialog=0

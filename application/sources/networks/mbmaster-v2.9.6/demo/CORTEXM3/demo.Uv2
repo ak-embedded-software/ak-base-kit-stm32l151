@@ -1,0 +1,119 @@
+### uVision2 Project, (C) Keil Software
+### Do not modify !
+
+Target (Demo), 0x0004 // Tools: 'ARM-ADS'
+
+Group (System)
+Group (Demo)
+Group (Port)
+Group (MODBUS)
+
+File 1,2,<.\System\Startup.s><Startup.s>
+File 1,4,<C:\Keil\ARM\RV31\LIB\Luminary\DriverLib.lib><DriverLib.lib>
+File 2,1,<.\demo.c><demo.c>
+File 3,1,<.\Port\mbportserial.c><mbportserial.c>
+File 3,5,<.\Port\mbport.h><mbport.h>
+File 3,5,<.\Port\mbmconfig.h><mbmconfig.h>
+File 3,1,<.\Port\mbportother.c><mbportother.c>
+File 3,1,<.\Port\mbportevent.c><mbportevent.c>
+File 3,1,<.\Port\mbporttimer.c><mbporttimer.c>
+File 4,5,<..\..\mbmaster\include\internal\mbmiconfig.h><mbmiconfig.h>
+File 4,1,<..\..\mbmaster\mbm.c><mbm.c>
+File 4,1,<..\..\mbmaster\rtu\mbmrtu.c><mbmrtu.c>
+File 4,1,<..\..\mbmaster\rtu\mbmcrc.c><mbmcrc.c>
+File 4,1,<..\..\mbmaster\common\mbutils.c><mbutils.c>
+File 4,1,<..\..\mbmaster\functions\mbmfuncinput.c><mbmfuncinput.c>
+File 4,1,<..\..\mbmaster\functions\mbmfuncholding.c><mbmfuncholding.c>
+File 4,1,<..\..\mbmaster\ascii\mbmascii.c><mbmascii.c>
+
+
+Options 1,0,0  // Target 'Demo'
+ Device (LM3S3748)
+ Vendor (Luminary Micro)
+ Cpu (IRAM(0x20000000-0x2000FFFF) IROM(0-0x1FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3"))
+ FlashUt ()
+ StupF ("STARTUP\Luminary\Startup.s" ("Luminary Startup Code"))
+ FlashDR (UL2CM3(-UV2077N9E -O14 -S1 -C0 -N00("ARM CoreSight JTAG-DP") -D00(3BA00477) -L00(4) -TO18 -TC10000000 -TP21 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP7 -FO7 -FD20000000 -FC800 -FN1 -FF0LM3S_128 -FS00 -FL020000))
+ DevID (4535)
+ Rgf (LM3Sxxxx.H)
+ Mem ()
+ C ()
+ A ()
+ RL ()
+ OH ()
+ DBC_IFX ()
+ DBC_CMS ()
+ DBC_AMS ()
+ DBC_LMS ()
+ UseEnv=0
+ EnvBin ()
+ EnvInc ()
+ EnvLib ()
+ EnvReg (ÿLuminary\)
+ OrgReg (ÿLuminary\)
+ TgStat=16
+ OutDir (.\Build\)
+ OutName (demo)
+ GenApp=1
+ GenLib=0
+ GenHex=1
+ Debug=1
+ Browse=1
+ LstDir (.\)
+ HexSel=1
+ MG32K=0
+ TGMORE=0
+ RunUsr 0 0 <>
+ RunUsr 1 0 <>
+ BrunUsr 0 0 <>
+ BrunUsr 1 0 <>
+ CrunUsr 0 0 <>
+ CrunUsr 1 0 <>
+ SVCSID <>
+ GLFLAGS=1790
+ ADSFLGA { 243,31,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ACPUTYP ("Cortex-M3")
+ RVDEV ()
+ ADSTFLGA { 0,12,0,2,99,0,0,66,0,0,0,0,0,0,0,0,0,0,0,0 }
+ OCMADSOCM { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ OCMADSIRAM { 0,0,0,0,32,0,0,1,0 }
+ OCMADSIROM { 1,0,0,0,0,0,0,2,0 }
+ OCMADSXRAM { 0,0,0,0,0,0,0,0,0 }
+ OCR_RVCT { 1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,2,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,0,1,0,0,0,0,0,0,0,0,0,0 }
+ RV_STAVEC ()
+ ADSCCFLG { 5,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ADSCMISC ()
+ ADSCDEFN (rvmdk PART_LM3S3748 TARGET_IS_DUSTDEVIL_RA0)
+ ADSCUDEF ()
+ ADSCINCD (.;.\Port;..\..\mbmaster\include)
+ ADSASFLG { 1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ADSAMISC ()
+ ADSADEFN ()
+ ADSAUDEF ()
+ ADSAINCD ()
+ PropFld { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ IncBld=1
+ AlwaysBuild=0
+ GenAsm=0
+ AsmAsm=0
+ PublicsOnly=0
+ StopCode=3
+ CustArgs ()
+ LibMods ()
+ ADSLDFG { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ADSLDTA (0x00000000)
+ ADSLDDA (0x20000000)
+ ADSLDSC ()
+ ADSLDIB ()
+ ADSLDIC ()
+ ADSLDMC ()
+ ADSLDIF ()
+ ADSLDDW ()
+  OPTDL (SARMCM3.DLL)()(DLM.DLL)(-pLM3S3748)(SARMCM3.DLL)()(TLM.DLL)(-pLM3S3748)
+  OPTDBG 48126,1,()()()()()()()()()() (BIN\UL2CM3.DLL)()()()
+ FLASH1 { 9,0,0,0,1,0,0,0,1,16,0,0,0,0,0,0,0,0,0,0 }
+ FLASH2 (BIN\UL2CM3.DLL)
+ FLASH3 ("" ())
+ FLASH4 ()
+EndOpt
+

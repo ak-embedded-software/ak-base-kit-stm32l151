@@ -1,0 +1,2 @@
+Các bạn kiểm tra thông tin pinout tại đường link sau:
+https://epcb.vn/products/ak-embedded-base-kit-lap-trinh-nhung-vi-dieu-khien-mcu

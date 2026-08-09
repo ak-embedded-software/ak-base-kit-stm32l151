@@ -1,0 +1,469 @@
+2015-06-14 (REL_2_9_6) Christian Walter <cwalter@embedded-solutions.at>
+ Notes: Added improved Windows/LINUX/CYGWIN port which uses on the
+  fly CRC16 calculation and end of frame estimation by frame inspection.
+  This allows much faster end of frame detection as the slow timers of
+  the operating system no longer limit performance. 
+ 
+ Detailed notes:
+  - FEATURE (WIN32) Improved serial porting layer for faster EOF 
+     detection. 
+  - FEATURE (LINUX) Improved serial porting layer for faster EOF 
+     detection. 
+  
+2015-04-20 (REL_2_9_5) Christian Walter <cwalter@embedded-solutions.at:
+ Notes: Bugfix for linux port with mutex attributes not fread
+  
+ Detailed notes:
+  - BUGFIX (linux): pthread attributes not fread in mbportother
+  
+2014-11-25 (REL_2_9_4) Christian Walter <cwalter@embedded-solutions.at:
+ Notes: Added new master port for uC3/uNet3.
+ 
+ Detailed notes:
+  - FEATURE (uNet3): Added new port for uC3/uNet3 
+ 
+2014-08-18 (REL_2_9_3) Christian Walter <cwalter@embedded-solutions.at:
+ Notes: Fixed bug in mbmascii.h when C++ is enabled but MODBUS ascii is
+  not. Update lwIP port for all platforms. Fixed bug in LINUX port with
+   MBM_TCP_PURGE_BEFORE_SEND resulting in blocking read.
+
+ Detailed notes:
+  - BUGFIX (ALL): The mbmascii.h header file results in a compile error
+     if C++ is used and ASCII is not enabled.
+  - FEATURE (lwIP): New improved lwIP port
+  - BUGFIX (Linux): Fixed bug with master not polling correctly because
+     if MBM_TCP_PURGE_BEFORE_SEND is enabled the read would block on 
+     an empty socket.
+
+2014-03-09 (REL_2_9_2) Christian Walter <cwalter@embedded-solutions.at>:
+ Notes: Improved error handling for TCP master. Added ATxmega support with
+   ASF framework.
+
+ Detailed notes:
+  - FEATURE (TCP): Added new define MBM_TCP_PURGE_BEFORE_SEND to purge
+     TCP socket before sending new data. This avoid problems in case with
+     timeouts.
+  - BUGFIX (WIN32): Fixed bug in Win32 TCP layer with read function call
+     not setting value of bytes received correctly.
+  - BUGFIX (TCP): In case the transaction ID does not match the current
+     pending transaction ID the response no longer posts a receive event
+     but is dropped.
+  - FEATURE (ATxmega): Addeas ASF/ATxmega port
+
+2012-03-17 (REL_2_9_1) Christian Walter <cwalter@embedded-solutions.at>:
+ Notes: Fixed bug with master which could not use address 255. Changed
+   macros for enabling debugging support in master.
+
+ Detailed notes:
+  - BUGFIX (UDP)        : Address 255 now allowed for UDP master queries.
+  - BUGFIX (DEBUG)      : Changed MBP_ENABLE_DEBUG_FACILITY to
+      MBM_ENABLE_DEBUG_FACILITY in master stack to correctly control
+      debugging.
+  - BUGFIX (ALL)        : The response timeout was not stopped when frame
+      sending failed.
+
+2011-11-17 (REL_2_9_0) Christian Walter <cwalter@embedded-solutions.at>:
+ Notes: Added MODBUS UDP support. RTU/ASCII allow now individual stop bits.
+   Fixed bug with TCP address 255 (any address) not supported by master.
+
+ Detailed notes:
+  - FEATURE (ALL)       : Added MODBUS UDP support.
+  - FEATURE (RTU/ASCII) : New additional init function for RTU/ASCII which
+      allows setting of custom stopbits.
+  - BUGFIX (TCP)        : Address 255 now allowed for TCP master queries
+
+2011-05-22 (REL_2_8_0) Christian Walter <cwalter@embedded-solutions.at>:
+ Notes: Added read file record/write file record support.
+
+ Detailed notes:
+  - FEATURE (ALL)       : Added read/write file record support.
+
+2011-01-02 (REL_2_7_0) Christian Walter <cwalter@embedded-solutions.at>:
+ Notes: Added Eclipse project file for Linux port. Added GCC port for
+  FreeRTOS/lwIP on Cortex M3. Added support for LM3S8962. Serial porting
+  layer for Cortex M3/FreeRTOS. Updated AT91SAM7X port. Fixed bug in
+  discrete coil functions with register 0. Added CodeVision AVR compiler
+  support. Added SMP430 MODBUS master port. Added NXP LPC1768 port.
+
+ Detailed notes:
+  - FEATURE (NXP/LPC17XX) : Added lwIP/RTU port for NXP LPC1768 with
+      GCC (Code-Red).
+  - FEATURE (LWIP)      : Added FreeRTOS/lwIP for GCC.
+  - FEATURE (LINUX)     : Added Eclipse project file.
+  - FEATURE (M3)        : Added port for Cortex M3 RS485.
+  - FEATURE (RTU/ASCII) : Added support for Report Slave ID function.
+  - FEATURE (AT91SAM7X) : Updated port to latest FreeRTOS versions.
+  - BUGFIX (ALL)        : Fixed bug with discrete coils and address 0
+                          not working.
+  - FEATURE (AVR)       : Added CodeVision AVR compiler support.
+  - FEATURE (ALL)       : Minor fixes for LINT tool.
+  - FEATURE (MSP430)    : New port.
+
+2009-02-21 (REL_2_6_1) Christian Walter <cwalter@embedded-solutions.at>:
+ Notes: Added Nut/OS port for XNUT-100 hardware platform for RTU/ASCII.
+  Debugging support is now more portable because different format 
+  string on different platforms can now be specified. Added support for
+  ICCAVR on AVR.
+  
+ Detailed notes:
+  - FEATURE (ALL)    : Debugging support now more portable.
+  - FEATURE (NUT/OS) : Added new port for Nut/OS.
+  - FEATURE (AVR)    : Now support ImageCraft C compiler.
+
+2009-02-06 (REL_2_6_0) Christian Walter <cwalter@embedded-solutions.at>:
+ Notes: Further WIN32 improvements. Added FreeRTOS/lwIP port for Luminary
+  Micro Cortex M3.
+
+ Detailed notes:
+  - BUGFIX (WIN32)  : Fixed bug with SetEvent in WIN32 working not as 
+     expected. 
+  - FEATURE (lwIP)  : Added FreeRTOS/lwIP port for Cortex M3.
+  - BUGFIX (ALL)    : If initialization of handle failed MODBUS stack
+     return MB_ENOERR instead of an error.
+  - BUGFIX (ALL)    : Removed assert in illegal state because it broke
+     the unit tests.
+  - BUGFIX (RTU/ASCII) : Fixed bug where stack can go into an assert
+     if a timeout occurs and before properly handling the timeout the
+     serial porting layer posts a t35 timeout. In this case the stack
+     keeps the previous events which can lead to an assert in the next
+     call. 
+  - FEATURE (AVR)   : Added port for ATMega644P
+
+2009-12-16 (REL_2_5_1) Christian Walter <cwalter@embedded-solutions.at>:
+ Notes: Fixed bug in WIN32 where timeouts did not work as expected. Fixed
+  bug in RTU/ASCII mode when porting layer takes to long for sending data.
+  Added logging in the core stack.
+
+ Detailed notes: 
+  - BUGFIX (WIN32)  : Timeout implementation in WIN32 did not work
+     as expected.
+  - BUGFIX (ALL)    : After a timeout the transmitter could still be in the
+     send TX state and the master wants to issue the next request. This
+     case would lead to an assertion. This is very rare.
+  - FEATURE (ALL)   : Added a generic logging layer to the core stack
+     which is useful for debugging runtime problems.
+  - FEATURE (WIN32) : Implemented new core logging layer. The logging layer
+     is fully configurable by environment variables. See demo/WIN32DLL for
+     more details.
+  
+2009-11-21 (REL_2_5_0) Christian Walter <cwalter@embedded-solutions.at>:
+ Notes: Complety overworked LINUX port with support for building the
+  MODBUS library as a shared library. 
+
+ Detailed notes:
+  - FEATURE (LINUX) : Completly new port supporting different flavours
+     of linux. Every customers is recommended to switch to this new
+     version.
+
+2009-10-18 (REL_2_4_1) Christian Walter <cwalter@embedded-solutions.at>:
+ Notes: Fixed bug with write multiple coil functions when starting at
+  address zero. Fixed problem with PIC compiler for PIC18. Fixed bug
+  in ATMega128 port where second UART did not work correctly. Fixed
+  bug in MODBUS TCP where return value was not set. Added support for
+  ATMega2561.
+  
+ Detailed notes:
+   - BUGFIX (COILS) : The write multiple coil implemented a check for
+      the starting address incorrectly. The effect was that registers
+      starting at zero could not be written.
+   - BUGFIX (PIC)   : Fixed compile problems with PIC compiler with the
+      MB_IS_VALID_HDL define.
+   - BUGFIX (AVR)   : Second UART port did not work correctly because
+      the internal index was set incorrectly. Added support for ATMega64.
+   - FEATURE (ALL)  : Change API of protocol analyzer to support 
+      additional context. Existing users can simply pass a NULL
+      argument if the feature is not needed.
+   - FEATURE (ALL)  : Fixed race condition in analyzer.
+   - BUGFIX (TCP)   : Fixed bug in MODBUS TCP where return code was not
+      set.
+   - FEATURE (AVR)  : Added port for ATMega2561.
+
+2009-01-03 (REL_2_4_0) Christian Walter <cwalter@embedded-solutions.at>:
+ Notes: Added support for ARM Cortex M3. Small bugfix in mbutils.h 
+  header for C++ compilers. Added ARM Cortex M3 port for Luminary Micro.
+  Added support for "wait after send" for ASCII.
+ 
+ Detailed notes:
+  - FEATURE (ARM)   : Added ARM Cortex M3 port for ST Microelectronics.
+  - FEATURE (ARM)   : Added ARM Cortex M3 port for Luminary Micro.
+  - BUGFIX (C++)    : Renamed wrong _cplusplus define to __cplusplus
+     to prevent compiler include errors.
+  - FEATURE (ASCII) : Added support for wait after send define to wait
+     a specific time after an ASCII frame has been sent. This is useful
+     if you have an RS485 half-duplex network and you need some time
+     before you switch back to the receiver.
+  - FEATURE (ALL)   : Source code of the core stack is now tested using
+     PC-LINT 9.0 to assure code quality.
+
+2008-12-06 (REL_2_3_0) Christian Walter <cwalter@embedded-solutions.at>:
+ Notes: Added demo for master/slave stack running on the same time on
+  the AVR target. Fixed some bugs in the AVR porting layer when
+  multiple instances are used. Fixed bug in WIN32-DLL to remove any
+  race conditions and allow loading the DLL with LoadLibrary. 
+  Improvements in shutdown/close functions where some race conditions
+  existed. Added statistic interface. Added support for protocol
+  analyzing. Fixed bug in MODBUS TCP where protocol was not checked
+  in the MBAP header. Bugfixes for AVR port.
+
+ Detailed notes:
+  - BUGFIX (AVR)    : The AVR port did not set the bIsInitialized flag
+     on startup and therefore did not work as expected if more than
+	 one master is used.
+  - FEATURE (AVR)   : Added demo for running master/slave stack at the
+     same time.
+  - BUGFIX (WIN32)  : DLL can now be loaded using LoadLibrary and
+     UnloadLibrary. Previous versions deadlocked in this case due to
+     a problem with the loader lock of windows and incorrect thread
+     synchronization.
+  - BUGFIX (ALL)    : If a frame close function would return an error
+     because of the porting layer the internal resources would still
+     be freed. This could give problems when still callbacks are made
+     from the porting layer. The new implementation only performs
+     a clean shutdown or none at all.
+  - FEATURE (ALL)   : Added support for gathering protocol statistics
+     by setting the macro MBM_ENABLE_STATISTICS_INTERFACE=1. If enabled
+     the stack will count sent/received bytes, packets and packet
+     checksum and timeout errors.
+  - FEATURE (ALL)   : Added protocol analyzer.  
+  - BUGFIX (TCP)    : The protocol identifier was not checked in the
+     MBAP header response. If the protocol now does not match the
+     stack returns an error to the caller (as it should).     
+  - BUGFIX (AVR)    : Fixed bug with AVR port for ATMega128 port where
+     the second serial handle was not handled correctly. Fixed bug where
+     a previously allocated handle was not released correctly.
+     
+ Warnings:
+  - ALL (WIN32)     : Users updating the port must now make a call
+     to vMBPOtherDLLInit on startup and to vMBPOtherDLLClose on
+     close of the last instance of the stack. For a standalone 
+     application this is typically the end of the program. For the
+     DLL this is done internally in the DLL hooks.
+
+2008-09-02 (REL_2_2_2) Christian Walter <cwalter@embedded-solutions.at>:
+ Notes: Minor documentation fixes for doxygen. Added CMX port. Added 
+  support to enable a guard time after transmitting of the RTU frame
+  to solve problems with echo characters. This is acutally enforced also
+  by the standard but the stack previously rely on the correct operation
+  of the slave.
+
+ Detailed notes:
+  - BUGFIX (DOC)     : Fixed some doxygen warnings and API V2 functions
+     are now exported.
+  - FEATURE (CMX)    : Added CMX port for Coldfire MC5235. Note that
+     CMX is not included and you need a valid CMX license.
+  - FEATURE (RTU)    : Added support for enabling a guard time after
+     transmit. This is enabled by setting the macro 
+	 MBM_RTU_WAITAFTERSEND_ENABLED to 1.
+
+2008-08-04 (REL_2_2_1) Christian Walter <cwalter@embedded-solutions.at>:
+ Notes: Fixed some compiler warning with GCC and -Wall -pedantic settings.
+  Fixed a bug in the TCP implementation with mbm.c where the stack used
+  always the same internal handle. Added support for sending custom
+  MODBUS PDUs which can be used to encapsulate other protocols within
+  MODBUS. Dynamic timeouts for API V2 now default to old implementation
+  timeouts with fixed constant. Added Win32 timer port which uses the
+  Windows Multimedia API to support Windows CE.
+
+ Detailed notes:
+  - BUGFIX (TCP)     : The function eMBMTCPConnect and eMBMTCPDisconnect
+     had a bug where the wrong internal handle was used.
+  - BUGFIX (ALL)     : Fixed some compiler warnings. 
+  - FEATURE (ALL)    : Added support for custom MODBUS functions.
+  - FEATURE (SERIAL) : MBM_SERIAL_APIV2_RTU_DYNAMIC_TIMEOUT_MS now 
+     is defined as MBM_SERIAL_APIV2_RTU_TIMEOUT_MS to be compatible
+     for customers using the old TIMEOUT and are updating the MODBUS 
+     stack.
+  - FEATURE (WIN32)  : Added timer port mbporttimerce.c which uses the
+     Windows Multimedia Timer API to support Windows CE.
+
+2008-MM-DD (REL_2_2_0) Christian Walter <cwalter@embedded-solutions.at>:
+ Notes: The main header file now automatically includes the porting
+  layer header file. Fixed some bugs with the PIC MCC18 compiler.
+  Added support for Win32.
+
+ Detailed notes:
+  - BUGFIX (ALL)   : Fixed some bugs with the MCC18 PIC compilers. This
+     also includes a bugfix when -Oi is not used and the compiler does
+     not enforce ANSI standards.
+  - BUGFIX (ALL)   : Main header file now includes the porting layer header
+  - FEATURE (WIN)  : Added native Windows XP/200 port.
+  - BUGFIX (ALL)   : Fixed bug with C++ guardian in mbtypes.h.
+  - FEATURE (RTU)  : Added new macro to support dynamic timeouts when
+     using API V2.
+  - BUGFIX (RTU)   : The timeout callback was not locked against the
+     receive function which could lead to an assertion failure.
+
+2008-04-03 (REL_2_1_1) Christian Walter <cwalter@embedded-solutions.at>:
+ Notes: Fixed bug in support for coils/discrete register where the 
+  register quantity is a multiple of eight. Improved support for disabling
+  API checks. Added porting guideline.
+
+ Detailed notes:
+  - BUGFIX (COILS) : The calculation for the number of bytes in a response
+     was wrong if a multiple of eight coils was requested.
+  - BUGFIX (DISC)  : The calculation for the number of bytes in a response
+     was wrong if a multiple of eight discrete inputs was requested.
+  - FEATURE (ALL)  : Setting MBM_ENABLE_FULL_API_CHECKS reduces the code
+     size of the stack.
+  - FEATURE (ALL)  : Added a porting guideline for RTU/ASCII.
+
+2008-03-20 (REL_2_1) Christian Walter <cwalter@embedded-solutions.at>:
+ Notes: Added support for discrete inputs (function code 0x02). Added
+  support for coils (function code 0x01, 0x06, 0x0F). Fixed bug in AVR 
+  ATMega168 port with a wrong define for RS485 support. Added very small 
+  CRC16 function for MODBUS RTU and small targets.
+
+ Detailed notes:
+  - FEATURE (ALL) : Added support for "Read Discrete Inputs" (0x02).
+  - FEATURE (ALL) : Added support for "Read Coils" (0x01). Added support
+     for "Write Single Coil" (0x06). Added support for "Write Coils" (0x0F).
+  - BUGFIX (AVR)  : The ATMega168 RS485 port did not work correctly because
+     the define for enabling the support had the wrong name.
+  - FEATURE (ALL) : Added very small CRC16 function for small targets which
+     computes the lookup table on the fly.
+
+2008-02-26 (REL_2_0) Christian Walter <cwalter@embedded-solutions.at>:
+ Notes: Added MODBUS TCP support for the master stack. Added PIC demo port. 
+  Fixed bugs with different compilers where define names where longer than
+  allowed.  Fixed bug with exception converstion. Fixed bug with ATMega168
+  port.
+
+ Detailed notes:
+  - FEATURES (ALL) : Added MODBUS TCP support
+  - FEATURES (PIC18F) : Added PIC18F port.
+  - BUGFIX (ALL) : Fixed bugs with defines which are to long to be unique.
+  - BUGFIX (ALL) : Fixed missing break in mbutils.c for exception mapping.
+  - BUGFIX (AVR) : Fixed bug in ATMega168 target where UDRE0 instead of
+      UDRIE0 was used.
+
+2008-02-11 (REL_1_2_4) Christian Walter <cwalter@embedded-solutions.at>:
+ Notes: Fixed a bug in the Linux port and the ASCII layer where some
+  characters are not transmitted.
+
+ Detailed notes:
+  - BUGFIX (Linux/ASCII) : Fixed a bug in the Linux port where not all
+     characters are transmitted.
+
+2008-02-07 (REL_1_2_3) Christian Walter <cwalter@embedded-solutions.at>:
+ Notes: Added Linux port. Fixed some compiler/lints warning in the
+  RTU layer. Fixed a bug in the RTU layer where a special case with
+  a define was handled incorrectly.
+
+ Detailed notes:
+   - FEATURE (RTU/ASCII) : Added Linux port.
+   - BUGFIX (RTU) : Fixed a bug with a wrong define vor the V2 serial
+      API functions. Fixed some lint errors.
+
+2008-01-24 (REL_1_2_2) Christian Walter <cwalter@embedded-solutions.at>:
+ Notes: Added V2 API support for MODBUS master stack.
+ 
+ Detailed notes:
+  - FEATURE (ALL)   : Added V2 API support for targets which can not
+     pass a single character to the porting layer. This is required
+     if you want to use the FIFO buffer of your UART or you have
+     to use an operating system call for accessing the serial 
+     interface.
+
+2007-11-04 (REL_1_2_1) Christian Walter <wolti@sil.at>:
+ Notes: Fixed small bug in ASCII layer where the short frames could
+  not be sent because of a wrong length check. Added ATMega168 port.
+
+ Detailed notes:
+  - FEATURE (ASCII) : The minimum length for the ASCII frame was 
+     calculated with a two byte checksum but LRC requires only one
+	 byte.
+  - FEATURE (AVR)  : Added ATMega168 port.
+  - FEATURE (ALL)  : Improved Doxygen documentation.
+
+2007-08-15 (REL_1_2_0) Christian Walter <wolti@sil.at>:
+ Notes: Added ARM7 port for AT91SAM7X
+
+ Detailes notes:
+  - FEATURE (ARM7) : Added ARM7 port for AT91SAM7X
+
+2007-08-15 (REL_1_1_0) Christian Walter <wolti@sil.at>:
+ Notes: This releases breaks the API but allows the MASTER and the SLAVE
+  stack to use the same porting layer.
+
+ Detailed notes:
+  - FEATURE (ALL) : All common types between SLAVE and MASTER stack
+     have moved to a subdirectory include/common and all ports/tests
+	 have been updated.
+  - BUG (ALL)     : <vMBMReleaseHdl> contained a bug where the timer
+     handled was checked against an invalid TCP handle on free.
+  - FEATURE (ALL) : All port files now use mb prefix instead of mbm.
+  - BUG (CUNIT)   : Fixed bug in <eMBMTestInit> where a event handle
+     was allocated but not used. 
+  - BUG (ALL)     : Renamed <eMBPEventGet> to <bMBPEventGet> because
+     it returns a boolean.
+  - FEATURE (ALL) : Doxygen documentation now supports maintainer
+     and user output. The default output does not include any
+	 internal documentation.
+
+2007-07-23 (REL_1_0_4) Christian Walter <wolti@sil.at>:
+ Notes: Fixed bug in the ATMega128 port where the function
+  <eMBMPortSerialClose> did not release the resources for UART1.
+
+ Detailed notes:
+  - BUGFIX (AVR)   : The function <eMBMPortSerialClose> contained a typo
+     and the resources used by UART1 where never released.
+
+2007-07-09 (REL_1_0_3) Christian Walter <wolti@sil.at>:
+ Notes: Fixed bugs in the ATMega128 port where the initialization was not
+  correct. Fixed a possible problem in the ASCII layer because after
+  the frame has been received the MODBUS master might send the next request
+  immediately which can give a problem with RS485 line drivers.
+
+  Detailed notes
+   - BUGFIX (AVR)  : The init function used the wrong macro names and therefore
+      the RS485 drivers where not initialized correctly.
+   - BUGFIX (AVR)  : The init function never set eStatus to MBM_ENOERR and
+      therefore always returned an error.
+   - BUGFIX (AVR)  : The timer did not work because the external clock was
+      used. This happend because Timer 2 is not identical between different
+	  AVR families.
+   - FEATURE (ALL) : Added a configurable delay MBM_ASCII_BACKOF_TIME_MS to
+      wait a given amount in milliseconds after a slave transaction has
+	  been finished. The reason for this is that the slave needs some time
+	  to toggle its 485 lines receivers (if used). If the slave is to slow
+	  the first bytes sent by the master might be garbled because the slave
+	  still drives the transmission line.
+
+2007-07-09 (REL_1_0_2) Christian Walter <wolti@sil.at>:
+ Notes: Added MODBUS function Read/Write Multiple Registers (0x17). Added
+  port for ATMega128.
+
+ Detailed notes:
+  - FEATURE (ALL) : Added new MODBUS function Read/Write Multiple Registers
+      (0x10)
+  - FEATURE (AVR) : Added port for ATMega32
+  - FEATURE (AVR) : Added port for ATMega128
+
+2007-07-07 (REL_1_0_0) Christian Walter <wolti@sil.at>:
+ Notes: Added MODBUS function Write Multiple Registers (0x10). Improved
+  API safety.
+
+ Detailed notes:
+  - FEATURE (ALL) : Added new MODBUS function Write Multiple Registers (0x10)
+  - BUG (ALL) : Holding register API functions now have more error checks
+      to check for invalid slave addresses or invalid arguments.
+
+2007-07-01 (REL_1_0_0) Christian Walter <wolti@sil.at>:
+ Notes: Added MODBUS ASCII support.
+
+ Detailed notes:
+  - FEATURE (ALL): Added support for MODBUS ASCII.
+
+2007-06-23 (REL_1_0_0) Christian Walter <wolti@sil.at>:
+ Notes: Added AVR port (ATMega32)
+
+ Detailed notes:
+  - FEATURE (AVR): Added port for ATMega32/AVR
+
+2007-06-22 (REL_1_0_0) Christian Walter <wolti@sil.at>:
+ Notes: Initial import of RTU layer.
+
+
+2007-06-20 (REL_1_0_0) Christian Walter <wolti@sil.at>:
+ Notes: Initial import of MODBUS master code base for joined development 
+   work.

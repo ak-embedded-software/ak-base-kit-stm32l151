@@ -1,0 +1,1 @@
+set PATH=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;c:\ethernut-4.4.1\nut\tools\win32;c:\winavr-20060421\bin

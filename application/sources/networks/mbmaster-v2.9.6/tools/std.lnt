@@ -1,0 +1,8 @@
+--ic:\cygwin\usr\local\include
+--ic:\cygwin\lib\gcc\i686-pc-cygwin\3.4.4\include
+--ic:\cygwin\usr\include
+--ic:\cygwin\usr\include\w32api
+--i..\mbmaster\include
+--i.
+co-gcc.lnt
+options.lnt

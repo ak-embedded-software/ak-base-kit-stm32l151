@@ -1,0 +1,110 @@
+;****************************************************************************
+;* Vector table                                                             *
+;*                                                                          *
+;*  File name : vect.s79                                                    *
+;****************************************************************************
+
+;* Definition of Section
+
+        SECTION CSTACK:DATA:NOROOT(3)
+
+;* Interrupt vector table
+
+        EXTERN  int_abort
+        EXTERN  ResetHandler
+        EXTERN  except_nmi
+        EXTERN  except_hard_fault
+        EXTERN  except_memory_management
+        EXTERN  except_bus_fault
+        EXTERN  except_usage_fault
+        EXTERN  except_debug_monitor
+        EXTERN  _kernel_svc_handler
+        EXTERN  except_pendsv
+        EXTERN  inthdr_15
+        EXTERN  inthdr_23
+        EXTERN  inthdr_24
+        EXTERN  inthdr_48
+
+
+        SECTION .intvec:CONST:NOROOT(8)
+
+        PUBLIC  __vector_table
+__vector_table:
+        DATA
+        DCD     SFE(CSTACK)                     ;  0: Main stack pointer
+        DCD     ResetHandler                    ;  1: Reset
+        DCD     except_nmi		           ;  2: Non-maskable interrupt
+        DCD     except_hard_fault		           ;  3: Hard fault
+        DCD     except_memory_management		           ;  4: Memory management
+        DCD     except_bus_fault		           ;  5: Bus fault
+        DCD     except_usage_fault		           ;  6: Usage fault
+        DCD     int_abort                       ;  7:
+        DCD     int_abort                       ;  8:
+        DCD     int_abort                       ;  9:
+        DCD     int_abort                       ; 10:
+        DCD     _kernel_svc_handler             ; 11: SVC
+        DCD     except_debug_monitor		           ; 12: Debug monitor
+        DCD     int_abort                       ; 13:
+        DCD     except_pendsv                   ; 14: PendSV
+        DCD     inthdr_15                       ; 15: SysTick
+        DCD     int_abort                       ; 16: FCS
+        DCD     int_abort                       ; 17: Softwere WDT
+        DCD     int_abort                       ; 18: LVD
+        DCD     int_abort                       ; 19: MFT/DTIF
+        DCD     int_abort                       ; 20: INT ch.0~7
+        DCD     int_abort                       ; 21: INT ch.8~31
+        DCD     int_abort                       ; 22: Dual Timer/QPRC ch.0~2
+        DCD     inthdr_23                       ; 23: Multi Function SIO ch.0 receive
+        DCD     inthdr_24                       ; 24: Multi Function SIO ch.0 send/status
+        DCD     int_abort                       ; 25: Multi Function SIO ch.1 receive
+        DCD     int_abort                       ; 26: Multi Function SIO ch.1 send/status
+        DCD     int_abort                       ; 27: Multi Function SIO ch.2 receive
+        DCD     int_abort                       ; 28: Multi Function SIO ch.2 send/status
+        DCD     int_abort                       ; 29: Multi Function SIO ch.3 receive
+        DCD     int_abort                       ; 30: Multi Function SIO ch.3 send/status
+        DCD     int_abort                       ; 31: Multi Function SIO ch.4 receive
+        DCD     int_abort                       ; 32: Multi Function SIO ch.4 send/status
+        DCD     int_abort                       ; 33: Multi Function SIO ch.5 receive
+        DCD     int_abort                       ; 34: Multi Function SIO ch.5 send/status
+        DCD     int_abort                       ; 35: Multi Function SIO ch.6 receive
+        DCD     int_abort                       ; 36: Multi Function SIO ch.6 send/status
+        DCD     int_abort                       ; 37: Multi Function SIO ch.7 receive
+        DCD     int_abort                       ; 38: Multi Function SIO ch.7 send/status
+        DCD     int_abort                       ; 39: PPG ch.0/2/4/8/10/12/16/18/20
+        DCD     int_abort                       ; 40: Ext Main OSC / Ext Sub OSC / Main PLL / USB PLL / Timer Counter / RTC Counter
+        DCD     int_abort                       ; 41: A/D 0
+        DCD     int_abort                       ; 42: A/D 1
+        DCD     int_abort                       ; 43: A/D 2
+        DCD     int_abort                       ; 44: MFT unit0, unit1, unit2 FreeRunTimer
+        DCD     int_abort                       ; 45: MFT unit0, unit1, unit2 Input Capture
+        DCD     int_abort                       ; 46: MFT unit0, unit1, unit2 Output Compare
+        DCD     int_abort                       ; 47: Base Timer ch.0~7
+        DCD     inthdr_48                       ; 48: CAN 0, Ethernet 0
+        DCD     int_abort                       ; 49: CAN 1, Ethernet 1
+        DCD     int_abort                       ; 50: USB ch0 Function(DRQ of End Point 1Å`5)
+        DCD     int_abort                       ; 51: USB ch0 Function(DRQI, DRQO of End Point 0)
+        DCD     int_abort                       ; 52: USB ch1 Function(DRQ of End Point 1Å`5)
+        DCD     int_abort                       ; 53: USB ch1 Function(DRQI, DRQO of End Point 0)
+        DCD     int_abort                       ; 54: DMA 0
+        DCD     int_abort                       ; 55: DMA 1
+        DCD     int_abort                       ; 56: DMA 2
+        DCD     int_abort                       ; 57: DMA 3
+        DCD     int_abort                       ; 58: DMA 4
+        DCD     int_abort                       ; 59: DMA 5
+        DCD     int_abort                       ; 60: DMA 6
+        DCD     int_abort                       ; 61: DMA 7
+        DCD     int_abort                       ; 62: Base Timer ch.8~15
+        DCD     int_abort                       ; 63: Reserved
+
+        SECTION .text:CONST:NOROOT(2)
+
+        PUBLIC  _kernel_vector_atr
+
+_kernel_vector_atr
+        DATA
+        DCD     0x00000000
+        DCD     0x00000000
+
+        END
+
+;* end

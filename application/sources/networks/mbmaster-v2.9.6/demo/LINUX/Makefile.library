@@ -1,0 +1,66 @@
+#
+# MODBUS Library: Linux PORT
+#
+# Copyright (c) 2009 Christian Walter <walter@embedded-solutions.at>
+#
+# $Id: Makefile.library,v 1.1 2009-11-22 10:15:08 embedded-so.embedded-solutions.1 Exp $
+#
+# ---------------------------------------------------------------------------
+
+LIBVERSION  = 2.9.6
+APIVERSION  = 2
+CC          = gcc
+CXX         = g++
+OBJCOPY	    = objcopy
+SIZE	    = size
+INSIGHT     = insight
+LN          = ln
+DEST        = libmbmaster-$(LIBVERSION)
+
+INCLUDE     = -Iport -I../../mbmaster/include 
+CFLAGS	    = -MD -g3 -Wall -pedantic -fPIC -D_XOPEN_SOURCE=500 -DENABLE_PTHREAD -DSTDC_HEADERS -DHAVE_STDLIB_H -DMBM_RTU_ENABLED=1 -DMBM_ASCII_ENABLED=1 -DMBM_TCP_ENABLED=1 -DMBM_TCP_MAX_INSTANCES=1 -DHAVE_GETADDRINFO=1 -DHAVE_GETNAMEINFO=1 
+CFLAGS      += $(INCLUDE)
+LDFLAGS     = -pthread -shared -Wl,-soname,libmbmaster.so.$(APIVERSION)
+
+TGT         = libmbmaster.so.$(LIBVERSION)
+MB_SRC      = $(addprefix ../../mbmaster/, mbm.c functions/mbmfuncinput.c functions/mbmfuncholding.c common/mbutils.c tcp/mbmtcp.c rtu/mbmrtu.c rtu/mbmcrc.c ascii/mbmascii.c ) \
+	$(addprefix port/, mbporteventposix.c mbportother.c mbporttimerposix.c mbporttcp.c mbportserial.c)
+
+CSRC        = $(MB_SRC) 
+OBJS        = $(CSRC:.c=.o)
+DEPS        = $(OBJS:.o=.d) 
+BIN         = $(TGT)
+
+.PHONY: clean all
+
+all: clean $(DEST)/$(BIN)
+
+$(DEST)/$(BIN): $(OBJS) $(NOLINK_OBJS)
+	mkdir -p $(DEST)
+	$(CC) $(LDFLAGS) $(OBJS) $(LDLIBS) -o $@
+	cd $(DEST) && $(LN) -s $(BIN) libmbmaster.so
+	cd $(DEST) && $(LN) -s $(BIN) libmbmaster.so.$(APIVERSION)
+	cp ../../mbmaster/include/mbm.h $(DEST)
+	cp ../../mbmaster/include/internal/mbmiconfig.h $(DEST)
+	cp ../../mbmaster/include/common/mbtypes.h $(DEST)
+	cp port/mbport.h $(DEST)
+	cp port/mbmconfig.h $(DEST)
+
+clean:
+	rm -f $(DEPS)
+	rm -f $(OBJS)
+	rm -f $(DEST)/$(BIN) 
+	rm -f $(DEST)/libmbmaster.so
+	rm -f $(DEST)/libmbmaster.so.$(APIVERSION)
+
+# ---------------------------------------------------------------------------
+# rules for code generation
+# ---------------------------------------------------------------------------
+%.o:    %.c
+	$(CC) $(CFLAGS) -o $@ -c $<
+
+# ---------------------------------------------------------------------------
+#  # compiler generated dependencies
+# ---------------------------------------------------------------------------
+-include $(DEPS)
+

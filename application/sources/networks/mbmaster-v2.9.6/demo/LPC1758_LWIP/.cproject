@@ -1,0 +1,1402 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?>
+
+<cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+<storageModule moduleId="org.eclipse.cdt.core.settings">
+<cconfiguration id="com.crt.advproject.config.exe.debug.429326460">
+<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.crt.advproject.config.exe.debug.429326460" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+<externalSettings/>
+<extensions>
+<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+<extension id="org.eclipse.cdt.core.GNU_ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+<extension id="org.eclipse.cdt.core.MakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+</extensions>
+</storageModule>
+<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+<configuration artifactExtension="axf" artifactName="demo-lwip" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe" cleanCommand="rm -rf" description="Debug build" errorParsers="org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GASErrorParser" id="com.crt.advproject.config.exe.debug.429326460" name="Debug" parent="com.crt.advproject.config.exe.debug" postannouncebuildStep="Performing post-build steps" postbuildStep="arm-none-eabi-size ${BuildArtifactFileName}; # arm-none-eabi-objcopy -O binary ${BuildArtifactFileName} ${BuildArtifactFileBaseName}.bin ; checksum -p ${TargetChip} -d ${BuildArtifactFileBaseName}.bin;  ">
+<folderInfo id="com.crt.advproject.config.exe.debug.429326460." name="/" resourcePath="">
+<toolChain id="com.crt.advproject.toolchain.exe.debug.273054690" name="Code Red MCU Tools" superClass="com.crt.advproject.toolchain.exe.debug">
+<targetPlatform binaryParser="org.eclipse.cdt.core.ELF;org.eclipse.cdt.core.GNU_ELF" id="com.crt.advproject.platform.exe.debug.1717365132" name="ARM-based MCU (Debug)" superClass="com.crt.advproject.platform.exe.debug"/>
+<builder buildPath="${workspace_loc:/demo-lwip/Debug}" id="com.crt.advproject.builder.exe.debug.1106411446" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="com.crt.advproject.builder.exe.debug"/>
+<tool id="com.crt.advproject.cpp.exe.debug.1421730204" name="MCU C++ Compiler" superClass="com.crt.advproject.cpp.exe.debug"/>
+<tool command="arm-none-eabi-gcc" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG}${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" id="com.crt.advproject.gcc.exe.debug.312990452" name="MCU C Compiler" superClass="com.crt.advproject.gcc.exe.debug">
+<option id="com.crt.advproject.gcc.arch.2021867077" name="Architecture" superClass="com.crt.advproject.gcc.arch" value="com.crt.advproject.gcc.target.cm3" valueType="enumerated"/>
+<option id="com.crt.advproject.gcc.thumb.877188118" name="Thumb mode" superClass="com.crt.advproject.gcc.thumb" value="true" valueType="boolean"/>
+<option id="gnu.c.compiler.option.preprocessor.def.symbols.1114939861" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
+<listOptionValue builtIn="false" value="__NEWLIB__"/>
+<listOptionValue builtIn="false" value="__USE_CMSIS"/>
+<listOptionValue builtIn="false" value="WITH_LWIP=1"/>
+<listOptionValue builtIn="false" value="DEBUG"/>
+<listOptionValue builtIn="false" value="__CODE_RED"/>
+</option>
+<option id="gnu.c.compiler.option.misc.other.1520394652" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections" valueType="string"/>
+<option id="com.crt.advproject.gcc.hdrlib.1429825755" name="Use headers for C library" superClass="com.crt.advproject.gcc.hdrlib" value="com.crt.advproject.gcc.hdrlib.newlib" valueType="enumerated"/>
+<option id="gnu.c.compiler.option.include.paths.1978134617" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+<listOptionValue builtIn="false" value="&quot;${workspace_loc:/demo-lwip}&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${workspace_loc:/demo-lwip/port}&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${workspace_loc:/demo-lwip/mbmaster/include}&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${workspace_loc:/demo-lwip/cmsis}&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${workspace_loc:/demo-lwip/FreeRTOS/include}&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${workspace_loc:/demo-lwip/FreeRTOS/portable/GCC/ARM_CM3}&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${workspace_loc:/demo-lwip/lwip/src/include/ipv4}&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${workspace_loc:/demo-lwip/lwip/src/include}&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${workspace_loc:/demo-lwip/lwip/ports/nxp}&quot;"/>
+</option>
+<option id="com.crt.advproject.gcc.exe.debug.option.optimization.level.673005132" name="Optimization Level" superClass="com.crt.advproject.gcc.exe.debug.option.optimization.level" value="gnu.c.optimization.level.optimize" valueType="enumerated"/>
+<inputType id="com.crt.advproject.compiler.input.490561018" superClass="com.crt.advproject.compiler.input"/>
+</tool>
+<tool id="com.crt.advproject.gas.exe.debug.156681636" name="MCU Assembler" superClass="com.crt.advproject.gas.exe.debug">
+<option id="com.crt.advproject.gas.arch.606951177" name="Architecture" superClass="com.crt.advproject.gas.arch" value="com.crt.advproject.gas.target.cm3" valueType="enumerated"/>
+<option id="com.crt.advproject.gas.thumb.833406706" name="Thumb mode" superClass="com.crt.advproject.gas.thumb" value="true" valueType="boolean"/>
+<option id="gnu.both.asm.option.flags.crt.306931424" name="Assembler flags" superClass="gnu.both.asm.option.flags.crt" value="-c -x assembler-with-cpp -D__NEWLIB__  -DDEBUG -D__CODE_RED " valueType="string"/>
+<option id="com.crt.advproject.gas.hdrlib.1697586444" name="Use headers for C library" superClass="com.crt.advproject.gas.hdrlib" value="com.crt.advproject.gas.hdrlib.newlib" valueType="enumerated"/>
+<inputType id="com.crt.advproject.assembler.input.1326583457" name="Additional Assembly Source Files" superClass="com.crt.advproject.assembler.input"/>
+</tool>
+<tool id="com.crt.advproject.link.cpp.exe.debug.1367305342" name="MCU C++ Linker" superClass="com.crt.advproject.link.cpp.exe.debug"/>
+<tool id="com.crt.advproject.link.exe.debug.1562460307" name="MCU Linker" superClass="com.crt.advproject.link.exe.debug">
+<option id="com.crt.advproject.link.arch.2055021537" name="Architecture" superClass="com.crt.advproject.link.arch" value="com.crt.advproject.link.target.cm3" valueType="enumerated"/>
+<option id="com.crt.advproject.link.thumb.473867252" name="Thumb mode" superClass="com.crt.advproject.link.thumb" value="true" valueType="boolean"/>
+<option id="com.crt.advproject.link.script.123475154" name="Linker script" superClass="com.crt.advproject.link.script" value="&quot;demo-lwip_Debug.ld&quot;" valueType="string"/>
+<option id="com.crt.advproject.link.manage.921804779" name="Manage linker script" superClass="com.crt.advproject.link.manage" value="true" valueType="boolean"/>
+<option id="gnu.c.link.option.nostdlibs.2112779489" name="No startup or default libs (-nostdlib)" superClass="gnu.c.link.option.nostdlibs" value="true" valueType="boolean"/>
+<option id="gnu.c.link.option.other.877220311" name="Other options (-Xlinker [option])" superClass="gnu.c.link.option.other" valueType="stringList">
+<listOptionValue builtIn="false" value="-Map=${BuildArtifactFileBaseName}.map"/>
+<listOptionValue builtIn="false" value="--gc-sections"/>
+</option>
+<option id="com.crt.advproject.link.gcc.hdrlib.187625805" name="Use C library" superClass="com.crt.advproject.link.gcc.hdrlib" value="com.crt.advproject.gcc.link.hdrlib.newlib.nohost" valueType="enumerated"/>
+<inputType id="cdt.managedbuild.tool.gnu.c.linker.input.735670116" superClass="cdt.managedbuild.tool.gnu.c.linker.input">
+<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+</inputType>
+</tool>
+</toolChain>
+</folderInfo>
+<fileInfo id="com.crt.advproject.config.exe.debug.429326460.1743498058" name="drvserial.c" rcbsApplicability="disable" resourcePath="port/drvserial.c" toolsToInvoke="com.crt.advproject.gcc.exe.debug.312990452.1380066084">
+<tool id="com.crt.advproject.gcc.exe.debug.312990452.1380066084" name="MCU C Compiler" superClass="com.crt.advproject.gcc.exe.debug.312990452">
+<option id="com.crt.advproject.gcc.exe.debug.option.optimization.level.891400150" name="Optimization Level" superClass="com.crt.advproject.gcc.exe.debug.option.optimization.level" value="gnu.c.optimization.level.none" valueType="enumerated"/>
+<inputType id="com.crt.advproject.compiler.input.228765387" superClass="com.crt.advproject.compiler.input"/>
+</tool>
+</fileInfo>
+<fileInfo id="com.crt.advproject.config.exe.debug.429326460.1668237081" name="mbportserial.c" rcbsApplicability="disable" resourcePath="port/mbportserial.c" toolsToInvoke="com.crt.advproject.gcc.exe.debug.312990452.1307057925">
+<tool id="com.crt.advproject.gcc.exe.debug.312990452.1307057925" name="MCU C Compiler" superClass="com.crt.advproject.gcc.exe.debug.312990452">
+<option id="com.crt.advproject.gcc.exe.debug.option.optimization.level.1437035562" name="Optimization Level" superClass="com.crt.advproject.gcc.exe.debug.option.optimization.level" value="gnu.c.optimization.level.none" valueType="enumerated"/>
+<inputType id="com.crt.advproject.compiler.input.839982797" superClass="com.crt.advproject.compiler.input"/>
+</tool>
+</fileInfo>
+<fileInfo id="com.crt.advproject.config.exe.debug.429326460.305110501" name="main.c" rcbsApplicability="disable" resourcePath="main.c" toolsToInvoke="com.crt.advproject.gcc.exe.debug.312990452.561364731">
+<tool command="arm-none-eabi-gcc" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG}${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" id="com.crt.advproject.gcc.exe.debug.312990452.561364731" name="MCU C Compiler" superClass="com.crt.advproject.gcc.exe.debug.312990452">
+<option id="com.crt.advproject.gcc.exe.debug.option.optimization.level.864990195" name="Optimization Level" superClass="com.crt.advproject.gcc.exe.debug.option.optimization.level" value="gnu.c.optimization.level.none" valueType="enumerated"/>
+<inputType id="com.crt.advproject.compiler.input.1784858658" superClass="com.crt.advproject.compiler.input"/>
+</tool>
+</fileInfo>
+<sourceEntries>
+<entry excluding="lwip/src/core/ipv6|lwip/src/netif/slipif.c|lwip/src/netif/loopif.c|lwip/src/netif/ethernetif.c|lwip/src/netif/ppp|lwip/src/include/ipv6|lwip/test|uip/httpd-fsdata.c|FreeRTOS/portable/MemMang/heap_3.c|FreeRTOS/portable/MemMang/heap_1.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+</sourceEntries>
+</configuration>
+</storageModule>
+<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+<storageModule moduleId="org.eclipse.cdt.core.language.mapping"/>
+<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
+<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+<storageModule moduleId="scannerConfiguration">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile"/>
+<profile id="com.crt.advproject.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="com.crt.advproject.specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-c++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.crt.advproject.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="com.crt.advproject.specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file} " command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.crt.advproject.GASManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="com.crt.advproject.specsFile">
+<runAction arguments="-x assembler-with-cpp -E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'gcc -E -P -v -dD &quot;${plugin_state_location}/${specs_file}&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'g++ -E -P -v -dD &quot;${plugin_state_location}/specs.cpp&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'gcc -E -P -v -dD &quot;${plugin_state_location}/specs.c&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<scannerConfigBuildInfo instanceId="com.crt.advproject.config.exe.debug.429326460;com.crt.advproject.config.exe.debug.429326460.;com.crt.advproject.gcc.exe.debug.312990452;com.crt.advproject.compiler.input.490561018">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.crt.advproject.GCCManagedMakePerProjectProfile"/>
+<profile id="com.crt.advproject.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="com.crt.advproject.specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-c++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.crt.advproject.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="com.crt.advproject.specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file} " command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.crt.advproject.GASManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="com.crt.advproject.specsFile">
+<runAction arguments="-x assembler-with-cpp -E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'gcc -E -P -v -dD &quot;${plugin_state_location}/${specs_file}&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'g++ -E -P -v -dD &quot;${plugin_state_location}/specs.cpp&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'gcc -E -P -v -dD &quot;${plugin_state_location}/specs.c&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</scannerConfigBuildInfo>
+<scannerConfigBuildInfo instanceId="com.crt.advproject.config.exe.debug.429326460;com.crt.advproject.config.exe.debug.429326460.1378323295;com.crt.advproject.gcc.exe.debug.312990452.176213677;com.crt.advproject.compiler.input.490561018">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.crt.advproject.GCCManagedMakePerProjectProfile"/>
+<profile id="com.crt.advproject.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="com.crt.advproject.specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-c++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.crt.advproject.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="com.crt.advproject.specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file} " command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.crt.advproject.GASManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="com.crt.advproject.specsFile">
+<runAction arguments="-x assembler-with-cpp -E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'gcc -E -P -v -dD &quot;${plugin_state_location}/${specs_file}&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'g++ -E -P -v -dD &quot;${plugin_state_location}/specs.cpp&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'gcc -E -P -v -dD &quot;${plugin_state_location}/specs.c&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</scannerConfigBuildInfo>
+<scannerConfigBuildInfo instanceId="com.crt.advproject.config.exe.debug.429326460;com.crt.advproject.config.exe.debug.429326460.1378323295;com.crt.advproject.gcc.exe.debug.312990452.176213677;com.crt.advproject.compiler.input.1539241383">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.crt.advproject.GCCManagedMakePerProjectProfile"/>
+<profile id="com.crt.advproject.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="com.crt.advproject.specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-c++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.crt.advproject.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="com.crt.advproject.specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file} " command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.crt.advproject.GASManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="com.crt.advproject.specsFile">
+<runAction arguments="-x assembler-with-cpp -E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'gcc -E -P -v -dD &quot;${plugin_state_location}/${specs_file}&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'g++ -E -P -v -dD &quot;${plugin_state_location}/specs.cpp&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'gcc -E -P -v -dD &quot;${plugin_state_location}/specs.c&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</scannerConfigBuildInfo>
+<scannerConfigBuildInfo instanceId="com.crt.advproject.config.exe.debug.429326460;com.crt.advproject.config.exe.debug.429326460.;com.crt.advproject.gas.exe.debug.156681636;com.crt.advproject.assembler.input.1326583457">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.crt.advproject.GCCManagedMakePerProjectProfile"/>
+<profile id="com.crt.advproject.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="com.crt.advproject.specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-c++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.crt.advproject.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="com.crt.advproject.specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file} " command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.crt.advproject.GASManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="com.crt.advproject.specsFile">
+<runAction arguments="-x assembler-with-cpp -E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'gcc -E -P -v -dD &quot;${plugin_state_location}/${specs_file}&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'g++ -E -P -v -dD &quot;${plugin_state_location}/specs.cpp&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'gcc -E -P -v -dD &quot;${plugin_state_location}/specs.c&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</scannerConfigBuildInfo>
+</storageModule>
+</cconfiguration>
+<cconfiguration id="com.crt.advproject.config.exe.release.440614483">
+<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.crt.advproject.config.exe.release.440614483" moduleId="org.eclipse.cdt.core.settings" name="Release">
+<externalSettings/>
+<extensions>
+<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+<extension id="org.eclipse.cdt.core.GNU_ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+<extension id="org.eclipse.cdt.core.MakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+</extensions>
+</storageModule>
+<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+<configuration artifactExtension="axf" artifactName="demo-lwip" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe" cleanCommand="rm -rf" description="Release build" errorParsers="org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GASErrorParser" id="com.crt.advproject.config.exe.release.440614483" name="Release" parent="com.crt.advproject.config.exe.release" postannouncebuildStep="Performing post-build steps" postbuildStep="arm-none-eabi-size ${BuildArtifactFileName}; # arm-none-eabi-objcopy -O binary ${BuildArtifactFileName} ${BuildArtifactFileBaseName}.bin ; checksum -p ${TargetChip} -d ${BuildArtifactFileBaseName}.bin;  ">
+<folderInfo id="com.crt.advproject.config.exe.release.440614483." name="/" resourcePath="">
+<toolChain id="com.crt.advproject.toolchain.exe.release.526471070" name="Code Red MCU Tools" superClass="com.crt.advproject.toolchain.exe.release">
+<targetPlatform binaryParser="org.eclipse.cdt.core.ELF;org.eclipse.cdt.core.GNU_ELF" id="com.crt.advproject.platform.exe.release.1642470038" name="ARM-based MCU (Release)" superClass="com.crt.advproject.platform.exe.release"/>
+<builder buildPath="${workspace_loc:/demo-lwip/Release}" id="com.crt.advproject.builder.exe.release.1465474523" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="com.crt.advproject.builder.exe.release"/>
+<tool id="com.crt.advproject.cpp.exe.release.1903789399" name="MCU C++ Compiler" superClass="com.crt.advproject.cpp.exe.release"/>
+<tool id="com.crt.advproject.gcc.exe.release.116867325" name="MCU C Compiler" superClass="com.crt.advproject.gcc.exe.release">
+<option id="com.crt.advproject.gcc.arch.199827317" name="Architecture" superClass="com.crt.advproject.gcc.arch" value="com.crt.advproject.gcc.target.cm3" valueType="enumerated"/>
+<option id="com.crt.advproject.gcc.thumb.621302187" name="Thumb mode" superClass="com.crt.advproject.gcc.thumb" value="true" valueType="boolean"/>
+<option id="gnu.c.compiler.option.preprocessor.def.symbols.247360603" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
+<listOptionValue builtIn="false" value="__REDLIB__"/>
+<listOptionValue builtIn="false" value="__USE_CMSIS"/>
+<listOptionValue builtIn="false" value="WITH_LWIP=1"/>
+<listOptionValue builtIn="false" value="DEBUG"/>
+<listOptionValue builtIn="false" value="__CODE_RED"/>
+</option>
+<option id="gnu.c.compiler.option.misc.other.2050713755" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections" valueType="string"/>
+<option id="gnu.c.compiler.option.optimization.flags.430367652" name="Other optimization flags" superClass="gnu.c.compiler.option.optimization.flags" value="" valueType="string"/>
+<option id="com.crt.advproject.gcc.hdrlib.1059594468" name="Use headers for C library" superClass="com.crt.advproject.gcc.hdrlib" value="com.crt.advproject.gcc.hdrlib.codered" valueType="enumerated"/>
+<option id="gnu.c.compiler.option.include.paths.1555356137" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+<listOptionValue builtIn="false" value="&quot;${workspace_loc:/demo-lwip}&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${workspace_loc:/demo-lwip/port}&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${workspace_loc:/demo-lwip/mbmaster/include}&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${workspace_loc:/demo-lwip/cmsis}&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${workspace_loc:/demo-lwip/FreeRTOS/include}&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${workspace_loc:/demo-lwip/FreeRTOS/portable/GCC/ARM_CM3}&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${workspace_loc:/demo-lwip/lwip/src/include/ipv4}&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${workspace_loc:/demo-lwip/lwip/src/include}&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${workspace_loc:/demo-lwip/lwip/ports/nxp}&quot;"/>
+</option>
+<inputType id="com.crt.advproject.compiler.input.981098569" superClass="com.crt.advproject.compiler.input"/>
+</tool>
+<tool id="com.crt.advproject.gas.exe.release.891220399" name="MCU Assembler" superClass="com.crt.advproject.gas.exe.release">
+<option id="com.crt.advproject.gas.arch.1460411558" name="Architecture" superClass="com.crt.advproject.gas.arch" value="com.crt.advproject.gas.target.cm3" valueType="enumerated"/>
+<option id="com.crt.advproject.gas.thumb.565806339" name="Thumb mode" superClass="com.crt.advproject.gas.thumb" value="true" valueType="boolean"/>
+<option id="gnu.both.asm.option.flags.crt.1932803935" name="Assembler flags" superClass="gnu.both.asm.option.flags.crt" value="-c -x assembler-with-cpp -D__REDLIB__  -DNDEBUG -D__CODE_RED " valueType="string"/>
+<option id="com.crt.advproject.gas.hdrlib.1236451695" name="Use headers for C library" superClass="com.crt.advproject.gas.hdrlib" value="com.crt.advproject.gas.hdrlib.codered" valueType="enumerated"/>
+<inputType id="com.crt.advproject.assembler.input.799951926" name="Additional Assembly Source Files" superClass="com.crt.advproject.assembler.input"/>
+</tool>
+<tool id="com.crt.advproject.link.cpp.exe.release.1476480552" name="MCU C++ Linker" superClass="com.crt.advproject.link.cpp.exe.release"/>
+<tool id="com.crt.advproject.link.exe.release.397454063" name="MCU Linker" superClass="com.crt.advproject.link.exe.release">
+<option id="com.crt.advproject.link.arch.2096939167" name="Architecture" superClass="com.crt.advproject.link.arch" value="com.crt.advproject.link.target.cm3" valueType="enumerated"/>
+<option id="com.crt.advproject.link.thumb.1965210850" name="Thumb mode" superClass="com.crt.advproject.link.thumb" value="true" valueType="boolean"/>
+<option id="com.crt.advproject.link.script.973222650" name="Linker script" superClass="com.crt.advproject.link.script" value="&quot;demo-lwip_Release.ld&quot;" valueType="string"/>
+<option id="com.crt.advproject.link.manage.63240905" name="Manage linker script" superClass="com.crt.advproject.link.manage" value="true" valueType="boolean"/>
+<option id="gnu.c.link.option.nostdlibs.1597830090" name="No startup or default libs (-nostdlib)" superClass="gnu.c.link.option.nostdlibs" value="true" valueType="boolean"/>
+<option id="gnu.c.link.option.other.322732752" name="Other options (-Xlinker [option])" superClass="gnu.c.link.option.other" valueType="stringList">
+<listOptionValue builtIn="false" value="-Map=${BuildArtifactFileBaseName}.map"/>
+<listOptionValue builtIn="false" value="--gc-sections"/>
+</option>
+<option id="com.crt.advproject.link.gcc.hdrlib.1254051688" name="Use C library" superClass="com.crt.advproject.link.gcc.hdrlib" value="com.crt.advproject.gcc.link.hdrlib.codered.none" valueType="enumerated"/>
+<inputType id="cdt.managedbuild.tool.gnu.c.linker.input.1142690174" superClass="cdt.managedbuild.tool.gnu.c.linker.input">
+<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+</inputType>
+</tool>
+</toolChain>
+</folderInfo>
+<fileInfo id="com.crt.advproject.config.exe.release.440614483.1307028297" name="main.c" rcbsApplicability="disable" resourcePath="main.c" toolsToInvoke="com.crt.advproject.gcc.exe.release.116867325.2016457778">
+<tool id="com.crt.advproject.gcc.exe.release.116867325.2016457778" name="MCU C Compiler" superClass="com.crt.advproject.gcc.exe.release.116867325">
+<option id="com.crt.advproject.gcc.exe.release.option.optimization.level.1099398508" name="Optimization Level" superClass="com.crt.advproject.gcc.exe.release.option.optimization.level" value="gnu.c.optimization.level.none" valueType="enumerated"/>
+<inputType id="com.crt.advproject.compiler.input.1523285972" superClass="com.crt.advproject.compiler.input"/>
+</tool>
+</fileInfo>
+<sourceEntries>
+<entry excluding="lwip/src/core/ipv6|lwip/src/netif/slipif.c|lwip/src/netif/loopif.c|lwip/src/netif/ethernetif.c|lwip/src/netif/ppp|lwip/src/include/ipv6|lwip/test|uip/httpd-fsdata.c|FreeRTOS/portable/MemMang/heap_3.c|FreeRTOS/portable/MemMang/heap_1.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+</sourceEntries>
+</configuration>
+</storageModule>
+<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+<storageModule moduleId="org.eclipse.cdt.core.language.mapping"/>
+<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
+<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+<storageModule moduleId="scannerConfiguration">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile"/>
+<profile id="com.crt.advproject.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="com.crt.advproject.specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-c++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.crt.advproject.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="com.crt.advproject.specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file} " command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.crt.advproject.GASManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="com.crt.advproject.specsFile">
+<runAction arguments="-x assembler-with-cpp -E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'gcc -E -P -v -dD &quot;${plugin_state_location}/${specs_file}&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'g++ -E -P -v -dD &quot;${plugin_state_location}/specs.cpp&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'gcc -E -P -v -dD &quot;${plugin_state_location}/specs.c&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<scannerConfigBuildInfo instanceId="com.crt.advproject.config.exe.debug.429326460;com.crt.advproject.config.exe.debug.429326460.;com.crt.advproject.gcc.exe.debug.312990452;com.crt.advproject.compiler.input.490561018">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.crt.advproject.GCCManagedMakePerProjectProfile"/>
+<profile id="com.crt.advproject.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="com.crt.advproject.specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-c++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.crt.advproject.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="com.crt.advproject.specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file} " command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.crt.advproject.GASManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="com.crt.advproject.specsFile">
+<runAction arguments="-x assembler-with-cpp -E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'gcc -E -P -v -dD &quot;${plugin_state_location}/${specs_file}&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'g++ -E -P -v -dD &quot;${plugin_state_location}/specs.cpp&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'gcc -E -P -v -dD &quot;${plugin_state_location}/specs.c&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</scannerConfigBuildInfo>
+<scannerConfigBuildInfo instanceId="com.crt.advproject.config.exe.debug.429326460;com.crt.advproject.config.exe.debug.429326460.1378323295;com.crt.advproject.gcc.exe.debug.312990452.176213677;com.crt.advproject.compiler.input.490561018">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.crt.advproject.GCCManagedMakePerProjectProfile"/>
+<profile id="com.crt.advproject.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="com.crt.advproject.specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-c++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.crt.advproject.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="com.crt.advproject.specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file} " command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.crt.advproject.GASManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="com.crt.advproject.specsFile">
+<runAction arguments="-x assembler-with-cpp -E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'gcc -E -P -v -dD &quot;${plugin_state_location}/${specs_file}&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'g++ -E -P -v -dD &quot;${plugin_state_location}/specs.cpp&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'gcc -E -P -v -dD &quot;${plugin_state_location}/specs.c&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</scannerConfigBuildInfo>
+<scannerConfigBuildInfo instanceId="com.crt.advproject.config.exe.debug.429326460;com.crt.advproject.config.exe.debug.429326460.1378323295;com.crt.advproject.gcc.exe.debug.312990452.176213677;com.crt.advproject.compiler.input.1539241383">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.crt.advproject.GCCManagedMakePerProjectProfile"/>
+<profile id="com.crt.advproject.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="com.crt.advproject.specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-c++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.crt.advproject.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="com.crt.advproject.specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file} " command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.crt.advproject.GASManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="com.crt.advproject.specsFile">
+<runAction arguments="-x assembler-with-cpp -E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'gcc -E -P -v -dD &quot;${plugin_state_location}/${specs_file}&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'g++ -E -P -v -dD &quot;${plugin_state_location}/specs.cpp&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'gcc -E -P -v -dD &quot;${plugin_state_location}/specs.c&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</scannerConfigBuildInfo>
+<scannerConfigBuildInfo instanceId="com.crt.advproject.config.exe.debug.429326460;com.crt.advproject.config.exe.debug.429326460.;com.crt.advproject.gas.exe.debug.156681636;com.crt.advproject.assembler.input.1326583457">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.crt.advproject.GCCManagedMakePerProjectProfile"/>
+<profile id="com.crt.advproject.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="com.crt.advproject.specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-c++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.crt.advproject.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="com.crt.advproject.specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file} " command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.crt.advproject.GASManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="com.crt.advproject.specsFile">
+<runAction arguments="-x assembler-with-cpp -E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'gcc -E -P -v -dD &quot;${plugin_state_location}/${specs_file}&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'g++ -E -P -v -dD &quot;${plugin_state_location}/specs.cpp&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'gcc -E -P -v -dD &quot;${plugin_state_location}/specs.c&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</scannerConfigBuildInfo>
+</storageModule>
+</cconfiguration>
+</storageModule>
+<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+<project id="demo-lwip.com.crt.advproject.projecttype.exe.41613634" name="Executable" projectType="com.crt.advproject.projecttype.exe"/>
+</storageModule>
+<storageModule moduleId="com.crt.config">
+<projectStorage>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#13;
+&lt;TargetConfig&gt;&#13;
+&lt;Properties property_0="" property_1="" property_2="" property_3="NXP" property_4="LPC1758" property_count="5" version="1"/&gt;&#13;
+&lt;infoList vendor="NXP"&gt;&#13;
+&lt;info chip="LPC1758" match_id="0x25013F37" name="LPC1758"&gt;&#13;
+&lt;chip&gt;&#13;
+&lt;name&gt;LPC1758&lt;/name&gt;&#13;
+&lt;family&gt;LPC17xx&lt;/family&gt;&#13;
+&lt;vendor&gt;NXP (formerly Philips)&lt;/vendor&gt;&#13;
+&lt;reset board="None" core="Real" sys="Real"/&gt;&#13;
+&lt;clock changeable="TRUE" freq="20MHz" is_accurate="TRUE"/&gt;&#13;
+&lt;memory can_program="true" id="Flash" is_ro="true" type="Flash"/&gt;&#13;
+&lt;memory id="RAM" type="RAM"/&gt;&#13;
+&lt;memory id="Periph" is_volatile="true" type="Peripheral"/&gt;&#13;
+&lt;memoryInstance derived_from="Flash" id="MFlash512" location="0x00000000" size="0x80000"/&gt;&#13;
+&lt;memoryInstance derived_from="RAM" id="RamLoc32" location="0x10000000" size="0x8000"/&gt;&#13;
+&lt;memoryInstance derived_from="RAM" id="RamAHB32" location="0x2007c000" size="0x8000"/&gt;&#13;
+&lt;prog_flash blocksz="0x1000" location="0" maxprgbuff="0x1000" progwithcode="TRUE" size="0x10000"/&gt;&#13;
+&lt;prog_flash blocksz="0x8000" location="0x10000" maxprgbuff="0x1000" progwithcode="TRUE" size="0x70000"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17_NVIC" determined="infoFile" id="NVIC" location="0xE000E000"/&gt;&#13;
+&lt;peripheralInstance derived_from="TIMER" determined="infoFile" enable="SYSCTL.PCONP.PCTIM0&amp;amp;0x1" id="TIMER0" location="0x40004000"/&gt;&#13;
+&lt;peripheralInstance derived_from="TIMER" determined="infoFile" enable="SYSCTL.PCONP.PCTIM1&amp;amp;0x1" id="TIMER1" location="0x40008000"/&gt;&#13;
+&lt;peripheralInstance derived_from="TIMER" determined="infoFile" enable="SYSCTL.PCONP.PCTIM2&amp;amp;0x1" id="TIMER2" location="0x40090000"/&gt;&#13;
+&lt;peripheralInstance derived_from="TIMER" determined="infoFile" enable="SYSCTL.PCONP.PCTIM3&amp;amp;0x1" id="TIMER3" location="0x40094000"/&gt;&#13;
+&lt;peripheralInstance derived_from="FGPIO" determined="infoFile" enable="SYSCTL.PCONP.PCGPIO&amp;amp;0x1" id="GPIO0" location="0x2009C000"/&gt;&#13;
+&lt;peripheralInstance derived_from="FGPIO" determined="infoFile" enable="SYSCTL.PCONP.PCGPIO&amp;amp;0x1" id="GPIO1" location="0x2009C020"/&gt;&#13;
+&lt;peripheralInstance derived_from="FGPIO" determined="infoFile" enable="SYSCTL.PCONP.PCGPIO&amp;amp;0x1" id="GPIO2" location="0x2009C040"/&gt;&#13;
+&lt;peripheralInstance derived_from="FGPIO" determined="infoFile" enable="SYSCTL.PCONP.PCGPIO&amp;amp;0x1" id="GPIO3" location="0x2009C060"/&gt;&#13;
+&lt;peripheralInstance derived_from="FGPIO" determined="infoFile" enable="SYSCTL.PCONP.PCGPIO&amp;amp;0x1" id="GPIO4" location="0x2009C080"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17_I2S" determined="infoFile" enable="SYSCTL.PCONP&amp;amp;0x08000000" id="I2S" location="0x400A8000"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17_SYSCTL" determined="infoFile" id="SYSCTL" location="0x400FC000"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17_DAC" determined="infoFile" enable="PCB.PINSEL1.P0_26&amp;amp;0x2=2" id="DAC" location="0x4008C000"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17xx_UART" determined="infoFile" enable="SYSCTL.PCONP.PCUART0&amp;amp;0x1" id="UART0" location="0x4000C000"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17xx_UART_MODEM" determined="infoFile" enable="SYSCTL.PCONP.PCUART1&amp;amp;0x1" id="UART1" location="0x40010000"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17xx_UART" determined="infoFile" enable="SYSCTL.PCONP.PCUART2&amp;amp;0x1" id="UART2" location="0x40098000"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17xx_UART" determined="infoFile" enable="SYSCTL.PCONP.PCUART3&amp;amp;0x1" id="UART3" location="0x4009C000"/&gt;&#13;
+&lt;peripheralInstance derived_from="SPI" determined="infoFile" enable="SYSCTL.PCONP.PCSPI&amp;amp;0x1" id="SPI" location="0x40020000"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17_SSP" determined="infoFile" enable="SYSCTL.PCONP.PCSSP0&amp;amp;0x1" id="SSP0" location="0x40088000"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17_SSP" determined="infoFile" enable="SYSCTL.PCONP.PCSSP1&amp;amp;0x1" id="SSP1" location="0x40030000"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17_ADC" determined="infoFile" enable="SYSCTL.PCONP.PCAD&amp;amp;0x1" id="ADC" location="0x40034000"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17_USBINTST" determined="infoFile" enable="USBCLKCTL.USBClkCtrl&amp;amp;0x12" id="USBINTSTAT" location="0x400fc1c0"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17_USB_CLK_CTL" determined="infoFile" id="USBCLKCTL" location="0x5000cff4"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17_USBDEV" determined="infoFile" enable="USBCLKCTL.USBClkSt&amp;amp;0x12=0x12" id="USBDEV" location="0x5000C200"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17_PWM" determined="infoFile" enable="SYSCTL.PCONP.PWM1&amp;amp;0x1" id="PWM" location="0x40018000"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17_I2C" determined="infoFile" enable="SYSCTL.PCONP.PCI2C0&amp;amp;0x1" id="I2C0" location="0x4001C000"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17_I2C" determined="infoFile" enable="SYSCTL.PCONP.PCI2C1&amp;amp;0x1" id="I2C1" location="0x4005C000"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17_I2C" determined="infoFile" enable="SYSCTL.PCONP.PCI2C2&amp;amp;0x1" id="I2C2" location="0x400A0000"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17_DMA" determined="infoFile" enable="SYSCTL.PCONP.PCGPDMA&amp;amp;0x1" id="DMA" location="0x50004000"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17_ENET" determined="infoFile" enable="SYSCTL.PCONP.PCENET&amp;amp;0x1" id="ENET" location="0x50000000"/&gt;&#13;
+&lt;peripheralInstance derived_from="CM3_DCR" determined="infoFile" id="DCR" location="0xE000EDF0"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17_PCB" determined="infoFile" id="PCB" location="0x4002c000"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17_QEI" determined="infoFile" id="QEI" location="0x400bc000"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17_USBHOST" determined="infoFile" enable="USBCLKCTL.USBClkSt&amp;amp;0x11=0x11" id="USBHOST" location="0x5000C000"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17_USBOTG" determined="infoFile" enable="USBCLKCTL.USBClkSt&amp;amp;0x1c=0x1c" id="USBOTG" location="0x5000C000"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17_RTC" determined="infoFile" enable="SYSCTL.PCONP.PCRTC&amp;amp;0x1" id="RTC" location="0x40024000"/&gt;&#13;
+&lt;peripheralInstance derived_from="MPU" determined="infoFile" id="MPU" location="0xE000ED90"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC1x_WDT" determined="infoFile" id="WDT" location="0x40000000"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17_FLASHCFG" determined="infoFile" id="FLASHACCEL" location="0x400FC000"/&gt;&#13;
+&lt;peripheralInstance derived_from="GPIO_INT" determined="infoFile" id="GPIOINTMAP" location="0x40028080"/&gt;&#13;
+&lt;memoryInstance derived_from="RAM" id="CANAccFilterRAM" location="0x40038000" size="0x800"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17_CANAFR" determined="infoFile" enable="SYSCTL.PCONP.PCCAN1&amp;amp;0x1|SYSCTL.PCONP.PCCAN2&amp;amp;0x1" id="CANAFR" location="0x4003C000"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17_CANCEN" determined="infoFile" enable="SYSCTL.PCONP.PCCAN1&amp;amp;0x1|SYSCTL.PCONP.PCCAN2&amp;amp;0x1" id="CANCEN" location="0x40040000"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17_CANWAKESLEEP" determined="infoFile" id="CANWAKESLEEP" location="0x400FC110"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17_CANCON" determined="infoFile" enable="SYSCTL.PCONP.PCCAN1&amp;amp;0x1" id="CANCON1" location="0x40044000"/&gt;&#13;
+&lt;peripheralInstance derived_from="LPC17_CANCON" determined="infoFile" enable="SYSCTL.PCONP.PCCAN2&amp;amp;0x1" id="CANCON2" location="0x40048000"/&gt;&#13;
+&lt;/chip&gt;&#13;
+&lt;processor&gt;&#13;
+&lt;name gcc_name="cortex-m3"&gt;Cortex-M3&lt;/name&gt;&#13;
+&lt;family&gt;Cortex-M&lt;/family&gt;&#13;
+&lt;/processor&gt;&#13;
+&lt;link href="nxp_lpcxxxx_peripheral.xme" show="embed" type="simple"/&gt;&#13;
+&lt;/info&gt;&#13;
+&lt;/infoList&gt;&#13;
+&lt;/TargetConfig&gt;</projectStorage>
+</storageModule>
+</cproject>

@@ -1,0 +1,123 @@
+;****************************************************************************
+;* Exception Handler                                                        *
+;*                                                                          *
+;*  File name : excp.s79.                                                   *
+;****************************************************************************
+
+;* Definition of Section
+
+        SECTION .text:CODE:NOROOT(2)
+        THUMB
+
+;* Definition of Standard function
+
+        EXTERN  _kernel_entint
+        EXTERN  _kernel_retint
+
+;* Exception Handler
+
+        PUBLIC  except_nmi
+except_nmi
+        b       except_nmi
+
+        PUBLIC  except_hard_fault
+except_hard_fault
+        b       except_hard_fault
+
+        PUBLIC  except_memory_management
+except_memory_management
+        b       except_memory_management
+
+        PUBLIC  except_bus_fault
+except_bus_fault
+        b       except_bus_fault
+
+        PUBLIC  except_usage_fault
+except_usage_fault
+        b       except_usage_fault
+
+        PUBLIC  except_debug_monitor
+except_debug_monitor
+        b       except_debug_monitor
+
+        PUBLIC  except_pendsv
+except_pendsv
+        b       except_pendsv
+
+        SECTION .text:CODE:NOROOT(2)
+        THUMB
+        PUBLIC  inthdr_15
+inthdr_15
+        stmfd   sp!,{lr}
+        add     sp, sp, #-4*1
+        bl      _kernel_entint
+        ldr     r1, intisr_15_1_func
+        ldr     r0, intisr_15_1_exinf
+        blx     r1
+        b       _kernel_retint
+
+        ALIGNROM    2
+        DATA
+        EXTERN  _ddr_m_systick
+intisr_15_1_exinf   DCD     0
+intisr_15_1_func    DCD     _ddr_m_systick
+
+        SECTION .text:CODE:NOROOT(2)
+        THUMB
+        PUBLIC  inthdr_23
+inthdr_23
+        stmfd   sp!,{lr}
+        add     sp, sp, #-4*1
+        bl      _kernel_entint
+        ldr     r1, intisr_23_1_func
+        ldr     r0, intisr_23_1_exinf
+        blx     r1
+        b       _kernel_retint
+
+        ALIGNROM    2
+        DATA
+        EXTERN  _ddr_mb9_uart_mng0
+        EXTERN  _ddr_mb9_ruart_intr
+intisr_23_1_exinf   DCD     _ddr_mb9_uart_mng0
+intisr_23_1_func    DCD     _ddr_mb9_ruart_intr
+
+        SECTION .text:CODE:NOROOT(2)
+        THUMB
+        PUBLIC  inthdr_24
+inthdr_24
+        stmfd   sp!,{lr}
+        add     sp, sp, #-4*1
+        bl      _kernel_entint
+        ldr     r1, intisr_24_1_func
+        ldr     r0, intisr_24_1_exinf
+        blx     r1
+        b       _kernel_retint
+
+        ALIGNROM    2
+        DATA
+        EXTERN  _ddr_mb9_uart_mng0
+        EXTERN  _ddr_mb9_tuart_intr
+intisr_24_1_exinf   DCD     _ddr_mb9_uart_mng0
+intisr_24_1_func    DCD     _ddr_mb9_tuart_intr
+
+        SECTION .text:CODE:NOROOT(2)
+        THUMB
+        PUBLIC  inthdr_48
+inthdr_48
+        stmfd   sp!,{lr}
+        add     sp, sp, #-4*1
+        bl      _kernel_entint
+        ldr     r1, intisr_48_1_func
+        ldr     r0, intisr_48_1_exinf
+        blx     r1
+        b       _kernel_retint
+
+        ALIGNROM    2
+        DATA
+        EXTERN  _ddr_m3_fm3_eth_intr0
+intisr_48_1_exinf   DCD     0
+intisr_48_1_func    DCD     _ddr_m3_fm3_eth_intr0
+
+        END
+
+;* end

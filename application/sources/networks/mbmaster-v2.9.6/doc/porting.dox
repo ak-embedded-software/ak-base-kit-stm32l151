@@ -1,0 +1,67 @@
+/*! \page sec_porting Porting the MODBUS stack
+
+Porting the MODBUS stack is a necessary step for every platform. The basic procedure is as following
+<ol>
+  <li>Create a new directory for your port from a skeleton.
+  <li>Implement the platform abstraction functions for 
+      enabling/disabling interrupts.
+  <li>Implement the timer functions.
+  <li>In case of RTU/ASCII you have to implement a serial
+      abstraction layer.
+  <li>In case of TCP you have to implement the functions for handling 
+      TCP connections.
+  <li>In case you have an RTOS you can implement an event queue for 
+      better performance.
+</ol>
+
+We start by creating a new directory <tt>demo/PLATFORM</tt>. In the next step the necessary files from the directory <tt>demo/BARE</tt> should be copied into this directory following the directory structure from below.
+
+\verbatim
+demo/PLATFORM/mbmdemo-ser.c (If you use the MODBUS master and RTU/ASCII)
+demo/PLATFORM/mbmdemo-tcp.c (If you use the MODBUS master and TCP)
+demo/PLATFORM/port/mbport.h
+demo/PLATFORM/port/mbmconfig.h (If you use the MODBUS master stack)
+demo/PLATFORM/port/mbsconfig.h (If you use the MODBUS slave stack)
+demo/PLATFORM/port/mbportevent.c
+demo/PLATFORM/port/mbportother.c
+demo/PLATFORM/port/mbporttimer.c
+demo/platform/port/mbportserial.c (If you use RTU/ASCII)
+demo/platform/port/mbporttcp.c (If you use RTU/ASCII)
+\endverbatim
+
+\section sec_porting_build Build system
+We do not provide any additional information for the build process but the following settings work fine.
+<ul>
+  <li>The preprocessor include directories should at least the path <tt>mbmaster/include</tt> or <tt>mbslave/include</tt> and <tt>demo/PLATFORM/port</tt>.
+  <li>It is recommend to create your project file in the <tt>demo/PLATFORM</tt> directory.
+  <li>You can to include all the relevant C files from the <tt>mbslave</tt> and <tt>mbmaster</tt> subdirectory into your build process.
+</ul>
+
+\section sec_porting_ospecific Platform specifics (mbport.h)
+You should verify the file <tt>mbport.h</tt> if the data types matches you platform. You can also place additional include files at the top of this file. This file is included by every module of the MODBUS stack.
+
+\section sec_porting_timers Implementation of timers (mbporttimer.c)
+The MODBUS stack needs timer to detect the end of frame or to signal errors to the use when a slave (or master) does not respond. An example implementation is already provided in <tt>mbporttimer.c</tt> which needs only very little customization. The only thing which has to be added is the actual initialization of the timer in the function eMBPTimerInit. In addition the prototype for the ISR handler prvvTimerISR should be checked for compiler specifics. The timer itself should be initialized as following:
+<ul>
+  <li>A periodic timer with a period of approx. 1ms</li>
+  <li>A interrupt associated with the timer overflow which calls the interrupt handler prvvTimerISR.</li>
+</ul>
+
+\section sec_porting_serial Implementation of serial functions (mbportserial.c)
+For RTU/ASCII you need to implement serial communication functions. An example is already provided in <tt>mbportserial.c</tt>. The things which need to be added are:
+<ul>
+  <li>Create the real initialization code in the function eMBPSerialInit.</li>
+  <li>Create the shutdown code in eMBPSerialClose if you need it.</li>
+  <li>Implement enabling/disabling of the transmitter in eMBPSerialTxEnable.</li>
+  <li>Implement enabling/disabling of the receiver in eMBPSerialRxEnable.</li>
+  <li>Adapt or change the interrupt functions prrvUSARTTxISR and prrvUSARTRxISR.</li>
+</ul>
+
+\section sec_porting_event Event queue (mbportevent.c)
+The skeleton is already provided but in case of an RTOS the functions should use a real event queue. You can take a look at the provided Linux ports for an example on how to do this.
+
+\section sec_porting_customize Customizing the stack
+You can enable or disable most functions from the stack. Default values are provided in the file <tt>mbmaster/include/mbmiconfig.h</tt> or <tt>/mbslave/include/mbiconfig.h</tt>. If you want to override any of these settings simply add them to your project local <tt>mbmconfig.h</tt> and <tt>mbsconfig.h</tt> file. Do not change any files within the MODBUS stack. You can find a detailed description of these options in this doxygen configuration.
+
+*/
+

@@ -1,0 +1,23 @@
+// Strong type checking
+-strong(Ab, BOOL)
+-strong(Ac, ULONG)
+-strong(Ac, LONG)
+-strong(Ac, USHORT)
+-strong(Ac, SHORT)
+-strong(Ac, UBYTE)
+-strong(Ac, BYTE)
+-strong(Ac, UCHAR)
+-strong(Ac, CHAR)
+-strong(Ac, xMBPTimeStamp)
+-strong(A, xMBPEventHandle)
+-strong(A, xMBPTimerHandle)
+-strong(A, xMBPSerialHandle)
+-strong(A, xMBPTCPHandle)
+-strong(A, xMBPTCPClientHandle)
+-strong(A, xMBPEventType)
+
+// Ignore some warnings
+-e788           // default case is sufficient. no need to handle
+                // each enum value.
+-e717           // do { ... } while( 0 )
+-e835           // zero argument to operators +-*/

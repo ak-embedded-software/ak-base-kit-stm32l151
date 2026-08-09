@@ -1,0 +1,50 @@
+;****************************************************************************
+;* Reset Handler                                                            *
+;*                                                                          *
+;*  File name : prst.s79                                                    *
+;****************************************************************************
+
+; Register Addresses
+REG_HWDT        EQU     0x40011000
+
+; Register Offsets
+CTL             EQU     0x008
+LCK             EQU     0xC00
+
+        PROGRAM ?PRST
+
+        SECTION CSTACK:DATA:NOROOT(3)
+        SECTION HSTACK:DATA:NOROOT(3)
+
+        SECTION .text:CODE:NOROOT(2)
+        THUMB
+
+        EXTERN  __iar_program_start
+
+        PUBLIC  ResetHandler
+ResetHandler:
+        mrs     r0,  control
+        ldr     r1,  =SFE(CSTACK)
+        orr     r0,  r0,  #0x02
+        ldr     r2,  =SFE(HSTACK)
+        bic     r0,  r0,  #0x01
+        msr     psp, r1
+        msr     msp, r2
+        msr     control,  r0
+
+; HW WDT disable
+        ldr     r0, =REG_HWDT
+        ldr     r1, =0x1ACCE551
+        str     r1, [r0, #LCK]
+        ldr     r1, =0xE5331AAE
+        str     r1, [r0, #LCK]
+        ldr     r1, =0x00000000
+        str     r1, [r0, #CTL]
+
+; Enter the iar code
+        ldr     r0, =__iar_program_start
+        bx      r0
+
+        END
+
+;* end

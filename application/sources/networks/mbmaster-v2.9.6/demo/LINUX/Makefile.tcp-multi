@@ -1,0 +1,61 @@
+#
+# MODBUS Library: LINUX/CYGWIN port
+#
+# Copyright (c) 2007-2015 Christian Walter
+#
+# $Id: Makefile.tcp,v 1.3 2009/10/17 18:02:19 embedded-solutions.anovak Exp $
+#
+# ---------------------------------------------------------------------------
+
+CC          = gcc
+CXX         = g++
+OBJCOPY	    = objcopy
+SIZE	    = size
+INSIGHT     = insight
+
+INCLUDE     = -Iport -I../../mbmaster/include 
+CFLAGS	    = -MD -g3 -Wall -pedantic -D_XOPEN_SOURCE=500 -DENABLE_PTHREAD -DSTDC_HEADERS -DHAVE_STDLIB_H -DMBM_RTU_ENABLED=1 -DMBM_ASCII_ENABLED=1 -DMBM_TCP_ENABLED=1 -DMBM_TCP_MAX_INSTANCES=2 -DHAVE_GETADDRINFO=1 -DHAVE_GETNAMEINFO=1  -DMBP_TCP_DEBUG=1
+CFLAGS      += $(INCLUDE)
+ASFLAGS     = -MD 
+LDFLAGS     = -pthread
+LDLIBS      = -lpthread -lrt
+
+TGT         = demo-tcp-multi
+MB_SRC      = $(addprefix ../../mbmaster/, mbm.c functions/mbmfuncinput.c functions/mbmfuncholding.c common/mbutils.c tcp/mbmtcp.c rtu/mbmrtu.c rtu/mbmcrc.c ascii/mbmascii.c ) \
+	$(addprefix port/, mbporteventposix.c mbportother.c mbporttimerposix.c mbporttcp.c mbportserial.c)
+
+CSRC        = demo-tcp-multi.c $(MB_SRC) 
+ASRC        = 
+OBJS        = $(CSRC:.c=.o) $(ASRC:.S=.o)
+DEPS        = $(OBJS:.o=.d) 
+BIN         = $(TGT)
+
+.PHONY: clean all
+
+all: clean $(BIN)
+
+debug:
+	$(INSIGHT) --se=$(TGT)
+
+$(BIN): $(OBJS) $(NOLINK_OBJS)
+	$(CC) $(LDFLAGS) $(OBJS) $(LDLIBS) -o $@
+
+clean:
+	rm -f $(DEPS)
+	rm -f $(OBJS) $(NOLINK_OBJS)
+	rm -f $(BIN) $(TGT).map
+
+# ---------------------------------------------------------------------------
+# rules for code generation
+# ---------------------------------------------------------------------------
+%.o:    %.c
+	$(CC) $(CFLAGS) -o $@ -c $<
+
+%.o:    %.S
+	$(CC) $(ASFLAGS) -o $@ -c $<
+
+# ---------------------------------------------------------------------------
+#  # compiler generated dependencies
+# ---------------------------------------------------------------------------
+-include $(DEPS)
+

@@ -1,0 +1,55 @@
+#
+# MODBUS Library: CYGWIN/LINUX port
+#
+# Copyright (c) 2009 Christian Walter <cwalter@embedded-solutions.at>
+#
+# $Id: Makefile.library-example,v 1.1 2009-11-22 10:15:08 embedded-so.embedded-solutions.1 Exp $
+#
+# ---------------------------------------------------------------------------
+
+LIBVERSION  = 2.9.6
+CC          = gcc
+CXX         = g++
+OBJCOPY	    = objcopy
+SIZE	    = size
+INSIGHT     = insight
+
+INCLUDE     = -Ilibmbmaster-$(LIBVERSION)
+CFLAGS	    = -MD -g3 -Wall -pedantic -D_XOPEN_SOURCE=500 -DENABLE_PTHREAD -DSTDC_HEADERS -DHAVE_STDLIB_H -DMBM_RTU_ENABLED=1 -DMBM_ASCII_ENABLED=1 -DMBM_TCP_ENABLED=1  -DMBM_APIHEADERS_ONLY=1
+CFLAGS      += $(INCLUDE)
+ASFLAGS     = -MD 
+LDFLAGS     = -pthread -L$(PWD)/libmbmaster-$(LIBVERSION) -Wl,-rpath,$(PWD)/libmbmaster-$(LIBVERSION) 
+LDLIBS      = -lmbmaster -lpthread -lrt
+
+TGT         = demo-tcp
+CSRC        = demo-tcp.c 
+OBJS        = $(CSRC:.c=.o) 
+DEPS        = $(OBJS:.o=.d) 
+BIN         = $(TGT)
+
+.PHONY: clean all
+
+all: clean $(BIN)
+
+debug:
+	$(INSIGHT) --se=$(TGT)
+
+$(BIN): $(OBJS) $(NOLINK_OBJS)
+	$(CC) $(LDFLAGS) $(OBJS) $(LDLIBS) -o $@
+
+clean:
+	rm -f $(DEPS)
+	rm -f $(OBJS) 
+	rm -f $(BIN) $(TGT).map
+
+# ---------------------------------------------------------------------------
+# rules for code generation
+# ---------------------------------------------------------------------------
+%.o:    %.c
+	$(CC) $(CFLAGS) -o $@ -c $<
+
+# ---------------------------------------------------------------------------
+#  # compiler generated dependencies
+# ---------------------------------------------------------------------------
+-include $(DEPS)
+

@@ -1,0 +1,31 @@
+;****************************************************************************
+;* WFI Entry                                                                *
+;*                                                                          *
+;*  File name : wfi.s79                                                     *
+;****************************************************************************
+
+        SECTION .text:CODE:NOROOT(3)
+        THUMB
+
+        PUBLIC  _wfi_entry
+_wfi_entry:
+    ALIGNROM 3
+    NOP.W
+    NOP.W
+    NOP.W
+    NOP.W
+    WFI
+    NOP
+    B label1
+    NOP
+    NOP.W
+    NOP.W
+    NOP.W
+    NOP.W
+    NOP.W
+    NOP.W
+    NOP.W
+    NOP.W
+label1
+    BX LR
+    END

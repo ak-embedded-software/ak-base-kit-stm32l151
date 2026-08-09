@@ -1,0 +1,17 @@
+# Build outputs
+build_*/
+*.axf
+*.bin
+*.elf
+*.hex
+*.o
+*.d
+*.map
+
+# IDE / Editor files
+.vscode/
+.antigravity/
+.gemini/
+.idea/
+*.swp
+*~

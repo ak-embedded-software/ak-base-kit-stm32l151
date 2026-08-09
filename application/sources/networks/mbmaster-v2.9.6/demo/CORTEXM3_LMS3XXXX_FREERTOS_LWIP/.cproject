@@ -1,0 +1,2098 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fileVersion 4.0.0?>
+
+<cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+<storageModule moduleId="org.eclipse.cdt.core.settings">
+<cconfiguration id="com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.debug.1225776918">
+<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.debug.1225776918" moduleId="org.eclipse.cdt.core.settings" name="Debug LM3S6965">
+<externalSettings/>
+<extensions>
+<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="org.eclipse.cdt.core.MakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+</extensions>
+</storageModule>
+<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+<configuration artifactExtension="" artifactName="demo-tcp-lm3s6965" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe" cleanCommand="cs-rm -rf" description="" errorParsers="org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GASErrorParser" id="com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.debug.1225776918" name="Debug LM3S6965" parent="com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.debug">
+<folderInfo id="com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.debug.1225776918." name="/" resourcePath="">
+<toolChain id="com.codesourcery.arm_none_eabi.cdt.managedbuild.toolchain.gnu.exe.debug.738342582" name="Sourcery G++ for ARM EABI" nonInternalBuilderId="com.codesourcery.arm_none_eabi.cdt.managedbuild.target.gnu.builder.exe.debug" superClass="com.codesourcery.arm_none_eabi.cdt.managedbuild.toolchain.gnu.exe.debug">
+<option id="com.codesourcery.arm_none_eabi.exe.debug.general.board.1220606692" name="Board" superClass="com.codesourcery.arm_none_eabi.exe.debug.general.board" value="com.codesourcery.arm_none_eabi.exe.debug.general.board.lm3s6965" valueType="enumerated"/>
+<option id="com.codesourcery.arm_none_eabi.exe.debug.general.memory.1000906168" name="Location" superClass="com.codesourcery.arm_none_eabi.exe.debug.general.memory" value="com.codesourcery.arm_none_eabi.exe.debug.general.memory.rom" valueType="enumerated"/>
+<option id="com.codesourcery.arm_none_eabi.exe.debug.general.hosting.885300909" name="Hosting" superClass="com.codesourcery.arm_none_eabi.exe.debug.general.hosting"/>
+<option id="com.codesourcery.arm_none_eabi.exe.debug.general.cpu.1510902979" name="Processor" superClass="com.codesourcery.arm_none_eabi.exe.debug.general.cpu"/>
+<option id="com.codesourcery.arm_none_eabi.exe.debug.general.endian.595162793" name="Endianness" superClass="com.codesourcery.arm_none_eabi.exe.debug.general.endian"/>
+<option id="com.codesourcery.arm_none_eabi.exe.debug.general.thumb.923302699" name="ARM/Thumb Mode" superClass="com.codesourcery.arm_none_eabi.exe.debug.general.thumb"/>
+<option id="com.codesourcery.arm_none_eabi.exe.debug.general.float-abi.962507677" name="Hard/Soft Float" superClass="com.codesourcery.arm_none_eabi.exe.debug.general.float-abi"/>
+<option id="com.codesourcery.arm_none_eabi.exe.debug.general.fpu.1317149411" name="FPU" superClass="com.codesourcery.arm_none_eabi.exe.debug.general.fpu"/>
+<targetPlatform binaryParser="org.eclipse.cdt.core.ELF" id="com.codesourcery.arm_none_eabi.cdt.managedbuild.target.gnu.platform.exe.debug.1581712668" name="Debug Platform" superClass="com.codesourcery.arm_none_eabi.cdt.managedbuild.target.gnu.platform.exe.debug"/>
+<builder autoBuildTarget="all" buildPath="${workspace_loc:/demo-tcp-lm3s6965/Debug}" cleanBuildTarget="clean" command="cs-make" id="org.eclipse.cdt.build.core.internal.builder.607113841" incrementalBuildTarget="all" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT Internal Builder" superClass="org.eclipse.cdt.build.core.internal.builder"/>
+<tool id="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1678782465" name="Sourcery G++ C Compiler" superClass="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.c.compiler.exe.debug">
+<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.exe.debug.option.optimization.level.612944328" name="Optimization Level" superClass="gnu.c.compiler.exe.debug.option.optimization.level" valueType="enumerated"/>
+<option id="gnu.c.compiler.exe.debug.option.debugging.level.833485091" name="Debug Level" superClass="gnu.c.compiler.exe.debug.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
+<option id="gnu.c.compiler.option.include.paths.2081755470" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+<listOptionValue builtIn="false" value="&quot;${ProjDirPath}&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\port&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\mbmaster\include&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\FreeRTOS\include&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\FreeRTOS\portable\GCC\ARM_CM3&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\StellarisWare&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\lwip\src\include&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\lwip\src\include\ipv4&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\lwip\ports\stellaris\include&quot;"/>
+</option>
+<option id="gnu.c.compiler.option.preprocessor.def.symbols.1441645413" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
+<listOptionValue builtIn="false" value="UART_BUFFERED"/>
+<listOptionValue builtIn="false" value="PART_LM3S6965"/>
+<listOptionValue builtIn="false" value="sourcerygxx"/>
+</option>
+<inputType id="com.codesourcery.arm_none_eabi.cdt.debug.core.c.compiler.exe.debug.input.624415256" superClass="com.codesourcery.arm_none_eabi.cdt.debug.core.c.compiler.exe.debug.input"/>
+</tool>
+<tool id="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.2092376314" name="Sourcery G++ C++ Compiler" superClass="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug">
+<option id="gnu.cpp.compiler.exe.debug.option.optimization.level.657958349" name="Optimization Level" superClass="gnu.cpp.compiler.exe.debug.option.optimization.level" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
+<option id="gnu.cpp.compiler.exe.debug.option.debugging.level.60092807" name="Debug Level" superClass="gnu.cpp.compiler.exe.debug.option.debugging.level" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
+</tool>
+<tool id="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.assembler.exe.debug.399892217" name="Sourcery G++ Assembler" superClass="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.assembler.exe.debug">
+<option id="gnu.both.asm.option.debugging.level.1298953646" name="Debug Level" superClass="gnu.both.asm.option.debugging.level" value="gnu.both.asm.debugging.level.max" valueType="enumerated"/>
+<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1223970040" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+</tool>
+<tool id="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.c.linker.exe.debug.1994977104" name="Sourcery G++ C Linker" superClass="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.c.linker.exe.debug">
+<option id="gnu.c.link.option.paths.407961232" name="Library search path (-L)" superClass="gnu.c.link.option.paths" valueType="libPaths">
+<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\Stellarisware\driverlib\codesourcery&quot;"/>
+</option>
+<option id="gnu.c.link.option.libs.2129791573" name="Libraries (-l)" superClass="gnu.c.link.option.libs" valueType="libs">
+<listOptionValue builtIn="false" value="driver"/>
+</option>
+<inputType id="cdt.managedbuild.tool.gnu.c.linker.input.461134173" superClass="cdt.managedbuild.tool.gnu.c.linker.input">
+<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+</inputType>
+</tool>
+<tool id="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.cpp.linker.exe.debug.1211377756" name="Sourcery G++ C++ Linker" superClass="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.cpp.linker.exe.debug"/>
+<tool id="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.objcopy.exe.debug.261031820" name="Sourcery G++ Objcopy" superClass="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.objcopy.exe.debug"/>
+</toolChain>
+</folderInfo>
+<sourceEntries>
+<entry excluding="FreeRTOS/portable/RVDS|FreeRTOS/portable/Keil|Startup.s|Stellarisware/utils/utils.sgxx|Stellarisware/utils/ustdlib.h|Stellarisware/utils/ustdlib.c|Stellarisware/utils/tftp.h|Stellarisware/utils/tftp.c|Stellarisware/utils/swupdate.h|Stellarisware/utils/swupdate.c|Stellarisware/utils/sine.h|Stellarisware/utils/sine.c|Stellarisware/utils/ringbuf.h|Stellarisware/utils/ringbuf.c|Stellarisware/utils/ptpdlib.h|Stellarisware/utils/ptpdlib.c|Stellarisware/utils/lwiplib.h|Stellarisware/utils/lwiplib.c|Stellarisware/utils/locator.h|Stellarisware/utils/locator.c|Stellarisware/utils/isqrt.h|Stellarisware/utils/isqrt.c|Stellarisware/utils/fswrapper.h|Stellarisware/utils/fswrapper.c|Stellarisware/utils/flash_pb.h|Stellarisware/utils/flash_pb.c|Stellarisware/utils/cpu_usage.h|Stellarisware/utils/cpu_usage.c|Stellarisware/utils/cmdline.h|Stellarisware/utils/cmdline.c|Stellarisware/driverlib|StellarisWare/driverlib|lwip/ports/stellaris/netif/stellarisif.c|mbmaster/functions/mbmfunccustom1.c|lwip/src/netif/FILES|lwip/src/netif/slipif.c|lwip/src/netif/loopif.c|lwip/src/netif/ethernetif.c|lwip/src/netif/ppp|lwip/src/core/ipv6|lwip/test|FreeRTOS/portable/MemMang/heap_3.c|FreeRTOS/portable/MemMang/heap_1.c|StellarisWare/inc/inc.sgxx|StellarisWare/inc/lm3s9b96.h|StellarisWare/inc/lm3s9b95.h|StellarisWare/inc/lm3s9b92.h|StellarisWare/inc/lm3s9b90.h|StellarisWare/inc/lm3s9792.h|StellarisWare/inc/lm3s9790.h|StellarisWare/inc/lm3s8971.h|StellarisWare/inc/lm3s8970.h|StellarisWare/inc/lm3s8962.h|StellarisWare/inc/lm3s8938.h|StellarisWare/inc/lm3s8933.h|StellarisWare/inc/lm3s8930.h|StellarisWare/inc/lm3s8738.h|StellarisWare/inc/lm3s8733.h|StellarisWare/inc/lm3s8730.h|StellarisWare/inc/lm3s8630.h|StellarisWare/inc/lm3s8538.h|StellarisWare/inc/lm3s8530.h|StellarisWare/inc/lm3s828.h|StellarisWare/inc/lm3s818.h|StellarisWare/inc/lm3s817.h|StellarisWare/inc/lm3s815.h|StellarisWare/inc/lm3s812.h|StellarisWare/inc/lm3s811.h|StellarisWare/inc/lm3s808.h|StellarisWare/inc/lm3s801.h|StellarisWare/inc/lm3s800.h|StellarisWare/inc/lm3s6965.h|StellarisWare/inc/lm3s6952.h|StellarisWare/inc/lm3s6950.h|StellarisWare/inc/lm3s6938.h|StellarisWare/inc/lm3s6918.h|StellarisWare/inc/lm3s6916.h|StellarisWare/inc/lm3s6911.h|StellarisWare/inc/lm3s6816.h|StellarisWare/inc/lm3s6753.h|StellarisWare/inc/lm3s6730.h|StellarisWare/inc/lm3s6637.h|StellarisWare/inc/lm3s6633.h|StellarisWare/inc/lm3s6618.h|StellarisWare/inc/lm3s6611.h|StellarisWare/inc/lm3s6610.h|StellarisWare/inc/lm3s6537.h|StellarisWare/inc/lm3s6432.h|StellarisWare/inc/lm3s6422.h|StellarisWare/inc/lm3s6420.h|StellarisWare/inc/lm3s628.h|StellarisWare/inc/lm3s618.h|StellarisWare/inc/lm3s617.h|StellarisWare/inc/lm3s615.h|StellarisWare/inc/lm3s613.h|StellarisWare/inc/lm3s612.h|StellarisWare/inc/lm3s6110.h|StellarisWare/inc/lm3s611.h|StellarisWare/inc/lm3s6100.h|StellarisWare/inc/lm3s610.h|StellarisWare/inc/lm3s608.h|StellarisWare/inc/lm3s601.h|StellarisWare/inc/lm3s600.h|StellarisWare/inc/lm3s5b91.h|StellarisWare/inc/lm3s5791.h|StellarisWare/inc/lm3s5762.h|StellarisWare/inc/lm3s5752.h|StellarisWare/inc/lm3s5749.h|StellarisWare/inc/lm3s5747.h|StellarisWare/inc/lm3s5739.h|StellarisWare/inc/lm3s5737.h|StellarisWare/inc/lm3s5732.h|StellarisWare/inc/lm3s5662.h|StellarisWare/inc/lm3s5652.h|StellarisWare/inc/lm3s5632.h|StellarisWare/inc/lm3s3749.h|StellarisWare/inc/lm3s3748.h|StellarisWare/inc/lm3s3739.h|StellarisWare/inc/lm3s3651.h|StellarisWare/inc/lm3s328.h|StellarisWare/inc/lm3s317.h|StellarisWare/inc/lm3s316.h|StellarisWare/inc/lm3s315.h|StellarisWare/inc/lm3s310.h|StellarisWare/inc/lm3s308.h|StellarisWare/inc/lm3s301.h|StellarisWare/inc/lm3s300.h|StellarisWare/inc/lm3s2b93.h|StellarisWare/inc/lm3s2965.h|StellarisWare/inc/lm3s2950.h|StellarisWare/inc/lm3s2948.h|StellarisWare/inc/lm3s2939.h|StellarisWare/inc/lm3s2918.h|StellarisWare/inc/lm3s2911.h|StellarisWare/inc/lm3s2793.h|StellarisWare/inc/lm3s2776.h|StellarisWare/inc/lm3s2739.h|StellarisWare/inc/lm3s2730.h|StellarisWare/inc/lm3s2678.h|StellarisWare/inc/lm3s2671.h|StellarisWare/inc/lm3s2651.h|StellarisWare/inc/lm3s2637.h|StellarisWare/inc/lm3s2620.h|StellarisWare/inc/lm3s2616.h|StellarisWare/inc/lm3s2608.h|StellarisWare/inc/lm3s2601.h|StellarisWare/inc/lm3s2533.h|StellarisWare/inc/lm3s2432.h|StellarisWare/inc/lm3s2412.h|StellarisWare/inc/lm3s2410.h|StellarisWare/inc/lm3s2276.h|StellarisWare/inc/lm3s2139.h|StellarisWare/inc/lm3s2110.h|StellarisWare/inc/lm3s2016.h|StellarisWare/inc/lm3s1968.h|StellarisWare/inc/lm3s1960.h|StellarisWare/inc/lm3s1958.h|StellarisWare/inc/lm3s1937.h|StellarisWare/inc/lm3s1918.h|StellarisWare/inc/lm3s1911.h|StellarisWare/inc/lm3s1850.h|StellarisWare/inc/lm3s1776.h|StellarisWare/inc/lm3s1751.h|StellarisWare/inc/lm3s1637.h|StellarisWare/inc/lm3s1635.h|StellarisWare/inc/lm3s1627.h|StellarisWare/inc/lm3s1626.h|StellarisWare/inc/lm3s1625.h|StellarisWare/inc/lm3s1620.h|StellarisWare/inc/lm3s1608.h|StellarisWare/inc/lm3s1607.h|StellarisWare/inc/lm3s1601.h|StellarisWare/inc/lm3s1538.h|StellarisWare/inc/lm3s1512.h|StellarisWare/inc/lm3s1439.h|StellarisWare/inc/lm3s1435.h|StellarisWare/inc/lm3s1332.h|StellarisWare/inc/lm3s1165.h|StellarisWare/inc/lm3s1162.h|StellarisWare/inc/lm3s1150.h|StellarisWare/inc/lm3s1138.h|StellarisWare/inc/lm3s1133.h|StellarisWare/inc/lm3s1110.h|StellarisWare/inc/lm3s102.h|StellarisWare/inc/lm3s101.h|StellarisWare/inc/hw_watchdog.h|StellarisWare/inc/hw_usb.h|StellarisWare/inc/hw_udma.h|StellarisWare/inc/hw_uart.h|StellarisWare/inc/hw_types.h|StellarisWare/inc/hw_timer.h|StellarisWare/inc/hw_sysctl.h|StellarisWare/inc/hw_ssi.h|StellarisWare/inc/hw_qei.h|StellarisWare/inc/hw_pwm.h|StellarisWare/inc/hw_nvic.h|StellarisWare/inc/hw_memmap.h|StellarisWare/inc/hw_ints.h|StellarisWare/inc/hw_i2s.h|StellarisWare/inc/hw_i2c.h|StellarisWare/inc/hw_hibernate.h|StellarisWare/inc/hw_gpio.h|StellarisWare/inc/hw_flash.h|StellarisWare/inc/hw_ethernet.h|StellarisWare/inc/hw_epi.h|StellarisWare/inc/hw_comp.h|StellarisWare/inc/hw_can.h|StellarisWare/inc/hw_adc.h|StellarisWare/inc/asmdefs.h|StellarisWare/utils/utils.sgxx|StellarisWare/utils/ustdlib.h|StellarisWare/utils/ustdlib.c|StellarisWare/utils/uartstdio.h|StellarisWare/utils/tftp.h|StellarisWare/utils/tftp.c|StellarisWare/utils/swupdate.h|StellarisWare/utils/swupdate.c|StellarisWare/utils/sine.h|StellarisWare/utils/sine.c|StellarisWare/utils/ringbuf.h|StellarisWare/utils/ringbuf.c|StellarisWare/utils/ptpdlib.h|StellarisWare/utils/ptpdlib.c|StellarisWare/utils/lwiplib.h|StellarisWare/utils/lwiplib.c|StellarisWare/utils/locator.h|StellarisWare/utils/locator.c|StellarisWare/utils/isqrt.h|StellarisWare/utils/isqrt.c|StellarisWare/utils/fswrapper.h|StellarisWare/utils/fswrapper.c|StellarisWare/utils/flash_pb.h|StellarisWare/utils/flash_pb.c|StellarisWare/utils/cpu_usage.h|StellarisWare/utils/cpu_usage.c|StellarisWare/utils/cmdline.h|StellarisWare/utils/cmdline.c|StellarisWare/driverlib/readme.txt|StellarisWare/driverlib/Makefile|StellarisWare/driverlib/driverlib.sgxx|StellarisWare/driverlib/watchdog.h|StellarisWare/driverlib/watchdog.c|StellarisWare/driverlib/usb.h|StellarisWare/driverlib/usb.c|StellarisWare/driverlib/udma.h|StellarisWare/driverlib/udma.c|StellarisWare/driverlib/uart.h|StellarisWare/driverlib/timer.h|StellarisWare/driverlib/timer.c|StellarisWare/driverlib/systick.h|StellarisWare/driverlib/systick.c|StellarisWare/driverlib/sysctl.h|StellarisWare/driverlib/ssi.h|StellarisWare/driverlib/ssi.c|StellarisWare/driverlib/rom.h|StellarisWare/driverlib/rom_map.h|StellarisWare/driverlib/qei.h|StellarisWare/driverlib/qei.c|StellarisWare/driverlib/pwm.h|StellarisWare/driverlib/pwm.c|StellarisWare/driverlib/pin_map.h|StellarisWare/driverlib/mpu.h|StellarisWare/driverlib/mpu.c|StellarisWare/driverlib/interrupt.h|StellarisWare/driverlib/i2s.h|StellarisWare/driverlib/i2s.c|StellarisWare/driverlib/i2c.h|StellarisWare/driverlib/i2c.c|StellarisWare/driverlib/hibernate.h|StellarisWare/driverlib/hibernate.c|StellarisWare/driverlib/gpio.h|StellarisWare/driverlib/flash.h|StellarisWare/driverlib/ethernet.h|StellarisWare/driverlib/epi.h|StellarisWare/driverlib/epi.c|StellarisWare/driverlib/debug.h|StellarisWare/driverlib/cpu.h|StellarisWare/driverlib/comp.h|StellarisWare/driverlib/comp.c|StellarisWare/driverlib/can.h|StellarisWare/driverlib/can.c|StellarisWare/driverlib/adc.h|StellarisWare/driverlib/adc.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+</sourceEntries>
+</configuration>
+</storageModule>
+<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+<storageModule moduleId="org.eclipse.cdt.core.language.mapping"/>
+<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
+<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+<storageModule moduleId="scannerConfiguration">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile"/>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<scannerConfigBuildInfo instanceId="com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.release.1820840535;com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.release.1820840535.245222438;com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.c.compiler.exe.release.64222679;com.codesourcery.arm_none_eabi.cdt.debug.core.c.compiler.exe.release.input.512203161">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC"/>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</scannerConfigBuildInfo>
+<scannerConfigBuildInfo instanceId="com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.debug.1225776918;com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.debug.1225776918.;com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1678782465;com.codesourcery.arm_none_eabi.cdt.debug.core.c.compiler.exe.debug.input.624415256">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC"/>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</scannerConfigBuildInfo>
+<scannerConfigBuildInfo instanceId="com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.debug.1225776918;com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.debug.1225776918.1280571819;com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1422060677;com.codesourcery.arm_none_eabi.cdt.debug.core.c.compiler.exe.debug.input.86887349">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC"/>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</scannerConfigBuildInfo>
+<scannerConfigBuildInfo instanceId="com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.debug.1225776918.1337950924;com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.debug.1225776918.1337950924.;com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1515211601;com.codesourcery.arm_none_eabi.cdt.debug.core.c.compiler.exe.debug.input.1820932124">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC"/>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</scannerConfigBuildInfo>
+<scannerConfigBuildInfo instanceId="com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.release.1820840535;com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.release.1820840535.;com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.c.compiler.exe.release.1056212095;com.codesourcery.arm_none_eabi.cdt.debug.core.c.compiler.exe.release.input.2061616593">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC"/>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</scannerConfigBuildInfo>
+</storageModule>
+</cconfiguration>
+<cconfiguration id="com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.release.1820840535">
+<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.release.1820840535" moduleId="org.eclipse.cdt.core.settings" name="Release LM3S6965">
+<externalSettings/>
+<extensions>
+<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="org.eclipse.cdt.core.MakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+</extensions>
+</storageModule>
+<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+<configuration artifactExtension="" artifactName="demo-tcp-lm3s6965" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="cs-rm -rf" description="" errorParsers="org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GASErrorParser" id="com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.release.1820840535" name="Release LM3S6965" parent="com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.release">
+<folderInfo id="com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.release.1820840535." name="/" resourcePath="">
+<toolChain id="com.codesourcery.arm_none_eabi.cdt.managedbuild.toolchain.gnu.exe.release.910425967" name="Sourcery G++ for ARM EABI" superClass="com.codesourcery.arm_none_eabi.cdt.managedbuild.toolchain.gnu.exe.release">
+<option id="com.codesourcery.arm_none_eabi.exe.release.general.board.238473906" name="Board" superClass="com.codesourcery.arm_none_eabi.exe.release.general.board" value="com.codesourcery.arm_none_eabi.exe.release.general.board.lm3s6952" valueType="enumerated"/>
+<option id="com.codesourcery.arm_none_eabi.exe.release.general.memory.1362154725" name="Location" superClass="com.codesourcery.arm_none_eabi.exe.release.general.memory" value="com.codesourcery.arm_none_eabi.exe.release.general.memory.rom" valueType="enumerated"/>
+<option id="com.codesourcery.arm_none_eabi.exe.release.general.hosting.500703418" name="Hosting" superClass="com.codesourcery.arm_none_eabi.exe.release.general.hosting"/>
+<option id="com.codesourcery.arm_none_eabi.exe.release.general.cpu.419804817" name="Processor" superClass="com.codesourcery.arm_none_eabi.exe.release.general.cpu"/>
+<option id="com.codesourcery.arm_none_eabi.exe.release.general.endian.595322036" name="Endianness" superClass="com.codesourcery.arm_none_eabi.exe.release.general.endian"/>
+<option id="com.codesourcery.arm_none_eabi.exe.release.general.thumb.462434201" name="ARM/Thumb Mode" superClass="com.codesourcery.arm_none_eabi.exe.release.general.thumb"/>
+<option id="com.codesourcery.arm_none_eabi.exe.release.general.float-abi.2084486676" name="Hard/Soft Float" superClass="com.codesourcery.arm_none_eabi.exe.release.general.float-abi"/>
+<option id="com.codesourcery.arm_none_eabi.exe.release.general.fpu.1245678892" name="FPU" superClass="com.codesourcery.arm_none_eabi.exe.release.general.fpu"/>
+<targetPlatform binaryParser="org.eclipse.cdt.core.ELF" id="com.codesourcery.arm_none_eabi.cdt.managedbuild.target.gnu.platform.exe.release.1772707060" name="Release Platform" superClass="com.codesourcery.arm_none_eabi.cdt.managedbuild.target.gnu.platform.exe.release"/>
+<builder buildPath="${workspace_loc:/demo-tcp-lm3s6965/Release}" id="com.codesourcery.arm_none_eabi.cdt.managedbuild.target.gnu.builder.exe.release.2088509888" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="com.codesourcery.arm_none_eabi.cdt.managedbuild.target.gnu.builder.exe.release"/>
+<tool id="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.c.compiler.exe.release.1056212095" name="Sourcery G++ C Compiler" superClass="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.c.compiler.exe.release">
+<option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.exe.release.option.optimization.level.985542458" name="Optimization Level" superClass="gnu.c.compiler.exe.release.option.optimization.level" valueType="enumerated"/>
+<option id="gnu.c.compiler.exe.release.option.debugging.level.138346057" name="Debug Level" superClass="gnu.c.compiler.exe.release.option.debugging.level" value="gnu.c.debugging.level.none" valueType="enumerated"/>
+<option id="gnu.c.compiler.option.include.paths.1681586422" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+<listOptionValue builtIn="false" value="&quot;${ProjDirPath}&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\mbmaster\include&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\lwip\src\include\lwip&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\FreeRTOS\include&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\FreeRTOS\portable\GCC\ARM_CM3&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\StellarisWare&quot;"/>
+</option>
+<option id="gnu.c.compiler.option.preprocessor.def.symbols.1505633236" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
+<listOptionValue builtIn="false" value="UART_BUFFERED"/>
+<listOptionValue builtIn="false" value="PART_LM3S6965"/>
+<listOptionValue builtIn="false" value="sourcerygxx"/>
+</option>
+<inputType id="com.codesourcery.arm_none_eabi.cdt.debug.core.c.compiler.exe.release.input.2061616593" superClass="com.codesourcery.arm_none_eabi.cdt.debug.core.c.compiler.exe.release.input"/>
+</tool>
+<tool id="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1182091048" name="Sourcery G++ C++ Compiler" superClass="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.cpp.compiler.exe.release">
+<option id="gnu.cpp.compiler.exe.release.option.optimization.level.151956226" name="Optimization Level" superClass="gnu.cpp.compiler.exe.release.option.optimization.level" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
+<option id="gnu.cpp.compiler.exe.release.option.debugging.level.826386231" name="Debug Level" superClass="gnu.cpp.compiler.exe.release.option.debugging.level" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
+</tool>
+<tool id="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.assembler.exe.release.1186045161" name="Sourcery G++ Assembler" superClass="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.assembler.exe.release">
+<option id="gnu.both.asm.option.debugging.level.1697405896" name="Debug Level" superClass="gnu.both.asm.option.debugging.level" value="gnu.both.asm.debugging.level.none" valueType="enumerated"/>
+<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1475289637" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+</tool>
+<tool id="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.c.linker.exe.release.1617397789" name="Sourcery G++ C Linker" superClass="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.c.linker.exe.release">
+<option id="gnu.c.link.option.paths.38741161" name="Library search path (-L)" superClass="gnu.c.link.option.paths" valueType="libPaths">
+<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\Stellarisware\driverlib\codesourcery&quot;"/>
+</option>
+<inputType id="cdt.managedbuild.tool.gnu.c.linker.input.811783392" superClass="cdt.managedbuild.tool.gnu.c.linker.input">
+<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+</inputType>
+</tool>
+<tool id="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.cpp.linker.exe.release.597390618" name="Sourcery G++ C++ Linker" superClass="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.cpp.linker.exe.release"/>
+<tool id="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.objcopy.exe.release.1408843529" name="Sourcery G++ Objcopy" superClass="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.objcopy.exe.release"/>
+</toolChain>
+</folderInfo>
+<sourceEntries>
+<entry excluding="FreeRTOS/portable/RVDS|FreeRTOS/portable/Keil|Startup.s|Stellarisware/utils/utils.sgxx|Stellarisware/utils/ustdlib.h|Stellarisware/utils/ustdlib.c|Stellarisware/utils/tftp.h|Stellarisware/utils/tftp.c|Stellarisware/utils/swupdate.h|Stellarisware/utils/swupdate.c|Stellarisware/utils/sine.h|Stellarisware/utils/sine.c|Stellarisware/utils/ringbuf.h|Stellarisware/utils/ringbuf.c|Stellarisware/utils/ptpdlib.h|Stellarisware/utils/ptpdlib.c|Stellarisware/utils/lwiplib.h|Stellarisware/utils/lwiplib.c|Stellarisware/utils/locator.h|Stellarisware/utils/locator.c|Stellarisware/utils/isqrt.h|Stellarisware/utils/isqrt.c|Stellarisware/utils/fswrapper.h|Stellarisware/utils/fswrapper.c|Stellarisware/utils/flash_pb.h|Stellarisware/utils/flash_pb.c|Stellarisware/utils/cpu_usage.h|Stellarisware/utils/cpu_usage.c|Stellarisware/utils/cmdline.h|Stellarisware/utils/cmdline.c|Stellarisware/driverlib|StellarisWare/driverlib|lwip/ports/stellaris/netif/stellarisif.c|mbmaster/functions/mbmfunccustom1.c|lwip/src/netif/FILES|lwip/src/netif/slipif.c|lwip/src/netif/loopif.c|lwip/src/netif/ethernetif.c|lwip/src/netif/ppp|lwip/src/core/ipv6|lwip/test|FreeRTOS/portable/MemMang/heap_3.c|FreeRTOS/portable/MemMang/heap_1.c|StellarisWare/inc/inc.sgxx|StellarisWare/inc/lm3s9b96.h|StellarisWare/inc/lm3s9b95.h|StellarisWare/inc/lm3s9b92.h|StellarisWare/inc/lm3s9b90.h|StellarisWare/inc/lm3s9792.h|StellarisWare/inc/lm3s9790.h|StellarisWare/inc/lm3s8971.h|StellarisWare/inc/lm3s8970.h|StellarisWare/inc/lm3s8962.h|StellarisWare/inc/lm3s8938.h|StellarisWare/inc/lm3s8933.h|StellarisWare/inc/lm3s8930.h|StellarisWare/inc/lm3s8738.h|StellarisWare/inc/lm3s8733.h|StellarisWare/inc/lm3s8730.h|StellarisWare/inc/lm3s8630.h|StellarisWare/inc/lm3s8538.h|StellarisWare/inc/lm3s8530.h|StellarisWare/inc/lm3s828.h|StellarisWare/inc/lm3s818.h|StellarisWare/inc/lm3s817.h|StellarisWare/inc/lm3s815.h|StellarisWare/inc/lm3s812.h|StellarisWare/inc/lm3s811.h|StellarisWare/inc/lm3s808.h|StellarisWare/inc/lm3s801.h|StellarisWare/inc/lm3s800.h|StellarisWare/inc/lm3s6965.h|StellarisWare/inc/lm3s6952.h|StellarisWare/inc/lm3s6950.h|StellarisWare/inc/lm3s6938.h|StellarisWare/inc/lm3s6918.h|StellarisWare/inc/lm3s6916.h|StellarisWare/inc/lm3s6911.h|StellarisWare/inc/lm3s6816.h|StellarisWare/inc/lm3s6753.h|StellarisWare/inc/lm3s6730.h|StellarisWare/inc/lm3s6637.h|StellarisWare/inc/lm3s6633.h|StellarisWare/inc/lm3s6618.h|StellarisWare/inc/lm3s6611.h|StellarisWare/inc/lm3s6610.h|StellarisWare/inc/lm3s6537.h|StellarisWare/inc/lm3s6432.h|StellarisWare/inc/lm3s6422.h|StellarisWare/inc/lm3s6420.h|StellarisWare/inc/lm3s628.h|StellarisWare/inc/lm3s618.h|StellarisWare/inc/lm3s617.h|StellarisWare/inc/lm3s615.h|StellarisWare/inc/lm3s613.h|StellarisWare/inc/lm3s612.h|StellarisWare/inc/lm3s6110.h|StellarisWare/inc/lm3s611.h|StellarisWare/inc/lm3s6100.h|StellarisWare/inc/lm3s610.h|StellarisWare/inc/lm3s608.h|StellarisWare/inc/lm3s601.h|StellarisWare/inc/lm3s600.h|StellarisWare/inc/lm3s5b91.h|StellarisWare/inc/lm3s5791.h|StellarisWare/inc/lm3s5762.h|StellarisWare/inc/lm3s5752.h|StellarisWare/inc/lm3s5749.h|StellarisWare/inc/lm3s5747.h|StellarisWare/inc/lm3s5739.h|StellarisWare/inc/lm3s5737.h|StellarisWare/inc/lm3s5732.h|StellarisWare/inc/lm3s5662.h|StellarisWare/inc/lm3s5652.h|StellarisWare/inc/lm3s5632.h|StellarisWare/inc/lm3s3749.h|StellarisWare/inc/lm3s3748.h|StellarisWare/inc/lm3s3739.h|StellarisWare/inc/lm3s3651.h|StellarisWare/inc/lm3s328.h|StellarisWare/inc/lm3s317.h|StellarisWare/inc/lm3s316.h|StellarisWare/inc/lm3s315.h|StellarisWare/inc/lm3s310.h|StellarisWare/inc/lm3s308.h|StellarisWare/inc/lm3s301.h|StellarisWare/inc/lm3s300.h|StellarisWare/inc/lm3s2b93.h|StellarisWare/inc/lm3s2965.h|StellarisWare/inc/lm3s2950.h|StellarisWare/inc/lm3s2948.h|StellarisWare/inc/lm3s2939.h|StellarisWare/inc/lm3s2918.h|StellarisWare/inc/lm3s2911.h|StellarisWare/inc/lm3s2793.h|StellarisWare/inc/lm3s2776.h|StellarisWare/inc/lm3s2739.h|StellarisWare/inc/lm3s2730.h|StellarisWare/inc/lm3s2678.h|StellarisWare/inc/lm3s2671.h|StellarisWare/inc/lm3s2651.h|StellarisWare/inc/lm3s2637.h|StellarisWare/inc/lm3s2620.h|StellarisWare/inc/lm3s2616.h|StellarisWare/inc/lm3s2608.h|StellarisWare/inc/lm3s2601.h|StellarisWare/inc/lm3s2533.h|StellarisWare/inc/lm3s2432.h|StellarisWare/inc/lm3s2412.h|StellarisWare/inc/lm3s2410.h|StellarisWare/inc/lm3s2276.h|StellarisWare/inc/lm3s2139.h|StellarisWare/inc/lm3s2110.h|StellarisWare/inc/lm3s2016.h|StellarisWare/inc/lm3s1968.h|StellarisWare/inc/lm3s1960.h|StellarisWare/inc/lm3s1958.h|StellarisWare/inc/lm3s1937.h|StellarisWare/inc/lm3s1918.h|StellarisWare/inc/lm3s1911.h|StellarisWare/inc/lm3s1850.h|StellarisWare/inc/lm3s1776.h|StellarisWare/inc/lm3s1751.h|StellarisWare/inc/lm3s1637.h|StellarisWare/inc/lm3s1635.h|StellarisWare/inc/lm3s1627.h|StellarisWare/inc/lm3s1626.h|StellarisWare/inc/lm3s1625.h|StellarisWare/inc/lm3s1620.h|StellarisWare/inc/lm3s1608.h|StellarisWare/inc/lm3s1607.h|StellarisWare/inc/lm3s1601.h|StellarisWare/inc/lm3s1538.h|StellarisWare/inc/lm3s1512.h|StellarisWare/inc/lm3s1439.h|StellarisWare/inc/lm3s1435.h|StellarisWare/inc/lm3s1332.h|StellarisWare/inc/lm3s1165.h|StellarisWare/inc/lm3s1162.h|StellarisWare/inc/lm3s1150.h|StellarisWare/inc/lm3s1138.h|StellarisWare/inc/lm3s1133.h|StellarisWare/inc/lm3s1110.h|StellarisWare/inc/lm3s102.h|StellarisWare/inc/lm3s101.h|StellarisWare/inc/hw_watchdog.h|StellarisWare/inc/hw_usb.h|StellarisWare/inc/hw_udma.h|StellarisWare/inc/hw_uart.h|StellarisWare/inc/hw_types.h|StellarisWare/inc/hw_timer.h|StellarisWare/inc/hw_sysctl.h|StellarisWare/inc/hw_ssi.h|StellarisWare/inc/hw_qei.h|StellarisWare/inc/hw_pwm.h|StellarisWare/inc/hw_nvic.h|StellarisWare/inc/hw_memmap.h|StellarisWare/inc/hw_ints.h|StellarisWare/inc/hw_i2s.h|StellarisWare/inc/hw_i2c.h|StellarisWare/inc/hw_hibernate.h|StellarisWare/inc/hw_gpio.h|StellarisWare/inc/hw_flash.h|StellarisWare/inc/hw_ethernet.h|StellarisWare/inc/hw_epi.h|StellarisWare/inc/hw_comp.h|StellarisWare/inc/hw_can.h|StellarisWare/inc/hw_adc.h|StellarisWare/inc/asmdefs.h|StellarisWare/utils/utils.sgxx|StellarisWare/utils/ustdlib.h|StellarisWare/utils/ustdlib.c|StellarisWare/utils/uartstdio.h|StellarisWare/utils/tftp.h|StellarisWare/utils/tftp.c|StellarisWare/utils/swupdate.h|StellarisWare/utils/swupdate.c|StellarisWare/utils/sine.h|StellarisWare/utils/sine.c|StellarisWare/utils/ringbuf.h|StellarisWare/utils/ringbuf.c|StellarisWare/utils/ptpdlib.h|StellarisWare/utils/ptpdlib.c|StellarisWare/utils/lwiplib.h|StellarisWare/utils/lwiplib.c|StellarisWare/utils/locator.h|StellarisWare/utils/locator.c|StellarisWare/utils/isqrt.h|StellarisWare/utils/isqrt.c|StellarisWare/utils/fswrapper.h|StellarisWare/utils/fswrapper.c|StellarisWare/utils/flash_pb.h|StellarisWare/utils/flash_pb.c|StellarisWare/utils/cpu_usage.h|StellarisWare/utils/cpu_usage.c|StellarisWare/utils/cmdline.h|StellarisWare/utils/cmdline.c|StellarisWare/driverlib/readme.txt|StellarisWare/driverlib/Makefile|StellarisWare/driverlib/driverlib.sgxx|StellarisWare/driverlib/watchdog.h|StellarisWare/driverlib/watchdog.c|StellarisWare/driverlib/usb.h|StellarisWare/driverlib/usb.c|StellarisWare/driverlib/udma.h|StellarisWare/driverlib/udma.c|StellarisWare/driverlib/uart.h|StellarisWare/driverlib/timer.h|StellarisWare/driverlib/timer.c|StellarisWare/driverlib/systick.h|StellarisWare/driverlib/systick.c|StellarisWare/driverlib/sysctl.h|StellarisWare/driverlib/ssi.h|StellarisWare/driverlib/ssi.c|StellarisWare/driverlib/rom.h|StellarisWare/driverlib/rom_map.h|StellarisWare/driverlib/qei.h|StellarisWare/driverlib/qei.c|StellarisWare/driverlib/pwm.h|StellarisWare/driverlib/pwm.c|StellarisWare/driverlib/pin_map.h|StellarisWare/driverlib/mpu.h|StellarisWare/driverlib/mpu.c|StellarisWare/driverlib/interrupt.h|StellarisWare/driverlib/i2s.h|StellarisWare/driverlib/i2s.c|StellarisWare/driverlib/i2c.h|StellarisWare/driverlib/i2c.c|StellarisWare/driverlib/hibernate.h|StellarisWare/driverlib/hibernate.c|StellarisWare/driverlib/gpio.h|StellarisWare/driverlib/flash.h|StellarisWare/driverlib/ethernet.h|StellarisWare/driverlib/epi.h|StellarisWare/driverlib/epi.c|StellarisWare/driverlib/debug.h|StellarisWare/driverlib/cpu.h|StellarisWare/driverlib/comp.h|StellarisWare/driverlib/comp.c|StellarisWare/driverlib/can.h|StellarisWare/driverlib/can.c|StellarisWare/driverlib/adc.h|StellarisWare/driverlib/adc.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+</sourceEntries>
+</configuration>
+</storageModule>
+<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+<storageModule moduleId="org.eclipse.cdt.core.language.mapping"/>
+<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
+<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+<storageModule moduleId="scannerConfiguration">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile"/>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<scannerConfigBuildInfo instanceId="com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.release.1820840535;com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.release.1820840535.245222438;com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.c.compiler.exe.release.64222679;com.codesourcery.arm_none_eabi.cdt.debug.core.c.compiler.exe.release.input.512203161">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC"/>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</scannerConfigBuildInfo>
+<scannerConfigBuildInfo instanceId="com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.debug.1225776918;com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.debug.1225776918.;com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1678782465;com.codesourcery.arm_none_eabi.cdt.debug.core.c.compiler.exe.debug.input.624415256">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC"/>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</scannerConfigBuildInfo>
+<scannerConfigBuildInfo instanceId="com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.debug.1225776918;com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.debug.1225776918.1280571819;com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1422060677;com.codesourcery.arm_none_eabi.cdt.debug.core.c.compiler.exe.debug.input.86887349">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC"/>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</scannerConfigBuildInfo>
+<scannerConfigBuildInfo instanceId="com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.debug.1225776918.1337950924;com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.debug.1225776918.1337950924.;com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1515211601;com.codesourcery.arm_none_eabi.cdt.debug.core.c.compiler.exe.debug.input.1820932124">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC"/>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</scannerConfigBuildInfo>
+<scannerConfigBuildInfo instanceId="com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.release.1820840535;com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.release.1820840535.;com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.c.compiler.exe.release.1056212095;com.codesourcery.arm_none_eabi.cdt.debug.core.c.compiler.exe.release.input.2061616593">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC"/>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</scannerConfigBuildInfo>
+</storageModule>
+</cconfiguration>
+<cconfiguration id="com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.debug.1225776918.1337950924">
+<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.debug.1225776918.1337950924" moduleId="org.eclipse.cdt.core.settings" name="Debug LM3S8962">
+<externalSettings/>
+<extensions>
+<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="org.eclipse.cdt.core.MakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+</extensions>
+</storageModule>
+<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+<configuration artifactExtension="" artifactName="demo-tcp-lm3s8962" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="cs-rm -rf" description="" errorParsers="org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GASErrorParser" id="com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.debug.1225776918.1337950924" name="Debug LM3S8962" parent="com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.debug">
+<folderInfo id="com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.debug.1225776918.1337950924." name="/" resourcePath="">
+<toolChain id="com.codesourcery.arm_none_eabi.cdt.managedbuild.toolchain.gnu.exe.debug.1420731882" name="Sourcery G++ for ARM EABI" nonInternalBuilderId="com.codesourcery.arm_none_eabi.cdt.managedbuild.target.gnu.builder.exe.debug" superClass="com.codesourcery.arm_none_eabi.cdt.managedbuild.toolchain.gnu.exe.debug">
+<option id="com.codesourcery.arm_none_eabi.exe.debug.general.board.1222459444" name="Board" superClass="com.codesourcery.arm_none_eabi.exe.debug.general.board" value="com.codesourcery.arm_none_eabi.exe.debug.general.board.lm3s8962" valueType="enumerated"/>
+<option id="com.codesourcery.arm_none_eabi.exe.debug.general.memory.1493775657" name="Location" superClass="com.codesourcery.arm_none_eabi.exe.debug.general.memory" value="com.codesourcery.arm_none_eabi.exe.debug.general.memory.rom" valueType="enumerated"/>
+<option id="com.codesourcery.arm_none_eabi.exe.debug.general.hosting.1712205674" name="Hosting" superClass="com.codesourcery.arm_none_eabi.exe.debug.general.hosting"/>
+<option id="com.codesourcery.arm_none_eabi.exe.debug.general.cpu.869580246" name="Processor" superClass="com.codesourcery.arm_none_eabi.exe.debug.general.cpu"/>
+<option id="com.codesourcery.arm_none_eabi.exe.debug.general.endian.964591464" name="Endianness" superClass="com.codesourcery.arm_none_eabi.exe.debug.general.endian"/>
+<option id="com.codesourcery.arm_none_eabi.exe.debug.general.thumb.1685203187" name="ARM/Thumb Mode" superClass="com.codesourcery.arm_none_eabi.exe.debug.general.thumb"/>
+<option id="com.codesourcery.arm_none_eabi.exe.debug.general.float-abi.1823470505" name="Hard/Soft Float" superClass="com.codesourcery.arm_none_eabi.exe.debug.general.float-abi"/>
+<option id="com.codesourcery.arm_none_eabi.exe.debug.general.fpu.240284271" name="FPU" superClass="com.codesourcery.arm_none_eabi.exe.debug.general.fpu"/>
+<targetPlatform binaryParser="org.eclipse.cdt.core.ELF" id="com.codesourcery.arm_none_eabi.cdt.managedbuild.target.gnu.platform.exe.debug.1868341196" name="Debug Platform" superClass="com.codesourcery.arm_none_eabi.cdt.managedbuild.target.gnu.platform.exe.debug"/>
+<builder autoBuildTarget="all" buildPath="${workspace_loc:/demo-tcp-lm3s6965/Debug}" cleanBuildTarget="clean" command="cs-make" id="org.eclipse.cdt.build.core.internal.builder.1164159339" incrementalBuildTarget="all" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT Internal Builder" superClass="org.eclipse.cdt.build.core.internal.builder"/>
+<tool id="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1515211601" name="Sourcery G++ C Compiler" superClass="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.c.compiler.exe.debug">
+<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.exe.debug.option.optimization.level.2122394194" name="Optimization Level" superClass="gnu.c.compiler.exe.debug.option.optimization.level" valueType="enumerated"/>
+<option id="gnu.c.compiler.exe.debug.option.debugging.level.378490587" name="Debug Level" superClass="gnu.c.compiler.exe.debug.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
+<option id="gnu.c.compiler.option.include.paths.347166704" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+<listOptionValue builtIn="false" value="&quot;${ProjDirPath}&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\port&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\mbmaster\include&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\FreeRTOS\include&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\FreeRTOS\portable\GCC\ARM_CM3&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\StellarisWare&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\lwip\src\include&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\lwip\src\include\ipv4&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\lwip\ports\stellaris\include&quot;"/>
+</option>
+<option id="gnu.c.compiler.option.preprocessor.def.symbols.2049047950" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
+<listOptionValue builtIn="false" value="UART_BUFFERED"/>
+<listOptionValue builtIn="false" value="PART_LM3S8962"/>
+<listOptionValue builtIn="false" value="sourcerygxx"/>
+</option>
+<inputType id="com.codesourcery.arm_none_eabi.cdt.debug.core.c.compiler.exe.debug.input.1820932124" superClass="com.codesourcery.arm_none_eabi.cdt.debug.core.c.compiler.exe.debug.input"/>
+</tool>
+<tool id="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.237683842" name="Sourcery G++ C++ Compiler" superClass="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug">
+<option id="gnu.cpp.compiler.exe.debug.option.optimization.level.1754642116" name="Optimization Level" superClass="gnu.cpp.compiler.exe.debug.option.optimization.level" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
+<option id="gnu.cpp.compiler.exe.debug.option.debugging.level.1905222318" name="Debug Level" superClass="gnu.cpp.compiler.exe.debug.option.debugging.level" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
+</tool>
+<tool id="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.assembler.exe.debug.1761168440" name="Sourcery G++ Assembler" superClass="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.assembler.exe.debug">
+<option id="gnu.both.asm.option.debugging.level.114554443" name="Debug Level" superClass="gnu.both.asm.option.debugging.level" value="gnu.both.asm.debugging.level.max" valueType="enumerated"/>
+<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1152318168" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+</tool>
+<tool id="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.c.linker.exe.debug.838497235" name="Sourcery G++ C Linker" superClass="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.c.linker.exe.debug">
+<option id="gnu.c.link.option.paths.1642345497" name="Library search path (-L)" superClass="gnu.c.link.option.paths" valueType="libPaths">
+<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\Stellarisware\driverlib\codesourcery&quot;"/>
+</option>
+<option id="gnu.c.link.option.libs.118969008" name="Libraries (-l)" superClass="gnu.c.link.option.libs" valueType="libs">
+<listOptionValue builtIn="false" value="driver"/>
+</option>
+<inputType id="cdt.managedbuild.tool.gnu.c.linker.input.61774244" superClass="cdt.managedbuild.tool.gnu.c.linker.input">
+<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+</inputType>
+</tool>
+<tool id="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.cpp.linker.exe.debug.1989369517" name="Sourcery G++ C++ Linker" superClass="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.cpp.linker.exe.debug"/>
+<tool id="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.objcopy.exe.debug.678868799" name="Sourcery G++ Objcopy" superClass="com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.objcopy.exe.debug"/>
+</toolChain>
+</folderInfo>
+<sourceEntries>
+<entry excluding="FreeRTOS/portable/RVDS|FreeRTOS/portable/Keil|Startup.s|Stellarisware/utils/utils.sgxx|Stellarisware/utils/ustdlib.h|Stellarisware/utils/ustdlib.c|Stellarisware/utils/tftp.h|Stellarisware/utils/tftp.c|Stellarisware/utils/swupdate.h|Stellarisware/utils/swupdate.c|Stellarisware/utils/sine.h|Stellarisware/utils/sine.c|Stellarisware/utils/ringbuf.h|Stellarisware/utils/ringbuf.c|Stellarisware/utils/ptpdlib.h|Stellarisware/utils/ptpdlib.c|Stellarisware/utils/lwiplib.h|Stellarisware/utils/lwiplib.c|Stellarisware/utils/locator.h|Stellarisware/utils/locator.c|Stellarisware/utils/isqrt.h|Stellarisware/utils/isqrt.c|Stellarisware/utils/fswrapper.h|Stellarisware/utils/fswrapper.c|Stellarisware/utils/flash_pb.h|Stellarisware/utils/flash_pb.c|Stellarisware/utils/cpu_usage.h|Stellarisware/utils/cpu_usage.c|Stellarisware/utils/cmdline.h|Stellarisware/utils/cmdline.c|Stellarisware/driverlib|StellarisWare/driverlib|lwip/ports/stellaris/netif/stellarisif.c|mbmaster/functions/mbmfunccustom1.c|lwip/src/netif/FILES|lwip/src/netif/slipif.c|lwip/src/netif/loopif.c|lwip/src/netif/ethernetif.c|lwip/src/netif/ppp|lwip/src/core/ipv6|lwip/test|FreeRTOS/portable/MemMang/heap_3.c|FreeRTOS/portable/MemMang/heap_1.c|StellarisWare/inc/inc.sgxx|StellarisWare/inc/lm3s9b96.h|StellarisWare/inc/lm3s9b95.h|StellarisWare/inc/lm3s9b92.h|StellarisWare/inc/lm3s9b90.h|StellarisWare/inc/lm3s9792.h|StellarisWare/inc/lm3s9790.h|StellarisWare/inc/lm3s8971.h|StellarisWare/inc/lm3s8970.h|StellarisWare/inc/lm3s8962.h|StellarisWare/inc/lm3s8938.h|StellarisWare/inc/lm3s8933.h|StellarisWare/inc/lm3s8930.h|StellarisWare/inc/lm3s8738.h|StellarisWare/inc/lm3s8733.h|StellarisWare/inc/lm3s8730.h|StellarisWare/inc/lm3s8630.h|StellarisWare/inc/lm3s8538.h|StellarisWare/inc/lm3s8530.h|StellarisWare/inc/lm3s828.h|StellarisWare/inc/lm3s818.h|StellarisWare/inc/lm3s817.h|StellarisWare/inc/lm3s815.h|StellarisWare/inc/lm3s812.h|StellarisWare/inc/lm3s811.h|StellarisWare/inc/lm3s808.h|StellarisWare/inc/lm3s801.h|StellarisWare/inc/lm3s800.h|StellarisWare/inc/lm3s6965.h|StellarisWare/inc/lm3s6952.h|StellarisWare/inc/lm3s6950.h|StellarisWare/inc/lm3s6938.h|StellarisWare/inc/lm3s6918.h|StellarisWare/inc/lm3s6916.h|StellarisWare/inc/lm3s6911.h|StellarisWare/inc/lm3s6816.h|StellarisWare/inc/lm3s6753.h|StellarisWare/inc/lm3s6730.h|StellarisWare/inc/lm3s6637.h|StellarisWare/inc/lm3s6633.h|StellarisWare/inc/lm3s6618.h|StellarisWare/inc/lm3s6611.h|StellarisWare/inc/lm3s6610.h|StellarisWare/inc/lm3s6537.h|StellarisWare/inc/lm3s6432.h|StellarisWare/inc/lm3s6422.h|StellarisWare/inc/lm3s6420.h|StellarisWare/inc/lm3s628.h|StellarisWare/inc/lm3s618.h|StellarisWare/inc/lm3s617.h|StellarisWare/inc/lm3s615.h|StellarisWare/inc/lm3s613.h|StellarisWare/inc/lm3s612.h|StellarisWare/inc/lm3s6110.h|StellarisWare/inc/lm3s611.h|StellarisWare/inc/lm3s6100.h|StellarisWare/inc/lm3s610.h|StellarisWare/inc/lm3s608.h|StellarisWare/inc/lm3s601.h|StellarisWare/inc/lm3s600.h|StellarisWare/inc/lm3s5b91.h|StellarisWare/inc/lm3s5791.h|StellarisWare/inc/lm3s5762.h|StellarisWare/inc/lm3s5752.h|StellarisWare/inc/lm3s5749.h|StellarisWare/inc/lm3s5747.h|StellarisWare/inc/lm3s5739.h|StellarisWare/inc/lm3s5737.h|StellarisWare/inc/lm3s5732.h|StellarisWare/inc/lm3s5662.h|StellarisWare/inc/lm3s5652.h|StellarisWare/inc/lm3s5632.h|StellarisWare/inc/lm3s3749.h|StellarisWare/inc/lm3s3748.h|StellarisWare/inc/lm3s3739.h|StellarisWare/inc/lm3s3651.h|StellarisWare/inc/lm3s328.h|StellarisWare/inc/lm3s317.h|StellarisWare/inc/lm3s316.h|StellarisWare/inc/lm3s315.h|StellarisWare/inc/lm3s310.h|StellarisWare/inc/lm3s308.h|StellarisWare/inc/lm3s301.h|StellarisWare/inc/lm3s300.h|StellarisWare/inc/lm3s2b93.h|StellarisWare/inc/lm3s2965.h|StellarisWare/inc/lm3s2950.h|StellarisWare/inc/lm3s2948.h|StellarisWare/inc/lm3s2939.h|StellarisWare/inc/lm3s2918.h|StellarisWare/inc/lm3s2911.h|StellarisWare/inc/lm3s2793.h|StellarisWare/inc/lm3s2776.h|StellarisWare/inc/lm3s2739.h|StellarisWare/inc/lm3s2730.h|StellarisWare/inc/lm3s2678.h|StellarisWare/inc/lm3s2671.h|StellarisWare/inc/lm3s2651.h|StellarisWare/inc/lm3s2637.h|StellarisWare/inc/lm3s2620.h|StellarisWare/inc/lm3s2616.h|StellarisWare/inc/lm3s2608.h|StellarisWare/inc/lm3s2601.h|StellarisWare/inc/lm3s2533.h|StellarisWare/inc/lm3s2432.h|StellarisWare/inc/lm3s2412.h|StellarisWare/inc/lm3s2410.h|StellarisWare/inc/lm3s2276.h|StellarisWare/inc/lm3s2139.h|StellarisWare/inc/lm3s2110.h|StellarisWare/inc/lm3s2016.h|StellarisWare/inc/lm3s1968.h|StellarisWare/inc/lm3s1960.h|StellarisWare/inc/lm3s1958.h|StellarisWare/inc/lm3s1937.h|StellarisWare/inc/lm3s1918.h|StellarisWare/inc/lm3s1911.h|StellarisWare/inc/lm3s1850.h|StellarisWare/inc/lm3s1776.h|StellarisWare/inc/lm3s1751.h|StellarisWare/inc/lm3s1637.h|StellarisWare/inc/lm3s1635.h|StellarisWare/inc/lm3s1627.h|StellarisWare/inc/lm3s1626.h|StellarisWare/inc/lm3s1625.h|StellarisWare/inc/lm3s1620.h|StellarisWare/inc/lm3s1608.h|StellarisWare/inc/lm3s1607.h|StellarisWare/inc/lm3s1601.h|StellarisWare/inc/lm3s1538.h|StellarisWare/inc/lm3s1512.h|StellarisWare/inc/lm3s1439.h|StellarisWare/inc/lm3s1435.h|StellarisWare/inc/lm3s1332.h|StellarisWare/inc/lm3s1165.h|StellarisWare/inc/lm3s1162.h|StellarisWare/inc/lm3s1150.h|StellarisWare/inc/lm3s1138.h|StellarisWare/inc/lm3s1133.h|StellarisWare/inc/lm3s1110.h|StellarisWare/inc/lm3s102.h|StellarisWare/inc/lm3s101.h|StellarisWare/inc/hw_watchdog.h|StellarisWare/inc/hw_usb.h|StellarisWare/inc/hw_udma.h|StellarisWare/inc/hw_uart.h|StellarisWare/inc/hw_types.h|StellarisWare/inc/hw_timer.h|StellarisWare/inc/hw_sysctl.h|StellarisWare/inc/hw_ssi.h|StellarisWare/inc/hw_qei.h|StellarisWare/inc/hw_pwm.h|StellarisWare/inc/hw_nvic.h|StellarisWare/inc/hw_memmap.h|StellarisWare/inc/hw_ints.h|StellarisWare/inc/hw_i2s.h|StellarisWare/inc/hw_i2c.h|StellarisWare/inc/hw_hibernate.h|StellarisWare/inc/hw_gpio.h|StellarisWare/inc/hw_flash.h|StellarisWare/inc/hw_ethernet.h|StellarisWare/inc/hw_epi.h|StellarisWare/inc/hw_comp.h|StellarisWare/inc/hw_can.h|StellarisWare/inc/hw_adc.h|StellarisWare/inc/asmdefs.h|StellarisWare/utils/utils.sgxx|StellarisWare/utils/ustdlib.h|StellarisWare/utils/ustdlib.c|StellarisWare/utils/uartstdio.h|StellarisWare/utils/tftp.h|StellarisWare/utils/tftp.c|StellarisWare/utils/swupdate.h|StellarisWare/utils/swupdate.c|StellarisWare/utils/sine.h|StellarisWare/utils/sine.c|StellarisWare/utils/ringbuf.h|StellarisWare/utils/ringbuf.c|StellarisWare/utils/ptpdlib.h|StellarisWare/utils/ptpdlib.c|StellarisWare/utils/lwiplib.h|StellarisWare/utils/lwiplib.c|StellarisWare/utils/locator.h|StellarisWare/utils/locator.c|StellarisWare/utils/isqrt.h|StellarisWare/utils/isqrt.c|StellarisWare/utils/fswrapper.h|StellarisWare/utils/fswrapper.c|StellarisWare/utils/flash_pb.h|StellarisWare/utils/flash_pb.c|StellarisWare/utils/cpu_usage.h|StellarisWare/utils/cpu_usage.c|StellarisWare/utils/cmdline.h|StellarisWare/utils/cmdline.c|StellarisWare/driverlib/readme.txt|StellarisWare/driverlib/Makefile|StellarisWare/driverlib/driverlib.sgxx|StellarisWare/driverlib/watchdog.h|StellarisWare/driverlib/watchdog.c|StellarisWare/driverlib/usb.h|StellarisWare/driverlib/usb.c|StellarisWare/driverlib/udma.h|StellarisWare/driverlib/udma.c|StellarisWare/driverlib/uart.h|StellarisWare/driverlib/timer.h|StellarisWare/driverlib/timer.c|StellarisWare/driverlib/systick.h|StellarisWare/driverlib/systick.c|StellarisWare/driverlib/sysctl.h|StellarisWare/driverlib/ssi.h|StellarisWare/driverlib/ssi.c|StellarisWare/driverlib/rom.h|StellarisWare/driverlib/rom_map.h|StellarisWare/driverlib/qei.h|StellarisWare/driverlib/qei.c|StellarisWare/driverlib/pwm.h|StellarisWare/driverlib/pwm.c|StellarisWare/driverlib/pin_map.h|StellarisWare/driverlib/mpu.h|StellarisWare/driverlib/mpu.c|StellarisWare/driverlib/interrupt.h|StellarisWare/driverlib/i2s.h|StellarisWare/driverlib/i2s.c|StellarisWare/driverlib/i2c.h|StellarisWare/driverlib/i2c.c|StellarisWare/driverlib/hibernate.h|StellarisWare/driverlib/hibernate.c|StellarisWare/driverlib/gpio.h|StellarisWare/driverlib/flash.h|StellarisWare/driverlib/ethernet.h|StellarisWare/driverlib/epi.h|StellarisWare/driverlib/epi.c|StellarisWare/driverlib/debug.h|StellarisWare/driverlib/cpu.h|StellarisWare/driverlib/comp.h|StellarisWare/driverlib/comp.c|StellarisWare/driverlib/can.h|StellarisWare/driverlib/can.c|StellarisWare/driverlib/adc.h|StellarisWare/driverlib/adc.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+</sourceEntries>
+</configuration>
+</storageModule>
+<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+<storageModule moduleId="org.eclipse.cdt.core.language.mapping"/>
+<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
+<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+<storageModule moduleId="scannerConfiguration">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile"/>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<scannerConfigBuildInfo instanceId="com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.release.1820840535;com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.release.1820840535.245222438;com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.c.compiler.exe.release.64222679;com.codesourcery.arm_none_eabi.cdt.debug.core.c.compiler.exe.release.input.512203161">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC"/>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</scannerConfigBuildInfo>
+<scannerConfigBuildInfo instanceId="com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.debug.1225776918;com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.debug.1225776918.;com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1678782465;com.codesourcery.arm_none_eabi.cdt.debug.core.c.compiler.exe.debug.input.624415256">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC"/>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</scannerConfigBuildInfo>
+<scannerConfigBuildInfo instanceId="com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.debug.1225776918;com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.debug.1225776918.1280571819;com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1422060677;com.codesourcery.arm_none_eabi.cdt.debug.core.c.compiler.exe.debug.input.86887349">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC"/>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</scannerConfigBuildInfo>
+<scannerConfigBuildInfo instanceId="com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.debug.1225776918.1337950924;com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.debug.1225776918.1337950924.;com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1515211601;com.codesourcery.arm_none_eabi.cdt.debug.core.c.compiler.exe.debug.input.1820932124">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC"/>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</scannerConfigBuildInfo>
+<scannerConfigBuildInfo instanceId="com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.release.1820840535;com.codesourcery.arm_none_eabi.cdt.managedbuild.config.gnu.exe.release.1820840535.;com.codesourcery.arm_none_eabi.cdt.managedbuild.tool.gnu.c.compiler.exe.release.1056212095;com.codesourcery.arm_none_eabi.cdt.debug.core.c.compiler.exe.release.input.2061616593">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC"/>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.codesourcery.arm_none_eabi.cdt.debug.core.SGPPManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="false"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-none-eabi-g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</scannerConfigBuildInfo>
+</storageModule>
+</cconfiguration>
+</storageModule>
+<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+<project id="demo-tcp-lm3s6965.com.codesourcery.arm_none_eabi.cdt.managedbuild.target.exe.791014799" name="Executable (Sourcery G++ for ARM EABI)" projectType="com.codesourcery.arm_none_eabi.cdt.managedbuild.target.exe" usesSysroot="false"/>
+</storageModule>
+</cproject>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>BBproject/Debug</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>308</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Debug-Log>
+        
+        
+      <ColumnWidth0>16</ColumnWidth0><ColumnWidth1>1369</ColumnWidth1></Debug-Log>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>16</ColumnWidth0><ColumnWidth1>1026</ColumnWidth1><ColumnWidth2>273</ColumnWidth2><ColumnWidth3>68</ColumnWidth3></Build>
+    <TerminalIO/><Find-in-Files><ColumnWidth0>390</ColumnWidth0><ColumnWidth1>65</ColumnWidth1><ColumnWidth2>585</ColumnWidth2><ColumnWidth3>260</ColumnWidth3></Find-in-Files><Select-Ambiguous-Definitions><ColumnWidth0>709</ColumnWidth0><ColumnWidth1>101</ColumnWidth1><ColumnWidth2>1215</ColumnWidth2></Select-Ambiguous-Definitions></Static>
+    <Windows>
+      
+      
+    <Wnd1>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-32573-31928</Identity>
+            <TabName>&#x30eF;&#x30FC;&#x30AF;&#x30B9;&#x30DA;&#x30FC;&#x30B9;</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>BBproject</ExpandedNode><ExpandedNode>BBproject/MODBUS</ExpandedNode><ExpandedNode>BBproject/MODBUS Port</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd1><Wnd3>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-27431-11742</Identity>
+            <TabName>&#x30C7;&#x30D0;&#x30C3;&#x30B0;&#x30eD;&#x30B0;</TabName>
+            <Factory>Debug-Log</Factory>
+            <Session/>
+          </Tab>
+          <Tab>
+            <Identity>TabID-30401-12300</Identity>
+            <TabName>&#x30D3;&#x30eB;&#x30C9;</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-25485-21808</Identity><TabName>&#x30D5;&#x30A1;&#x30A4;&#x30eB;&#x304B;&#x3089;&#x691C;&#x7D22;</TabName><Factory>Find-in-Files</Factory><Session/></Tab><Tab><Identity>TabID-31396-24472</Identity><TabName>Ambiguous Definitions</TabName><Factory>Select-Ambiguous-Definitions</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>1</SelectedTab></Wnd3></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Source\modbus.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>78</YPos2><SelStart2>3653</SelStart2><SelEnd2>3653</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Source\main.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>139</YPos2><SelStart2>3572</SelStart2><SelEnd2>3572</SelEnd2></Tab><ActiveTab>1</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Source\port\mbporttcp.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>21</YPos2><SelStart2>1234</SelStart2><SelEnd2>1247</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Source\port\mbport.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>39</YPos2><SelStart2>1371</SelStart2><SelEnd2>1371</SelEnd2></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-012B3768><key>iaridepm.enu1</key></Toolbar-012B3768></Sizes></Row0><Row1><Sizes/></Row1></Top><Left><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>700</Bottom><Right>399</Right><x>-2</x><y>-2</y><xscreen>174</xscreen><yscreen>278</yscreen><sizeHorzCX>108750</sizeHorzCX><sizeHorzCY>248658</sizeHorzCY><sizeVertCX>250625</sizeVertCX><sizeVertCY>627907</sizeVertCY></Rect></Wnd1></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>373</Bottom><Right>1602</Right><x>-2</x><y>-2</y><xscreen>1604</xscreen><yscreen>375</yscreen><sizeHorzCX>1002500</sizeHorzCX><sizeHorzCY>335420</sizeHorzCY><sizeVertCX>108750</sizeVertCX><sizeVertCY>248658</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

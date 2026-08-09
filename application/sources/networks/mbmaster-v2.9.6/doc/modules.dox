@@ -1,0 +1,78 @@
+/* 
+ * ModbusMaster Libary: A portable MODBUS master for MODBUS ASCII/RTU/TCP/UDP.
+ * Copyright (c) 2007-2011 Christian Walter <cwalter@embedded-solutioms.at>
+ * All rights reserved.
+ *
+ * $Id: modules.dox,v 1.9 2011-11-22 00:50:09 embedded-solutions.cwalter Exp $
+ */
+
+/*! \defgroup mbm MODBUS Master
+ * \code #include "mbm.h" \endcode
+ *
+ * The API documentation is splitted into different parts. A typical 
+ * application will only to have use the API function shown in this module.
+ * The most important functions are the functions for opening and closing
+ * a MODBUS instances. There are different function depending on the 
+ * type of transmission you are going to use. For serial transmission modes
+ * the function eMBMSerialInit should be used. For MODBUS/TCP the function
+ * eMBMTCPInit should be used.<br>
+ * After a new instance has been created the API function for querying a
+ * slave can be used. There are two different kind of API functions. 
+ * The first one are blocking API functions which can be used in case of an
+ * RTOS or a single instance of the stack. The non blocking API functions can
+ * be used in any other case.
+ *
+ * <b>Using a blocking version of the API:</b><br>
+ * In this example we use a single master which tries to read 5 holding
+ * registers starting at address 10 from the slave 1. 
+ *
+ * \include ex_blocking_api.c
+ * <b>Using a non-blocking version of the API:</b><br>
+ * In this example we assume two master stacks using two different serial
+ * ports. Furthermore no RTOS is available and therefore the polled version
+ * of the funtions have to be used. 
+ * \include ex_non_blocking_api.c
+ */
+
+/*! \defgroup mbm_cfg MODBUS Configuration
+ * \ingroup mbm
+ *
+ * Most modules in the protocol stack are completly optional and can be
+ * excluded. This is specially important if target resources are very small
+ * and program memory space should be saved.<br>
+ * 
+ * If the default options are not suitable the file <code>mbmconfig.h</code>
+ * should be created. This file can then be used to customization. 
+ */
+
+/*! 
+ * \if INTERNAL_DOCS
+ * \defgroup mbm_int MODBUS Master (Internal)
+ * \internal
+ * \ingroup mbm
+ * \endif
+ */
+
+/*! 
+ * \if INTERNAL_DOCS
+ * \defgroup mbm_rtu_int MODBUS RTU
+ * \internal
+ * \ingroup mbm 
+ * \endif
+ */
+
+/*! 
+ * \if INTERNAL_DOCS
+ * \defgroup mbm_ascii_int MODBUS ASCII
+ * \internal
+ * \ingroup mbm 
+ * \endif
+ */
+
+/*! 
+ * \if INTERNAL_DOCS
+ * \defgroup mbm_tcp_int MODBUS TCP
+ * \internal
+ * \ingroup mbm 
+ * \endif
+ */

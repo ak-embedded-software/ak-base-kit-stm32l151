@@ -1,0 +1,78 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution Name="demo" version="1">
+  <project Name="demo">
+    <configuration Name="Common" Target="STM32F103RB" arm_architecture="v7M" arm_core_type="Cortex-M3" arm_linker_fiq_stack_size="0" arm_linker_heap_size="128" arm_linker_irq_stack_size="0" arm_linker_jtag_pad_pre_dr="1" arm_linker_jtag_pad_pre_ir="5" arm_linker_stack_size="1024" arm_simulator_memory_simulation_filename="$(StudioDir)/targets/ST_STM32F10x/STM32F10xSimulatorMemory.dll" arm_simulator_memory_simulation_parameter="0x20000;0x4000" arm_target_debug_interface_type="ADIv5" arm_target_loader_parameter="8000000" c_preprocessor_definitions="" link_include_startup_code="No" linker_memory_map_file="$(ProjectDir)/Support/ST_STM32F103RB_MemoryMap.xml" oscillator_frequency="8MHz" project_directory="" project_type="Executable" property_groups_file_path="$(StudioDir)/targets/ST_STM32F10x/propertyGroups.xml" target_loader_reset_script="" target_reset_script=""/>
+    <configuration Name="RAM" Placement="RAM" linker_section_placement_file="$(StudioDir)/targets/sram_placement.xml" target_reset_script="SRAMReset()"/>
+    <configuration Name="Flash" Placement="Flash" arm_target_flash_loader_file_path="$(StudioDir)/targets/ST_STM32F10x/Release/Loader_rpc.elf" arm_target_flash_loader_type="LIBMEM RPC Loader" linker_section_placement_file="$(StudioDir)/targets/flash_placement.xml" target_reset_script="FLASHReset()"/>
+    <folder Name="Demo">
+      <configuration Name="Common" filter="c;cpp;cxx;cc;h;s;asm;inc"/>
+      <file Name="demo.c" file_name="demo.c"/>
+    </folder>
+    <folder Name="System">
+      <file Name="crt0.s" file_name="System/crt0.s"/>
+      <file Name="startup.s" file_name="System/startup.s"/>
+      <file Name="STM32F10x_Target.js" file_name="Support/STM32F10x_Target.js">
+        <configuration Name="Common" file_type="Reset Script"/>
+      </file>
+    </folder>
+    <configuration Name="Debug" c_preprocessor_definitions="LIBDEBUG=1" target_reset_script=""/>
+    <folder Name="Port">
+      <file Name="mbporttimer.c" file_name="Port/mbporttimer.c"/>
+      <file Name="mbmconfig.h" file_name="Port/mbmconfig.h"/>
+      <file Name="mbport.h" file_name="Port/mbport.h"/>
+      <file Name="mbportevent.c" file_name="Port/mbportevent.c"/>
+      <file Name="mbportother.c" file_name="Port/mbportother.c"/>
+      <file Name="mbportserial.c" file_name="Port/mbportserial.c"/>
+    </folder>
+    <folder Name="MODBUS">
+      <file Name="mbm.c" file_name="../../mbmaster/mbm.c"/>
+      <file Name="mbmrtu.c" file_name="../../mbmaster/rtu/mbmrtu.c"/>
+      <file Name="mbmcrc.c" file_name="../../mbmaster/rtu/mbmcrc.c"/>
+      <file Name="mbmfuncinput.c" file_name="../../mbmaster/functions/mbmfuncinput.c"/>
+      <file Name="mbmfunccoils.c" file_name="../../mbmaster/functions/mbmfunccoils.c"/>
+      <file Name="mbmfuncdisc.c" file_name="../../mbmaster/functions/mbmfuncdisc.c"/>
+      <file Name="mbmfuncholding.c" file_name="../../mbmaster/functions/mbmfuncholding.c"/>
+      <file Name="mbutils.c" file_name="../../mbmaster/common/mbutils.c"/>
+    </folder>
+    <folder Name="LibSTM32">
+      <file Name="stm32f10x_wwdg.h" file_name="libstm32x/include/stm32f10x_wwdg.h"/>
+      <file Name="cortexm3_macro.h" file_name="libstm32x/include/cortexm3_macro.h"/>
+      <file Name="stm32f10x_adc.h" file_name="libstm32x/include/stm32f10x_adc.h"/>
+      <file Name="stm32f10x_bkp.h" file_name="libstm32x/include/stm32f10x_bkp.h"/>
+      <file Name="stm32f10x_can.h" file_name="libstm32x/include/stm32f10x_can.h"/>
+      <file Name="stm32f10x_conf.h" file_name="libstm32x/include/stm32f10x_conf.h"/>
+      <file Name="stm32f10x_dma.h" file_name="libstm32x/include/stm32f10x_dma.h"/>
+      <file Name="stm32f10x_exti.h" file_name="libstm32x/include/stm32f10x_exti.h"/>
+      <file Name="stm32f10x_flash.h" file_name="libstm32x/include/stm32f10x_flash.h"/>
+      <file Name="stm32f10x_gpio.h" file_name="libstm32x/include/stm32f10x_gpio.h"/>
+      <file Name="stm32f10x_i2c.h" file_name="libstm32x/include/stm32f10x_i2c.h"/>
+      <file Name="stm32f10x_iwdg.h" file_name="libstm32x/include/stm32f10x_iwdg.h"/>
+      <file Name="stm32f10x_lib.h" file_name="libstm32x/include/stm32f10x_lib.h"/>
+      <file Name="stm32f10x_map.h" file_name="libstm32x/include/stm32f10x_map.h"/>
+      <file Name="stm32f10x_nvic.h" file_name="libstm32x/include/stm32f10x_nvic.h"/>
+      <file Name="stm32f10x_pwr.h" file_name="libstm32x/include/stm32f10x_pwr.h"/>
+      <file Name="stm32f10x_rcc.h" file_name="libstm32x/include/stm32f10x_rcc.h"/>
+      <file Name="stm32f10x_rtc.h" file_name="libstm32x/include/stm32f10x_rtc.h"/>
+      <file Name="stm32f10x_spi.h" file_name="libstm32x/include/stm32f10x_spi.h"/>
+      <file Name="stm32f10x_systick.h" file_name="libstm32x/include/stm32f10x_systick.h"/>
+      <file Name="stm32f10x_tim1.h" file_name="libstm32x/include/stm32f10x_tim1.h"/>
+      <file Name="stm32f10x_tim.h" file_name="libstm32x/include/stm32f10x_tim.h"/>
+      <file Name="stm32f10x_type.h" file_name="libstm32x/include/stm32f10x_type.h"/>
+      <file Name="stm32f10x_usart.h" file_name="libstm32x/include/stm32f10x_usart.h"/>
+      <file Name="stm32f10x_nvic.c" file_name="libstm32x/src/stm32f10x_nvic.c"/>
+      <file Name="stm32f10x_usart.c" file_name="libstm32x/src/stm32f10x_usart.c"/>
+      <file Name="stm32f10x_tim.c" file_name="libstm32x/src/stm32f10x_tim.c"/>
+      <file Name="stm32f10x_rcc.c" file_name="libstm32x/src/stm32f10x_rcc.c"/>
+      <file Name="stm32f10x_flash.c" file_name="libstm32x/src/stm32f10x_flash.c"/>
+      <file Name="stm32f10x_gpio.c" file_name="libstm32x/src/stm32f10x_gpio.c"/>
+      <file Name="stm32f10x_lib.c" file_name="libstm32x/src/stm32f10x_lib.c"/>
+    </folder>
+  </project>
+  <configuration Name="THUMB Flash Debug" inherited_configurations="THUMB;Flash;Debug"/>
+  <configuration Name="THUMB" arm_instruction_set="THUMB" arm_library_instruction_set="THUMB" c_preprocessor_definitions="__THUMB" hidden="Yes"/>
+  <configuration Name="Flash" c_preprocessor_definitions="__FLASH_BUILD" hidden="Yes"/>
+  <configuration Name="Debug" build_debug_information="Yes" c_preprocessor_definitions="DEBUG" gcc_optimization_level="None" hidden="Yes" link_include_startup_code="No"/>
+  <configuration Name="THUMB Flash Release" inherited_configurations="THUMB;Flash;Release"/>
+  <configuration Name="Release" build_debug_information="No" c_preprocessor_definitions="NDEBUG" gcc_optimization_level="Level 1" hidden="Yes" link_include_startup_code="No"/>
+  <configuration Name="Common" c_user_include_directories=".;Port;..\\..\\mbmaster\\include;..\\..\\mbmaster\\rtu;..\\..\\mbmaster\\ascii;libstm32x\\include"/>
+</solution>

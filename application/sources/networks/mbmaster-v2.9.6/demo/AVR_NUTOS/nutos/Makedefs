@@ -1,0 +1,10 @@
+top_srcdir = C:/ethernut-4.4.1/nut
+top_blddir = C:/ethernut-4.4.1/xnut-100-gcc
+top_appdir = C:/ethernut-4.4.1/app-xnut-100-gcc
+
+LIBDIR = C:/ethernut-4.4.1/xnut-100-gcc/lib
+INCFIRST=$(INCPRE)$(top_blddir)/include  $(INCPRE)C:/ethernut-4.4.1/xnut-100-gcc/include
+include $(top_appdir)/NutConf.mk
+include $(top_srcdir)/app/Makedefs.avr-gcc
+include $(top_srcdir)/app/Makeburn.avr-jtagicemkii
+

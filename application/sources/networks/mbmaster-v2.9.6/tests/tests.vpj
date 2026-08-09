@@ -1,0 +1,277 @@
+<!DOCTYPE Project SYSTEM "http://www.slickedit.com/dtd/vse/10.0/vpj.dtd">
+<Project
+	Version="10.0"
+	VendorName="SlickEdit"
+	WorkingDir=".">
+	<Config
+		Name="Debug"
+		Type="gnuc"
+		DebugCallbackName="gdb"
+		Version="1"
+		OutputFile="%bdtests.exe"
+		CompilerConfigName="Latest Version">
+		<Menu>
+			<Target
+				Name="Compile"
+				MenuCaption="&amp;Compile"
+				Dialog="_gnuc_options_form Compile"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				OutputExts="*.o"
+				SaveOption="SaveCurrent"
+				RunFromDir="%rw">
+				<Exec CmdLine='gcc -c %xup  %defd -g -o "%bd%n%oe" %i "%f"'/>
+			</Target>
+			<Target
+				Name="Link"
+				MenuCaption="&amp;Link"
+				ShowOnMenu="Never"
+				Dialog="_gnuc_options_form Link"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveCurrent"
+				RunFromDir="%rw">
+				<Exec CmdLine='gcc %xup -g -o "%o" %f %libs'/>
+			</Target>
+			<Target
+				Name="Build"
+				MenuCaption="&amp;Build"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine="make"/>
+			</Target>
+			<Target
+				Name="Rebuild"
+				MenuCaption="&amp;Rebuild"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine=""/>
+			</Target>
+			<Target
+				Name="Debug"
+				MenuCaption="&amp;Debug"
+				Dialog="_gnuc_options_form Run/Debug"
+				BuildFirst="1"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveNone"
+				RunFromDir="%rw">
+				<Exec CmdLine='vsdebugio -prog "%o"'/>
+			</Target>
+			<Target
+				Name="Execute"
+				MenuCaption="E&amp;xecute"
+				Dialog="_gnuc_options_form Run/Debug"
+				BuildFirst="1"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine='"%o"'/>
+			</Target>
+			<Target
+				Name="dash"
+				MenuCaption="-"
+				Deletable="0">
+				<Exec/>
+			</Target>
+			<Target
+				Name="GNU C Options"
+				MenuCaption="GNU C &amp;Options..."
+				ShowOnMenu="HideIfNoCmdLine"
+				Deletable="0"
+				SaveOption="SaveNone">
+				<Exec
+					CmdLine="gnucoptions"
+					Type="Slick-C"/>
+			</Target>
+		</Menu>
+		<Includes>
+			<Include Dir="C:/cygwin/usr/local/include/CUnit/"/>
+		</Includes>
+	</Config>
+	<Config
+		Name="Release"
+		Type="gnuc"
+		DebugCallbackName="gdb"
+		Version="1"
+		OutputFile="%bdtests.exe"
+		CompilerConfigName="Latest Version">
+		<Menu>
+			<Target
+				Name="Compile"
+				MenuCaption="&amp;Compile"
+				Dialog="_gnuc_options_form Compile"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				OutputExts="*.o"
+				SaveOption="SaveCurrent"
+				RunFromDir="%rw">
+				<Exec CmdLine='gcc -c %xup %defd -o "%bd%n%oe" %i "%f"'/>
+			</Target>
+			<Target
+				Name="Link"
+				MenuCaption="&amp;Link"
+				ShowOnMenu="Never"
+				Dialog="_gnuc_options_form Link"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveCurrent"
+				RunFromDir="%rw">
+				<Exec CmdLine='gcc %xup -o "%o" %f %libs'/>
+			</Target>
+			<Target
+				Name="Build"
+				MenuCaption="&amp;Build"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine="make"/>
+			</Target>
+			<Target
+				Name="Rebuild"
+				MenuCaption="&amp;Rebuild"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine=""/>
+			</Target>
+			<Target
+				Name="Debug"
+				MenuCaption="&amp;Debug"
+				Dialog="_gnuc_options_form Run/Debug"
+				BuildFirst="1"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveNone"
+				RunFromDir="%rw">
+				<Exec CmdLine='vsdebugio -prog "%o"'/>
+			</Target>
+			<Target
+				Name="Execute"
+				MenuCaption="E&amp;xecute"
+				Dialog="_gnuc_options_form Run/Debug"
+				BuildFirst="1"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine='"%o"'/>
+			</Target>
+			<Target
+				Name="dash"
+				MenuCaption="-"
+				Deletable="0">
+				<Exec/>
+			</Target>
+			<Target
+				Name="GNU C Options"
+				MenuCaption="GNU C &amp;Options..."
+				ShowOnMenu="HideIfNoCmdLine"
+				Deletable="0"
+				SaveOption="SaveNone">
+				<Exec
+					CmdLine="gnucoptions"
+					Type="Slick-C"/>
+			</Target>
+		</Menu>
+		<Includes>
+			<Include Dir="C:/cygwin/usr/local/include/CUnit/"/>
+		</Includes>
+	</Config>
+	<Files>
+		<Folder
+			Name="MODBUS Functions"
+			Filters="">
+			<F N="../mbmaster/functions/mbmfuncholding.c"/>
+			<F N="../mbmaster/functions/mbmfuncinput.c"/>
+		</Folder>
+		<Folder
+			Name="MODBUS Master"
+			Filters="">
+			<F N="../mbmaster/mbm.c"/>
+			<F N="../mbmaster/include/mbm.h"/>
+		</Folder>
+		<Folder
+			Name="MODBUS Internal"
+			Filters="">
+			<F N="../mbmaster/include/internal/mbmi.h"/>
+			<F N="../mbmaster/include/internal/mbmiconfig.h"/>
+			<F N="../mbmaster/include/internal/mbmiframe.h"/>
+		</Folder>
+		<Folder
+			Name="MODBUS RTU"
+			Filters="">
+			<F N="../mbmaster/rtu/mbmcrc.c"/>
+			<F N="../mbmaster/rtu/mbmcrc.h"/>
+			<F N="../mbmaster/rtu/mbmrtu.c"/>
+			<F N="../mbmaster/rtu/mbmrtu.h"/>
+		</Folder>
+		<Folder
+			Name="MODBUS ASCII"
+			Filters="">
+			<F N="../mbmaster/ascii/mbmascii.c"/>
+			<F N="../mbmaster/ascii/mbmascii.h"/>
+		</Folder>
+		<Folder
+			Name="MODBUS Common"
+			Filters="">
+			<F N="../mbmaster/include/common/mbframe.h"/>
+			<F N="../mbmaster/include/common/mbportlayer.h"/>
+			<F N="../mbmaster/include/common/mbtypes.h"/>
+			<F N="../mbmaster/common/mbutils.c"/>
+			<F N="../mbmaster/include/common/mbutils.h"/>
+		</Folder>
+		<Folder
+			Name="Unit Tests"
+			Filters="">
+			<F N="ut_mbm.h"/>
+			<F N="ut_mbm_ascii_driver.c"/>
+			<F N="ut_mbm_ascii_stubs.c"/>
+			<F N="ut_mbm_ascii_stubs.h"/>
+			<F N="ut_mbm_common_stubs.c"/>
+			<F N="ut_mbm_driver.c"/>
+			<F N="ut_mbm_holding_driver.c"/>
+			<F N="ut_mbm_input_driver.c"/>
+			<F N="ut_mbm_rtu_driver.c"/>
+			<F N="ut_mbm_rtu_stubs.c"/>
+			<F N="ut_mbm_rtu_stubs.h"/>
+		</Folder>
+		<Folder
+			Name="Unit Tests Core"
+			Filters="">
+			<F N="ut_mbm_console.c"/>
+		</Folder>
+		<Folder
+			Name="Port"
+			Filters="">
+			<F N="port/mbmconfig.h"/>
+			<F N="port/mbport.h"/>
+			<F N="port/mbportevent.c"/>
+			<F N="port/mbportother.c"/>
+			<F N="port/mbportserial.c"/>
+			<F N="port/mbporttimer.c"/>
+		</Folder>
+		<Folder
+			Name="Templates"
+			Filters="">
+			<F N="../tools/template.c"/>
+			<F N="../tools/template.h"/>
+		</Folder>
+		<F N="/cygwin/usr/local/include/CUnit/Automated.h"/>
+		<F N="/cygwin/usr/local/include/CUnit/Basic.h"/>
+		<F N="/cygwin/usr/local/include/CUnit/Console.h"/>
+		<F N="/cygwin/usr/local/include/CUnit/CUError.h"/>
+		<F N="/cygwin/usr/local/include/CUnit/CUnit.h"/>
+		<F N="/cygwin/usr/local/include/CUnit/MyMem.h"/>
+		<F N="/cygwin/usr/local/include/CUnit/TestDB.h"/>
+		<F N="/cygwin/usr/local/include/CUnit/TestRun.h"/>
+		<F N="/cygwin/usr/local/include/CUnit/Util.h"/>
+	</Files>
+</Project>

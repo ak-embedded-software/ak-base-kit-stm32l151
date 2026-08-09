@@ -1,0 +1,61 @@
+#
+# MODBUS Library: LINUX/CYGWIN port
+#
+# Copyright (c) 2007-2015 Christian Walter
+#
+# $Id: Makefile.ser,v 1.4 2009-10-17 18:02:17 embedded-solutions.anovak Exp $
+#
+# ---------------------------------------------------------------------------
+
+CC          = gcc
+CXX         = g++
+OBJCOPY	    = objcopy
+SIZE	    = size
+INSIGHT     = insight
+
+INCLUDE     = -Iport -I../../mbmaster/include 
+CFLAGS	    = -MD -g3 -Wall -D_XOPEN_SOURCE=500 -DENABLE_PTHREAD -DSTDC_HEADERS -DHAVE_STDLIB_H -DMBM_RTU_ENABLED=1 -DMBM_ASCII_ENABLED=1 -DMBM_SERIAL_RTU_MAX_INSTANCES=2 -DMBM_SERIAL_ASCII_MAX_INSTANCES=2 -DMBM_TCP_ENABLED=0
+CFLAGS      += $(INCLUDE)
+ASFLAGS     = -MD 
+LDFLAGS     = -pthread
+LDLIBS      = -lpthread -lrt
+
+TGT         = demo-ser
+MB_SRC      = $(addprefix ../../mbmaster/, mbm.c functions/mbmfuncinput.c functions/mbmfuncholding.c common/mbutils.c rtu/mbmrtu.c rtu/mbmcrc.c ascii/mbmascii.c ) \
+	$(addprefix port/, mbporteventposix.c mbportother.c mbporttimerposix.c mbportserial.c )
+
+CSRC        = demo-ser.c $(MB_SRC) 
+ASRC        = 
+OBJS        = $(CSRC:.c=.o) $(ASRC:.S=.o)
+DEPS        = $(OBJS:.o=.d) 
+BIN         = $(TGT)
+
+.PHONY: clean all
+
+all: clean $(BIN)
+
+debug:
+	$(INSIGHT) --se=$(TGT)
+
+$(BIN): $(OBJS) $(NOLINK_OBJS)
+	$(CC) $(LDFLAGS) $(OBJS) $(LDLIBS) -o $@
+
+clean:
+	rm -f $(DEPS)
+	rm -f $(OBJS) $(NOLINK_OBJS)
+	rm -f $(BIN) $(TGT).map
+
+# ---------------------------------------------------------------------------
+# rules for code generation
+# ---------------------------------------------------------------------------
+%.o:    %.c
+	$(CC) $(CFLAGS) -o $@ -c $<
+
+%.o:    %.S
+	$(CC) $(ASFLAGS) -o $@ -c $<
+
+# ---------------------------------------------------------------------------
+#  # compiler generated dependencies
+# ---------------------------------------------------------------------------
+-include $(DEPS)
+

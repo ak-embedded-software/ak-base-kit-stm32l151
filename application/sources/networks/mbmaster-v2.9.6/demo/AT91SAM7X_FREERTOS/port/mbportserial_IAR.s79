@@ -1,0 +1,35 @@
+		RSEG ICODE:CODE
+		CODE32
+
+		EXTERN vUSART0ISR
+		PUBLIC vUSART0ISRWrapper
+		EXTERN vUSART1ISR
+		PUBLIC vUSART1ISRWrapper
+
+; Wrapper for the serial port interrupt service routine.  This can cause a
+; context switch so requires an assembly wrapper.
+
+; Defines the portSAVE_CONTEXT and portRESTORE_CONTEXT macros.
+#include "ISR_Support.h"
+
+vUSART0ISRWrapper:
+
+	portSAVE_CONTEXT			; Save the context of the current task.
+
+	bl	vUSART0ISR				; Call the ISR routine.
+
+	portRESTORE_CONTEXT			; Restore the context of the current task -
+								; which may be different to the task that
+								; was interrupted.
+
+vUSART1ISRWrapper:
+
+	portSAVE_CONTEXT			; Save the context of the current task.
+
+	bl	vUSART1ISR				; Call the ISR routine.
+
+	portRESTORE_CONTEXT			; Restore the context of the current task -
+								; which may be different to the task that
+								; was interrupted.
+		END
+

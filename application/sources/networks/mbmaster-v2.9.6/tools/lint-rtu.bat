@@ -1,0 +1,1 @@
+lint-nt std.lnt -dMBM_RTU_ENABLED=1 -dMBM_ASCII_ENABLED=0 -dMBM_TCP_ENABLED=0 %1 %2 %3 %4 %5 %6 %7 %8 %9

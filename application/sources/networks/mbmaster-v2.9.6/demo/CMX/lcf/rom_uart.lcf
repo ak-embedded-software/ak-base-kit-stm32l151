@@ -1,0 +1,100 @@
+# Sample Linker Command File for CodeWarrior for ColdFire
+
+MEMORY 
+{
+	user 		(RX) 	: ORIGIN = 0x00000500, LENGTH = 0x0
+	sdram		(RWX)	: ORIGIN = 0x00000000, LENGTH = 0x0
+	vector_ram	(RWX)	: ORIGIN = 0x00000000, LENGTH = 0x0
+	sram		(RWX)	: ORIGIN = 0x20000000, LENGTH = 0x0
+	ext_sram	(RWX)	: ORIGIN = 0x30000000, LENGTH = 0x0
+	ipsbar		(RWX)	: ORIGIN = 0x40000000, LENGTH = 0x0
+	ext_flash	(RWX)	: ORIGIN = 0xFFE00000, LENGTH = 0x0
+}
+
+SECTIONS 
+{
+
+	.sdram		: {} > sdram
+	.vector_ram	: {} > vector_ram
+	.ipsbar		: {} > ipsbar
+	.sram		: {} > sram
+	.ext_sram	: {} > ext_sram
+
+	.boot_flash :
+	{
+		vectors.s (.text)
+		*(.text)
+		*(.rodata)
+		.= ALIGN(0x4);
+	} > ext_flash
+
+	__end_of_text = .;
+
+	___DATA_ROM		= __end_of_text;
+		
+	___DATA_RAM 	= ADDR(user);
+	
+	.sys_sram : AT(___DATA_ROM)
+	{
+		__START_DATA = .;
+		*(.data)
+		__END_DATA = .;
+
+		__START_SDATA = .;
+		*(.sdata)
+		__END_SDATA = .;
+		
+		__SDA_BASE = .;
+		.= ALIGN(0x4);		
+	} > user
+	
+	.uninitialized_data :
+	{
+		__START_SBSS = .;
+		*(.sbss)
+		*(SCOMMON)
+		__END_SBSS = .;
+
+		__START_BSS = .;
+		*(.bss)
+		*(COMMON)
+		__END_BSS = .;	
+
+		. = ALIGN (0x4);
+
+		___HEAP_START	= .;
+		___HEAP_END		= ___HEAP_START + 0x10000;
+		___SP_END		= ___HEAP_END;
+		___SP_INIT		= ___SP_END + 0x1000;
+
+		.				= ALIGN(0x4);		
+	} >> user
+	
+	_romp_at = ___DATA_ROM + SIZEOF(.sys_sram);
+	.romp : AT(_romp_at)
+	{
+		__S_romp = _romp_at;
+		WRITEW(___DATA_ROM);
+		WRITEW(ADDR(.sys_sram));
+		WRITEW(SIZEOF(.sys_sram));
+		WRITEW(0);
+		WRITEW(0);
+		WRITEW(0);
+	}
+
+	
+	___IPSBAR		= ADDR(.ipsbar);
+	___VECTOR_RAM		= ADDR(.vector_ram);
+	___SDRAM		= ADDR(.sdram);
+	___SDRAM_SIZE		= 0x01000000;
+	___SRAM			= ADDR(.sram);
+	___SRAM_SIZE		= 0x00010000;
+	___EXT_SRAM		= ADDR(.ext_sram);
+	___EXT_SRAM_SIZE	= 0x00080000;
+	___EXT_FLASH		= ADDR(.boot_flash);
+	___EXT_FLASH_SIZE	= 0x00200000;
+	___heap_addr 		= ___HEAP_START;
+	___heap_size 		= 0x10000;
+	__SP_INIT 		= ___SP_INIT;	
+	
+}

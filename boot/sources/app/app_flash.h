@@ -1,0 +1,13 @@
+#ifndef __APP_FLASH_H__
+#define __APP_FLASH_H__
+
+#define APP_FLASH_LOG_SECTOR_1							(0x0000)
+#define APP_FLASH_LOG_SECTOR_2							(0x1000)
+#define APP_FLASH_LOG_SECTOR_3							(0x2000)
+
+#define APP_FLASH_INTTERNAL_SHARE_DATA_SECTOR_1			(0x7000)
+
+#define APP_FLASH_FIRMWARE_START_ADDR					(0x80000)
+#define APP_FLASH_FIRMWARE_BLOCK_64K_SIZE				(2)
+
+#endif //__APP_FLASH_H__

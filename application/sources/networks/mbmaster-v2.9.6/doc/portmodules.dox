@@ -1,0 +1,57 @@
+/* 
+ * MODBUS Libary: Porting layer
+ * Copyright (c) 2007 Christian Walter <wolti@sil.at>
+ * All rights reserved.
+ *
+ * $Id: portmodules.dox,v 1.3 2011-11-22 00:50:09 embedded-solutions.cwalter Exp $
+ */
+
+/*! \defgroup mb_cmn MODBUS Common 
+ * 
+ * This module contains utilities shared by the MASTER and SLAVE 
+ * stack.
+ */ 
+
+/*! 
+ * \if INTERNAL_DOCS
+ * \defgroup mb_cmn_int MODBUS Common (internal)
+ * \internal
+ * \endif
+ */ 
+
+/*! \defgroup mb_port MODBUS Porting Layer
+ *
+ * Every platform targeted by the MODBUS stack must implemented all the
+ * functions listed below. A good start for creating a new platform is by
+ * using either the template from the directory <code>demo/BARE</code> if
+ * not RTOS is available  or <code>demo/BARERTOS</code> if an RTOS is
+ * available.<br>
+ * All new ports should be tested using the supplied test programs. For an
+ * example on this and more instructions the module <em>MODBUS Porting Layer
+ * Verification</em> should be read.
+ */
+
+/*! \defgroup mb_port_test MODBUS Porting Layer Verification
+ * \ingroup mb_port
+ *
+ * This module provides function which can be used to verify that the
+ * port is working as expected. Every new port should run the basic tests
+ * at least once. These tests include the testing of the following 
+ * components:
+ *
+ *  - RS485 Serial TX/RX Functions (Uses port 0).
+ *  - Testing of the Timers (Requires at least two timers).
+ *  - Testing of the Event Layer (Requires two event queues).
+ */
+
+/*! \defgroup mb_port_serial MODBUS Porting Layer (Serial)
+ * \ingroup mb_port
+ */
+
+/*! \defgroup mb_port_tcp MODBUS Porting Layer (TCP)
+ * \ingroup mb_port
+ */
+
+ /*! \defgroup mb_port_udp MODBUS Porting Layer (UDP)
+ * \ingroup mb_port
+ */

@@ -1,0 +1,60 @@
+#
+# MODBUS Library: Port skeletion
+#
+# Copyright (c) 2008 Christian Walter <cwalter@embedded-solutions.at>
+#
+# $Id: mbm-makefile,v 1.1 2008-04-06 07:46:23 cwalter Exp $
+#
+# ---------------------------------------------------------------------------
+
+CC          = gcc
+CXX         = g++
+OBJCOPY	    = objcopy
+SIZE	    = size
+INSIGHT     = insight
+
+INCLUDE     = -Iport -I../../mbmaster/include 
+CFLAGS	    = -MD -g3 -Wall -DMBM_RTU_ENABLED=1 -DMBM_ASCII_ENABLED=1 -DMBM_SERIAL_RTU_MAX_INSTANCES=2 -DMBM_SERIAL_ASCII_MAX_INSTANCES=2 -DMBM_SERIAL_API_VERSION=1 -DMBS_TCP_ENABLED=0
+CFLAGS      += $(INCLUDE)
+ASFLAGS     = -
+LDFLAGS     = 
+
+TGT         = demo-ser
+MB_SRC      = $(addprefix ../../mbmaster/, mbm.c functions/mbmfuncinput.c functions/mbmfuncholding.c common/mbutils.c rtu/mbmrtu.c rtu/mbmcrc.c ascii/mbmascii.c ) \
+	$(addprefix port/, mbportevent.c mbportother.c mbporttimer.c mbportserial.c )
+
+CSRC        = mbmdemo-ser.c $(MB_SRC) 
+ASRC        = 
+OBJS        = $(CSRC:.c=.o) $(ASRC:.S=.o)
+DEPS        = $(OBJS:.o=.d) 
+BIN         = $(TGT).exe
+
+.PHONY: clean all
+
+all: clean $(BIN)
+
+debug:
+	$(INSIGHT) --se=$(TGT).exe
+
+$(BIN): $(OBJS) $(NOLINK_OBJS)
+	$(CC) $(LDFLAGS) $(OBJS) $(LDLIBS) -o $@
+
+clean:
+	rm -f $(DEPS)
+	rm -f $(OBJS) $(NOLINK_OBJS)
+	rm -f $(BIN) $(TGT).map
+
+# ---------------------------------------------------------------------------
+# rules for code generation
+# ---------------------------------------------------------------------------
+%.o:    %.c
+	$(CC) $(CFLAGS) -o $@ -c $<
+
+%.o:    %.S
+	$(CC) $(ASFLAGS) -o $@ -c $<
+
+# ---------------------------------------------------------------------------
+#  # compiler generated dependencies
+# ---------------------------------------------------------------------------
+-include $(DEPS)
+
