@@ -55,5 +55,8 @@ ak_flash /dev/ttyUSB0 ak-base-kit-stm32l151-application.bin 0x08003000
 | Topic | Link |
 | ------ | ------ |
 | Training course | <https://github.com/the-ak-foundation/embedded-training-program> |
-| Tutorials | <https://epcb.vn/blogs/ak-embedded-software> |
 | Vendor | <https://epcb.vn/products/ak-embedded-base-kit-lap-trinh-nhung-vi-dieu-khien-mcu> |
+| Tutorials | <https://epcb.vn/blogs/ak-embedded-software> |
+| MCP docs Server | <https://github.com/the-ak-foundation/mcp-docs-server> |
+| Opensource Products | <https://epcb.vn/collections/ak-opensource-embedded> |
+
